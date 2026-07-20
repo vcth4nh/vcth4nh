@@ -18,7 +18,6 @@ I also participated in Pwn2Own Ireland as a team member in 2024 and 2025.
 
 - [IdeSense](https://github.com/vcth4nh/idesense) — JetBrains IDE context for AI coding agents via MCP.
 - [decaf](https://github.com/vcth4nh/decaf) — sources-first Java decompiler CLI with automatic engine fallback.
-- [VulnHunterX](https://github.com/vinsoc-cyber/VulnHunterX) — static analysis, fuzzing workflows, and LLM-based verification; core contributor.
 
 ## Connect
 

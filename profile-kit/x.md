@@ -14,4 +14,4 @@ I’m Vũ Chí Thành (`vcth4nh`), a vulnerability researcher interested in auth
 
 Selected disclosures, open-source work, and my résumé now live at https://thanh.vc
 
-Currently building IdeSense, decaf, and contributing to VulnHunterX. Open to research collaboration, consulting, speaking, and full-time opportunities.
+Currently building IdeSense and decaf. Open to research collaboration, consulting, speaking, and full-time opportunities.

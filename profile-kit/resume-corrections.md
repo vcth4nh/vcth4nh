@@ -41,4 +41,4 @@ Do not resolve the August/September intake discrepancy in public copy; year-only
 
 ## Projects and homelab
 
-Add IdeSense, decaf, and VulnHunterX as selected projects. Keep the detailed infrastructure inventory in an “Additional skills” section; use only a short homelab paragraph in public narrative profiles.
+Add IdeSense and decaf as selected projects. Keep the detailed infrastructure inventory in an “Additional skills” section; use only a short homelab paragraph in public narrative profiles.
