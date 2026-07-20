@@ -1,0 +1,27 @@
+---
+import ArrowIcon from "./ArrowIcon.astro";
+import { profile } from "../data/profile";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <a class="wordmark footer-wordmark" href="/">
+        <span class="wordmark-prompt" aria-hidden="true">/</span>{profile.handle}
+      </a>
+      <p>Research, tools, and field notes from the edges of trust.</p>
+    </div>
+
+    <nav aria-label="Social links" class="footer-links">
+      {profile.socials.map((social) => (
+        <a href={social.href} target="_blank" rel="noreferrer">
+          {social.label}<ArrowIcon size={14} />
+        </a>
+      ))}
+    </nav>
+
+    <p class="footer-meta">© {year} {profile.name}<br />Built with Astro. Deployed at the edge.</p>
+  </div>
+</footer>

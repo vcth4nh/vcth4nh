@@ -1,0 +1,34 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import ArrowIcon from "./ArrowIcon.astro";
+
+interface Props {
+  entry: CollectionEntry<"projects">;
+  index: number;
+  expanded?: boolean;
+}
+
+const { entry, index, expanded = false } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<article class:list={["project-row", expanded && "project-row-expanded"]}>
+  <div class="project-index">{String(index + 1).padStart(2, "0")}</div>
+  <div class="project-main">
+    <div class="project-titleline">
+      <h3>{entry.data.title}</h3>
+      <span>{entry.data.status} · {entry.data.year}</span>
+    </div>
+    <p class="project-description">{entry.data.description}</p>
+    {expanded && <div class="project-content"><Content /></div>}
+    <div class="tag-list">
+      {entry.data.stack.map((item) => <span>{item}</span>)}
+    </div>
+  </div>
+  <div class="project-side">
+    <span>{entry.data.role}</span>
+    <a class="round-arrow" href={entry.data.href} target="_blank" rel="noreferrer" aria-label={`Open ${entry.data.title} on GitHub`}>
+      <ArrowIcon />
+    </a>
+  </div>
+</article>

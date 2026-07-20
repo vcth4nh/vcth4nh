@@ -1,0 +1,39 @@
+---
+import { profile } from "../data/profile";
+
+interface Props {
+  label?: string;
+  class?: string;
+}
+
+const { label, class: className = "" } = Astro.props;
+const encodedUser = btoa(profile.email.user);
+const encodedDomain = btoa(profile.email.domain);
+---
+
+<a
+  class:list={["protected-email", className]}
+  data-protected-email
+  data-user={encodedUser}
+  data-domain={encodedDomain}
+>
+  <span data-email-label>{label ?? "hello [at] thanh [dot] vc"}</span>
+</a>
+
+<script>
+  const hydrateEmailLinks = () => {
+    document.querySelectorAll<HTMLAnchorElement>("[data-protected-email]").forEach((link) => {
+      const user = link.dataset.user;
+      const domain = link.dataset.domain;
+      if (!user || !domain) return;
+
+      const address = `${atob(user)}@${atob(domain)}`;
+      link.href = `mailto:${address}`;
+      const label = link.querySelector<HTMLElement>("[data-email-label]");
+      if (label && !link.dataset.keepLabel) label.textContent = address;
+    });
+  };
+
+  hydrateEmailLinks();
+  document.addEventListener("astro:after-swap", hydrateEmailLinks);
+</script>

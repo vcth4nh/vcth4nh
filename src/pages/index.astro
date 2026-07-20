@@ -1,0 +1,148 @@
+---
+import { getCollection } from "astro:content";
+import ArrowIcon from "../components/ArrowIcon.astro";
+import PortraitPlaceholder from "../components/PortraitPlaceholder.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ProtectedEmail from "../components/ProtectedEmail.astro";
+import ResearchCard from "../components/ResearchCard.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { profile } from "../data/profile";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const research = (await getCollection("research"))
+  .filter((entry) => entry.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const projects = (await getCollection("projects"))
+  .filter((entry) => entry.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout>
+  <section class="home-hero shell">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="availability-line reveal reveal-1">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to research, speaking, consulting, and roles
+        </p>
+        <h1 class="reveal reveal-2">
+          <span class="hero-name">{profile.name}</span>
+          <span class="hero-statement">Vulnerability research,<br /><em>made inspectable.</em></span>
+        </h1>
+        <p class="hero-lead reveal reveal-3">{profile.positioning}</p>
+        <div class="hero-actions reveal reveal-4">
+          <a class="button button-primary" href="/research/">View the evidence <ArrowIcon /></a>
+          <ProtectedEmail label="Start a conversation" class="button button-quiet" />
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-3">
+        <PortraitPlaceholder />
+        <p class="hero-side-note">
+          <span>{profile.current.label}</span>
+          <strong>{profile.current.title}</strong>
+          {profile.current.detail}
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-ledger reveal reveal-4" aria-label="Profile summary">
+      <div><span>Focus / 01</span><strong>Pre-auth attack surfaces</strong></div>
+      <div><span>Practice / 02</span><strong>Web · Mobile · IoT</strong></div>
+      <div><span>Output / 03</span><strong>Advisories · Exploits · Tools</strong></div>
+    </div>
+  </section>
+
+  <section class="section shell" id="selected-research">
+    <SectionHeading
+      index="01"
+      title="Selected evidence"
+      intro="Research is strongest when the path from claim to primary source is short."
+      link={{ label: "All research", href: "/research/" }}
+    />
+    <div class="research-grid">
+      {research.map((entry, index) => <ResearchCard entry={entry} index={index} />)}
+    </div>
+  </section>
+
+  <section class="section section-projects">
+    <div class="shell">
+      <SectionHeading
+        index="02"
+        title="Tools for the work"
+        intro="Small, composable systems that make analysis less repetitive and evidence easier to test."
+        link={{ label: "All projects", href: "/projects/" }}
+      />
+      <div class="project-list">
+        {projects.map((entry, index) => <ProjectCard entry={entry} index={index} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <SectionHeading
+      index="03"
+      title="A record of practice"
+      intro="From a part-time research internship to coordinated disclosure, mentoring, and international competition."
+      link={{ label: "Full résumé", href: "/resume/" }}
+    />
+    <div class="record-grid">
+      <div class="timeline">
+        {profile.experience.slice(0, 3).map((item, index) => (
+          <article class="timeline-item">
+            <div class="timeline-marker"><span>{String(index + 1).padStart(2, "0")}</span></div>
+            <div>
+              <p class="timeline-period">{item.period}</p>
+              <h3>{item.role}</h3>
+              <p>{item.organization}</p>
+              <span>{item.team}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <aside class="proof-panel">
+        <div class="proof-block proof-signal">
+          <span>2024 / 2025</span>
+          <strong>Pwn2Own<br />Ireland</strong>
+          <p>Participated as a team member across two editions.</p>
+        </div>
+        <div class="proof-block">
+          <span>2026 / 2028</span>
+          <strong>Radboud<br />University</strong>
+          <p>Incoming MSc Computing Science student, Cyber Security specialisation.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section homelab-section">
+    <div class="shell homelab-grid">
+      <div class="homelab-heading">
+        <span class="section-kicker"><span>04</span><span aria-hidden="true">↘</span></span>
+        <p class="eyebrow">Beyond the report</p>
+        <h2>{profile.homelab.title}</h2>
+      </div>
+      <div class="homelab-copy">
+        <p>{profile.homelab.description}</p>
+        <div class="lab-map" aria-label="Homelab areas">
+          {profile.homelab.areas.map((area, index) => (
+            <span><i>{String(index + 1).padStart(2, "0")}</i>{area}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing-section shell">
+    <p class="eyebrow">The useful kind of conversation</p>
+    <div class="closing-grid">
+      <h2>Have a difficult target,<br />an open research question,<br /><em>or a stage to fill?</em></h2>
+      <div>
+        <p>I am open to serious work where careful technical thinking matters.</p>
+        <ProtectedEmail label="hello [at] thanh [dot] vc" class="closing-email" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

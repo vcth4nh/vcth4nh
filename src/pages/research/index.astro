@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import ResearchCard from "../../components/ResearchCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const research = (await getCollection("research")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<BaseLayout
+  title="Research"
+  description="Selected vulnerability research by Vũ Chí Thành, with clear attribution and links to primary advisories."
+>
+  <section class="page-hero shell">
+    <div class="page-hero-index">01 / Research archive</div>
+    <div class="page-hero-grid">
+      <h1>Claims should<br /><em>carry evidence.</em></h1>
+      <div class="page-hero-copy">
+        <p>Selected vulnerability research, contest work, and coordinated disclosures. Each entry separates personal findings, co-research, and team outcomes.</p>
+        <div class="role-legend" aria-label="Attribution legend">
+          <span><i class="legend-independent"></i>Independent</span>
+          <span><i class="legend-co"></i>Co-research</span>
+          <span><i class="legend-team"></i>Team</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell archive-section">
+    <div class="research-grid research-grid-archive">
+      {research.map((entry, index) => <ResearchCard entry={entry} index={index} />)}
+    </div>
+  </section>
+
+  <section class="method-section">
+    <div class="shell method-grid">
+      <div>
+        <span class="eyebrow">Working method</span>
+        <h2>Trace the assumption.<br />Build the proof.<br />Close the loop.</h2>
+      </div>
+      <ol>
+        <li><span>01</span><div><strong>Model the boundary</strong><p>Map how identity, parsing, and state move between components.</p></div></li>
+        <li><span>02</span><div><strong>Reduce the finding</strong><p>Turn odd behavior into the smallest reproducible security claim.</p></div></li>
+        <li><span>03</span><div><strong>Coordinate disclosure</strong><p>Give maintainers evidence they can validate, fix, and communicate.</p></div></li>
+      </ol>
+    </div>
+  </section>
+</BaseLayout>

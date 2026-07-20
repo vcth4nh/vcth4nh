@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ArrowIcon from "./ArrowIcon.astro";
+
+interface Props {
+  entry: CollectionEntry<"research">;
+  index: number;
+}
+
+const { entry, index } = Astro.props;
+const number = String(index + 1).padStart(2, "0");
+---
+
+<article class:list={["research-card", `role-${entry.data.role}`]}>
+  <a href={`/research/${entry.id}/`}>
+    <div class="card-topline">
+      <span>{number} / {entry.data.year}</span>
+      <span class="role-label">{entry.data.roleLabel}</span>
+    </div>
+    <div class="card-body">
+      <div class="case-tags">
+        {entry.data.tags.slice(0, 2).map((tag) => <span>{tag}</span>)}
+      </div>
+      <h3>{entry.data.title}</h3>
+      <p>{entry.data.dek}</p>
+    </div>
+    <div class="card-foot">
+      <span>{entry.data.cves.length ? entry.data.cves.join(" · ") : entry.data.organization}</span>
+      <span class="round-arrow"><ArrowIcon /></span>
+    </div>
+  </a>
+</article>

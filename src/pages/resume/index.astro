@@ -1,0 +1,162 @@
+---
+import ArrowIcon from "../../components/ArrowIcon.astro";
+import ProtectedEmail from "../../components/ProtectedEmail.astro";
+import { profile } from "../../data/profile";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Résumé"
+  description="Résumé of Vũ Chí Thành — vulnerability researcher, exploit developer, and open-source tool builder."
+  pageClass="resume-page"
+>
+  <div class="resume-toolbar shell" aria-label="Résumé actions">
+    <p>Web résumé · updated July 2026</p>
+    <div>
+      <button class="button button-quiet" type="button" data-print-resume>Print / save PDF</button>
+      <a class="button button-primary" href="/resume.pdf" download>Download PDF <ArrowIcon /></a>
+    </div>
+  </div>
+
+  <article class="resume-sheet" aria-label={`Résumé of ${profile.name}`}>
+    <header class="resume-header">
+      <div>
+        <p class="resume-handle">/{profile.handle}</p>
+        <h1>{profile.name}</h1>
+        <p class="resume-title">{profile.positioning}</p>
+      </div>
+      <address>
+        <ProtectedEmail />
+        <a href={profile.siteUrl}>thanh.vc</a>
+        <a href="https://github.com/vcth4nh">github.com/vcth4nh</a>
+        <a href="https://www.linkedin.com/in/vcth4nh">linkedin.com/in/vcth4nh</a>
+      </address>
+    </header>
+
+    <div class="resume-rule"></div>
+
+    <section class="resume-summary">
+      <h2>Profile</h2>
+      <p>{profile.summary} Experienced across web, mobile, IoT, exploit development, and LLM-assisted security workflows.</p>
+    </section>
+
+    <div class="resume-columns">
+      <div class="resume-main">
+        <section class="resume-section">
+          <h2>Experience</h2>
+          <div class="resume-stack">
+            {profile.experience.map((item) => (
+              <article class="resume-item">
+                <div class="resume-item-heading">
+                  <div><h3>{item.role}</h3><p>{item.organization} · {item.team}</p></div>
+                  <time>{item.period}</time>
+                </div>
+                <ul>{item.highlights.map((highlight) => <li>{highlight}</li>)}</ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Selected security research</h2>
+          <div class="resume-stack compact-stack">
+            <article class="resume-item">
+              <div class="resume-item-heading">
+                <div><h3>GoAnywhere MFT authentication boundary</h3><p>CVE-2024-0204 · CVE-2024-25156</p></div>
+                <time>2024</time>
+              </div>
+              <p>Independently discovered and reported pre-authentication administrative access and a related path-traversal weakness. Fortra credits vcth4nh for CVE-2024-25156.</p>
+            </article>
+            <article class="resume-item">
+              <div class="resume-item-heading">
+                <div><h3>a-blog cms vulnerability chain</h3><p>CVE-2025-36560 · CVE-2025-41429</p></div>
+                <time>2025</time>
+              </div>
+              <p>Reported unauthenticated SSRF and improper log neutralization that could be chained into administrative session compromise; credited by JPCERT/CC.</p>
+            </article>
+            <article class="resume-item">
+              <div class="resume-item-heading">
+                <div><h3>9Router unauthenticated RCE</h3><p>GHSA-g6g7-pvmx-m74p · co-research with Ductinn</p></div>
+                <time>2026</time>
+              </div>
+              <p>Reported missing authentication and operating-system command injection in the open-source project.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="resume-section resume-projects-section">
+          <h2>Selected projects</h2>
+          <div class="resume-stack compact-stack">
+            <article class="resume-item inline-item">
+              <div><h3>IdeSense</h3><p>Creator · Kotlin, JetBrains Platform, MCP</p></div>
+              <p>MCP server exposing IDE indexing, navigation, diagnostics, and refactoring to coding agents.</p>
+            </article>
+            <article class="resume-item inline-item">
+              <div><h3>decaf</h3><p>Creator · Python, Java</p></div>
+              <p>Sources-first Java decompiler CLI with five-engine automatic fallback and nested archive support.</p>
+            </article>
+            <article class="resume-item inline-item">
+              <div><h3>VulnHunterX</h3><p>Core contributor · Python, CodeQL, Semgrep, LLM</p></div>
+              <p>Framework combining static analysis, fuzzing workflows, and LLM-based bug verification.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="resume-sidebar">
+        <section class="resume-section">
+          <h2>Education</h2>
+          <div class="resume-stack compact-stack">
+            {profile.education.map((item) => (
+              <article class="resume-item">
+                <h3>{item.degree}</h3>
+                <p>{item.school}</p>
+                <p>{item.period} · {item.note}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Capabilities</h2>
+          <div class="resume-capabilities">
+            {profile.capabilities.map((group) => (
+              <div>
+                <h3>{group.label}</h3>
+                <ul>{group.items.map((item) => <li>{item}</li>)}</ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Selected recognition</h2>
+          <div class="resume-awards">
+            {profile.awards.map((award) => (
+              <div><time>{award.year}</time><p><strong>{award.title}</strong><br />{award.issuer}</p></div>
+            ))}
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Credentials</h2>
+          {profile.certifications.map((item) => (
+            <div class="resume-credential">
+              <strong>{item.title}</strong>
+              <span>{item.issuer}{item.year && ` · ${item.year}`}</span>
+            </div>
+          ))}
+        </section>
+
+        <section class="resume-section">
+          <h2>Community</h2>
+          <p>Former cyber security mentor at KISA; training and challenge design with the VCS CTF Club; former web exploitation lead at BKSec.</p>
+        </section>
+      </aside>
+    </div>
+  </article>
+
+  <script>
+    document.querySelector("[data-print-resume]")?.addEventListener("click", () => window.print());
+  </script>
+</BaseLayout>

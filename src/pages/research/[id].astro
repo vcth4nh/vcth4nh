@@ -1,0 +1,67 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import ArrowIcon from "../../components/ArrowIcon.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("research");
+  return entries.map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+interface Props {
+  entry: CollectionEntry<"research">;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.dek}>
+  <article class="case-page shell">
+    <a class="back-link" href="/research/"><span aria-hidden="true">←</span> Research archive</a>
+
+    <header class="case-header">
+      <div class="case-meta-rail">
+        <span>{entry.data.year}</span>
+        <span>{entry.data.roleLabel}</span>
+        {entry.data.organization && <span>{entry.data.organization}</span>}
+      </div>
+      <div class="case-heading">
+        <div class="case-tags">
+          {entry.data.tags.map((tag) => <span>{tag}</span>)}
+        </div>
+        <h1>{entry.data.title}</h1>
+        <p>{entry.data.dek}</p>
+      </div>
+    </header>
+
+    <div class="case-layout">
+      <aside class="case-facts">
+        <div>
+          <span>Attribution</span>
+          <strong>{entry.data.roleLabel}</strong>
+        </div>
+        {entry.data.cves.length > 0 && (
+          <div>
+            <span>Identifiers</span>
+            {entry.data.cves.map((cve) => <strong>{cve}</strong>)}
+          </div>
+        )}
+        <div class="case-source-list">
+          <span>Primary sources</span>
+          {entry.data.links.map((link) => (
+            <a href={link.url} target="_blank" rel="noreferrer">{link.label}<ArrowIcon size={14} /></a>
+          ))}
+        </div>
+      </aside>
+      <div class="case-prose">
+        <Content />
+      </div>
+    </div>
+
+    <footer class="case-footer">
+      <p>Need a vulnerability assessment, research collaborator, or technical speaker?</p>
+      <a href="mailto:hello@thanh.vc">Start a conversation <ArrowIcon /></a>
+    </footer>
+  </article>
+</BaseLayout>
