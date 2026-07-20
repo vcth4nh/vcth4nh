@@ -2,8 +2,8 @@
 title: "SAML identity mismatch in authentik"
 dek: "An XML-comment interpretation conflict could bind an attacker's signed external identity to an existing authentik account."
 year: 2026
-role: co-research
-roleLabel: "Co-research"
+role: independent
+roleLabel: "Independent research"
 organization: "authentik"
 cves:
   - "CVE-2026-57580"
@@ -28,4 +28,4 @@ An attacker with an account at the source identity provider—and control over t
 
 ## The outcome
 
-The maintainers fixed the issue in authentik **2026.5.5** and **2026.2.6**. The advisory assigns **CVE-2026-57580** with a high-severity CVSS score of 8.7.
+The maintainers fixed the issue in authentik **2026.5.5** and **2026.2.6**. The advisory assigns **CVE-2026-57580** with a high-severity CVSS score of 8.7. This was an independent submission; other researchers separately reported the same issue.

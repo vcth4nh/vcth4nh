@@ -9,7 +9,7 @@ Incoming MSc Computing Science student — Cyber Security specialisation at Radb
 ## Selected research
 
 - **GoAnywhere MFT** — independently discovered and reported pre-authentication administrative access and a related path-traversal issue, later tracked as CVE-2024-0204 and CVE-2024-25156.
-- **authentik** — co-reported a SAML identity-matching conflict that enabled persistent account takeover, tracked as CVE-2026-57580.
+- **authentik** — independently reported a SAML identity-matching conflict that enabled persistent account takeover, tracked as CVE-2026-57580.
 - **a-blog cms** — reported an unauthenticated SSRF and log-neutralization chain, tracked as CVE-2025-36560 and CVE-2025-41429.
 - **9Router** — co-reported a critical unauthenticated command-injection chain, published as GHSA-g6g7-pvmx-m74p.
 
