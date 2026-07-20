@@ -2,11 +2,14 @@
 import { profile } from "../data/profile";
 ---
 
-<div class="portrait-placeholder" role="img" aria-label={`Portrait placeholder for ${profile.name}`}>
+<div class="portrait-placeholder" role="img" aria-label={`Identity artwork placeholder for ${profile.name}`}>
+  <div class="portrait-color portrait-color-one" aria-hidden="true"></div>
+  <div class="portrait-color portrait-color-two" aria-hidden="true"></div>
   <div class="portrait-grid" aria-hidden="true"></div>
-  <div class="portrait-mark" aria-hidden="true">VT</div>
+  <div class="portrait-boundary" aria-hidden="true"></div>
+  <div class="portrait-mark" aria-hidden="true">V4</div>
   <div class="portrait-caption">
-    <span>Portrait</span>
-    <span>Replace / 01</span>
+    <span>Ident / {profile.handle}</span>
+    <span>Frame / 04</span>
   </div>
 </div>

@@ -4,9 +4,10 @@ import { profile } from "../data/profile";
 interface Props {
   label?: string;
   class?: string;
+  keepLabel?: boolean;
 }
 
-const { label, class: className = "" } = Astro.props;
+const { label, class: className = "", keepLabel = false } = Astro.props;
 const encodedUser = btoa(profile.email.user);
 const encodedDomain = btoa(profile.email.domain);
 ---
@@ -16,6 +17,7 @@ const encodedDomain = btoa(profile.email.domain);
   data-protected-email
   data-user={encodedUser}
   data-domain={encodedDomain}
+  data-keep-label={keepLabel ? "true" : undefined}
 >
   <span data-email-label>{label ?? "hello [at] thanh [dot] vc"}</span>
 </a>

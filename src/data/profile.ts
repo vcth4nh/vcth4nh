@@ -15,7 +15,6 @@ export const profile = {
   availability: [
     "Research collaboration",
     "Security consulting",
-    "Speaking",
     "Full-time opportunities",
   ],
   socials: [
@@ -28,8 +27,8 @@ export const profile = {
     },
   ],
   current: {
-    label: "Next chapter",
-    title: "Incoming MSc Computing Science student",
+    label: "Currently",
+    title: "MSc Computing Science student",
     detail: "Cyber Security specialisation · Radboud University · 2026–2028",
   },
   experience: [
@@ -77,7 +76,7 @@ export const profile = {
       school: "Radboud University",
       degree: "MSc Computing Science — Cyber Security specialisation",
       period: "2026 — 2028",
-      note: "Incoming student",
+      note: "Current student",
     },
     {
       school: "Hanoi University of Science and Technology",

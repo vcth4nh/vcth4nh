@@ -5,7 +5,15 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://thanh.vc",
-  integrations: [mdx(), sitemap()],
+  devToolbar: {
+    enabled: false,
+  },
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => page !== "https://thanh.vc/retro/",
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

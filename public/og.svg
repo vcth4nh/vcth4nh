@@ -1,15 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0v48" fill="none" stroke="#f0eee6" stroke-opacity=".055"/>
+      <path d="M48 0H0v48" fill="none" stroke="#fff5d6" stroke-opacity=".065"/>
     </pattern>
   </defs>
-  <rect width="1200" height="630" fill="#0b0c0b"/>
+  <rect width="1200" height="630" fill="#0c2c4a"/>
   <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect x="72" y="64" width="8" height="502" fill="#ff5938"/>
-  <text x="116" y="118" fill="#ff5938" font-family="monospace" font-size="24" letter-spacing="2">/VCTH4NH</text>
-  <text x="116" y="268" fill="#f0eee6" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="600" letter-spacing="-5">Vũ Chí Thành</text>
-  <text x="116" y="370" fill="#f0eee6" font-family="Arial, Helvetica, sans-serif" font-size="54" letter-spacing="-3">Vulnerability researcher.</text>
-  <text x="116" y="438" fill="#9d9f98" font-family="Arial, Helvetica, sans-serif" font-size="31">Exploits · AI-assisted security tooling · Open research</text>
-  <text x="116" y="535" fill="#d9ff70" font-family="monospace" font-size="22">THANH.VC →</text>
+  <rect x="72" y="64" width="8" height="502" fill="#7ee56d"/>
+  <rect x="80" y="64" width="8" height="168" fill="#f9e897"/>
+  <rect x="80" y="232" width="8" height="168" fill="#ffb44c"/>
+  <rect x="80" y="400" width="8" height="166" fill="#ff6376"/>
+  <text x="116" y="118" fill="#7ee56d" font-family="JetBrains Mono, monospace" font-size="24" letter-spacing="2">/VCTH4NH</text>
+  <text x="116" y="268" fill="#fff5d6" font-family="JetBrains Mono, monospace" font-size="70" font-weight="600" letter-spacing="-4">Vũ Chí Thành</text>
+  <text x="116" y="370" fill="#f9e897" font-family="JetBrains Mono, monospace" font-size="46" letter-spacing="-3">Vulnerability researcher.</text>
+  <text x="116" y="438" fill="#9dc08b" font-family="Atkinson Hyperlegible Next, sans-serif" font-size="29">Exploits · AI-assisted security tooling · Open research</text>
+  <text x="116" y="535" fill="#ffb44c" font-family="JetBrains Mono, monospace" font-size="22">THANH.VC →</text>
 </svg>

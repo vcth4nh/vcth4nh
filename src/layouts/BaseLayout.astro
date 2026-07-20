@@ -3,12 +3,14 @@ import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import { profile } from "../data/profile";
 import "../styles/global.css";
+import "../styles/retro.css";
 
 interface Props {
   title?: string;
   description?: string;
   pageClass?: string;
   noindex?: boolean;
+  unwrapped?: boolean;
 }
 
 const {
@@ -16,6 +18,7 @@ const {
   description = profile.summary,
   pageClass = "",
   noindex = false,
+  unwrapped = false,
 } = Astro.props;
 
 const pageTitle = title ? `${title} — ${profile.name}` : `${profile.name} / ${profile.handle}`;
@@ -49,6 +52,55 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#0b0c0b" />
+    <script is:inline>
+      (() => {
+        let presentation = "field-notes";
+
+        try {
+          const requestedPresentation = new URLSearchParams(window.location.search).get("presentation");
+          const savedPresentation = window.localStorage.getItem("profile-presentation");
+
+          if (requestedPresentation === "classic" || requestedPresentation === "field-notes") {
+            presentation = requestedPresentation;
+            window.localStorage.setItem("profile-presentation", presentation);
+          } else if (savedPresentation === "classic" || savedPresentation === "field-notes") {
+            presentation = savedPresentation;
+          }
+        } catch {
+          // Field Notes remains the default when storage is unavailable.
+        }
+
+        document.documentElement.dataset.presentation = presentation;
+      })();
+    </script>
+    <script is:inline>
+      (() => {
+        const allowedThemes = new Set(["phosphor", "sage", "harbor", "grove", "signal"]);
+        const requestedTheme = new URLSearchParams(window.location.search).get("theme");
+        let theme = requestedTheme;
+
+        if (theme && allowedThemes.has(theme)) {
+          window.sessionStorage.setItem("preview-theme", theme);
+        } else {
+          theme = window.sessionStorage.getItem("preview-theme") || "phosphor";
+        }
+
+        if (!allowedThemes.has(theme)) theme = "phosphor";
+        document.documentElement.dataset.theme = theme;
+
+        const browserColors = {
+          phosphor: "#0b0c0b",
+          sage: "#40513b",
+          harbor: "#124076",
+          grove: "#0d530e",
+          signal: "#0c2c4a",
+        };
+        const activeBrowserColor = document.documentElement.dataset.presentation === "field-notes"
+          ? "#0a746a"
+          : browserColors[theme];
+        document.querySelector('meta[name="theme-color"]')?.setAttribute("content", activeBrowserColor);
+      })();
+    </script>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
@@ -70,9 +122,7 @@ const jsonLd = {
   <body class={pageClass}>
     <a class="skip-link" href="#main">Skip to content</a>
     <SiteHeader />
-    <main id="main">
-      <slot />
-    </main>
+    {unwrapped ? <slot /> : <main id="main"><slot /></main>}
     <SiteFooter />
   </body>
 </html>

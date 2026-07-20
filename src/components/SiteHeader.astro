@@ -1,5 +1,6 @@
 ---
 import { profile } from "../data/profile";
+import PresentationSwitch from "./PresentationSwitch.astro";
 import ProtectedEmail from "./ProtectedEmail.astro";
 
 const pathname = Astro.url.pathname;
@@ -15,19 +16,23 @@ const isActive = (href: string) =>
 
 <header class="site-header" data-site-header>
   <div class="shell header-inner">
-    <a class="wordmark" href="/" aria-label={`/${profile.handle} — ${profile.name}, home`}>
+    <a class="wordmark header-wordmark" href="/" aria-label={`/${profile.handle} — ${profile.name}, home`}>
       <span class="wordmark-prompt" aria-hidden="true">/</span>{profile.handle}
     </a>
 
     <nav class="desktop-nav" aria-label="Primary navigation">
-      {links.map((link) => (
+      {links.map((link, index) => (
         <a href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>
-          {link.label}
+          <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+          <span>{link.label}</span>
         </a>
       ))}
     </nav>
 
-    <ProtectedEmail label="Start a conversation" class="header-contact" />
+    <div class="header-tools">
+      <PresentationSwitch current="classic" class="classic-presentation-switch" />
+      <ProtectedEmail label="Start a conversation" class="header-contact" />
+    </div>
 
     <details class="mobile-nav">
       <summary>Menu</summary>
@@ -37,6 +42,7 @@ const isActive = (href: string) =>
             {link.label}
           </a>
         ))}
+        <PresentationSwitch current="classic" class="mobile-presentation-switch" />
         <ProtectedEmail label="Start a conversation" />
       </nav>
     </details>

@@ -1,0 +1,97 @@
+---
+interface Props {
+  current: "classic" | "field-notes";
+  class?: string;
+}
+
+const { current, class: className = "" } = Astro.props;
+---
+
+<div
+  class:list={["presentation-switch", className]}
+  data-presentation-switch
+>
+  <button
+    type="button"
+    role="switch"
+    aria-checked={current === "classic" ? "true" : "false"}
+    aria-label="Classic presentation"
+    data-presentation-toggle
+  >
+    <span class="presentation-switch-label">Classic</span>
+    <span class="presentation-switch-track" aria-hidden="true">
+      <span class="presentation-switch-thumb"></span>
+    </span>
+    <span class="presentation-switch-state" aria-hidden="true">
+      {current === "classic" ? "On" : "Off"}
+    </span>
+  </button>
+</div>
+
+<script>
+  const preferenceKey = "profile-presentation";
+  const root = document.documentElement;
+  const presentationToggles = Array.from(
+    document.querySelectorAll<HTMLButtonElement>("[data-presentation-toggle]"),
+  );
+  const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+  const classicThemeColors: Record<string, string> = {
+    phosphor: "#0b0c0b",
+    sage: "#40513b",
+    harbor: "#124076",
+    grove: "#0d530e",
+    signal: "#0c2c4a",
+  };
+
+  type Presentation = "classic" | "field-notes";
+
+  const applyPresentation = (presentation: Presentation, persist = true) => {
+    root.dataset.presentation = presentation;
+
+    presentationToggles.forEach((toggle) => {
+      const classicIsOn = presentation === "classic";
+      toggle.setAttribute("aria-checked", String(classicIsOn));
+      const state = toggle.querySelector<HTMLElement>(".presentation-switch-state");
+      if (state) state.textContent = classicIsOn ? "On" : "Off";
+    });
+
+    if (themeColor) {
+      themeColor.content = presentation === "field-notes"
+        ? "#0a746a"
+        : classicThemeColors[root.dataset.theme ?? "phosphor"] ?? classicThemeColors.phosphor;
+    }
+
+    if (persist) {
+      try {
+        window.localStorage.setItem(preferenceKey, presentation);
+      } catch {
+        // The in-place switch still works when storage is unavailable.
+      }
+    }
+
+    window.dispatchEvent(new CustomEvent("presentationchange", { detail: { presentation } }));
+  };
+
+  presentationToggles.forEach((toggle) => {
+    if (toggle.dataset.presentationBound === "true") return;
+    toggle.dataset.presentationBound = "true";
+
+    toggle.addEventListener("click", () => {
+      const presentation = root.dataset.presentation === "classic" ? "field-notes" : "classic";
+      applyPresentation(presentation, true);
+    });
+  });
+
+  const initialPresentation = root.dataset.presentation === "field-notes" ? "field-notes" : "classic";
+  applyPresentation(initialPresentation, false);
+
+  const initialUrl = new URL(window.location.href);
+  if (initialUrl.searchParams.has("presentation")) {
+    initialUrl.searchParams.delete("presentation");
+    window.history.replaceState(
+      window.history.state,
+      "",
+      `${initialUrl.pathname}${initialUrl.search}${initialUrl.hash}`,
+    );
+  }
+</script>

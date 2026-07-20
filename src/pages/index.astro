@@ -4,6 +4,7 @@ import ArrowIcon from "../components/ArrowIcon.astro";
 import PortraitPlaceholder from "../components/PortraitPlaceholder.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProtectedEmail from "../components/ProtectedEmail.astro";
+import RetroPresentation from "../components/RetroPresentation.astro";
 import ResearchCard from "../components/ResearchCard.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import { profile } from "../data/profile";
@@ -22,17 +23,21 @@ const competitionAwards = profile.awards.filter(
 );
 ---
 
-<BaseLayout>
+<BaseLayout pageClass="home-presentations" unwrapped>
+  <main id="main">
+  <div data-presentation-panel="classic">
   <section class="home-hero shell">
     <div class="hero-grid">
       <div class="hero-copy">
         <p class="availability-line reveal reveal-1">
           <span class="status-dot" aria-hidden="true"></span>
-          Open to research, speaking, consulting, and roles
+          Open to research, consulting, and roles
         </p>
         <h1 class="reveal reveal-2">
           <span class="hero-name">{profile.name}</span>
-          <span class="hero-statement">Vulnerability research,<br /><em>made inspectable.</em></span>
+          <span class="hero-statement">
+            Vulnerability<br />research,<br /><em class="hero-decode">made inspectable.</em>
+          </span>
         </h1>
         <p class="hero-lead reveal reveal-3">{profile.positioning}</p>
         <div class="hero-actions reveal reveal-4">
@@ -115,7 +120,7 @@ const competitionAwards = profile.awards.filter(
         <div class="proof-block">
           <span>2026 / 2028</span>
           <strong>Radboud<br />University</strong>
-          <p>Incoming MSc Computing Science student, Cyber Security specialisation.</p>
+          <p>MSc Computing Science student, Cyber Security specialisation.</p>
         </div>
       </aside>
     </div>
@@ -159,11 +164,17 @@ const competitionAwards = profile.awards.filter(
   <section class="closing-section shell">
     <p class="eyebrow">The useful kind of conversation</p>
     <div class="closing-grid">
-      <h2>Have a difficult target,<br />an open research question,<br /><em>or a stage to fill?</em></h2>
+      <h2>Have a difficult target,<br />an open research question,<br /><em>or a boundary to test?</em></h2>
       <div>
         <p>I am open to serious work where careful technical thinking matters.</p>
         <ProtectedEmail label="hello [at] thanh [dot] vc" class="closing-email" />
       </div>
     </div>
   </section>
+  </div>
+
+  <div class="field-notes-presentation" data-presentation-panel="field-notes">
+    <RetroPresentation />
+  </div>
+  </main>
 </BaseLayout>

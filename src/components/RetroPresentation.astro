@@ -1,0 +1,332 @@
+---
+import { getCollection } from "astro:content";
+import PresentationSwitch from "./PresentationSwitch.astro";
+import ProtectedEmail from "./ProtectedEmail.astro";
+import { profile } from "../data/profile";
+
+const research = (await getCollection("research"))
+  .filter((entry) => entry.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const projects = (await getCollection("projects"))
+  .filter((entry) => entry.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<a class="retro-skip" href="#retro-main">Skip to content</a>
+
+<div class="retro-site">
+    <header class="retro-header">
+      <a class="retro-logo" href="#top" aria-label={`${profile.name}, top of page`}>
+        <span aria-hidden="true">V4</span>
+        <strong>/{profile.handle}</strong>
+      </a>
+
+      <nav aria-label="Field Notes navigation">
+        <a href="#case-files"><span>01</span>/case-files</a>
+        <a href="#workbench"><span>02</span>~/workbench</a>
+        <a href="#contact"><span>03</span>/open-channel</a>
+      </nav>
+
+      <div class="retro-system-controls">
+        <button class="retro-command-trigger" type="button" data-command-trigger aria-haspopup="dialog">
+          jump<kbd>/</kbd>
+        </button>
+        <PresentationSwitch current="field-notes" class="retro-presentation-switch" />
+      </div>
+    </header>
+
+    <div id="retro-main">
+      <section class="retro-hero" id="top">
+        <svg class="retro-hero-thread" viewBox="0 0 900 620" aria-hidden="true">
+          <path d="M36 454C138 592 318 556 382 438S494 196 658 250s132 196 216 130" />
+        </svg>
+
+        <div class="retro-protocol-fragments" aria-hidden="true">
+          <code>GET /InitialAccountSetup.xhtml HTTP/1.1</code>
+          <code>&lt;saml:NameID&gt;signed&lt;!-- parser boundary --&gt;identity&lt;/saml:NameID&gt;</code>
+          <code>0x04 :: AUTH_BOUNDARY :: INSPECT</code>
+        </div>
+
+        <div class="retro-hero-copy">
+          <p class="retro-status"><i aria-hidden="true"></i> uid=vcth4nh · mode=research</p>
+          <p class="retro-name">Hey—I'm {profile.name}.</p>
+          <h1>
+            <span>Vulnerability</span>
+            <span>research,</span>
+            <em>made inspectable.</em>
+          </h1>
+          <p class="retro-lead">{profile.summary}</p>
+
+          <div class="retro-actions">
+            <a class="retro-button retro-button-primary" href="#case-files">Open case files <span>↓</span></a>
+            <ProtectedEmail label="Send a signal" class="retro-button retro-button-secondary" />
+          </div>
+
+          <p class="retro-margin-note" aria-hidden="true">
+            precise findings<br />messy notebook
+            <svg viewBox="0 0 96 54">
+              <path d="M8 8c22 3 42 15 68 34m0 0-5-14m5 14-15-1" />
+            </svg>
+          </p>
+        </div>
+
+        <aside class="retro-board" aria-label="Profile quick facts">
+          <div class="retro-board-grid" aria-hidden="true"></div>
+          <svg class="retro-board-circuit" viewBox="0 0 320 390" aria-hidden="true">
+            <path pathLength="1" d="M32 82h74l31 31h58l36-36h58" />
+            <path pathLength="1" d="M48 289h69l38-38h65l30 30h48" />
+            <path pathLength="1" d="M73 42v84l48 48v65l-52 52v58" />
+            <circle cx="32" cy="82" r="7" /><circle cx="289" cy="77" r="7" />
+            <circle cx="48" cy="289" r="7" /><circle cx="298" cy="281" r="7" />
+          </svg>
+          <div class="retro-tape" aria-hidden="true"></div>
+          <div class="retro-avatar" aria-hidden="true">
+            <span>V4</span>
+            <i></i><i></i><i></i>
+          </div>
+          <p class="retro-sticker retro-sticker-yellow">PRE-AUTH<br />SURFACES</p>
+          <p class="retro-sticker retro-sticker-mint">WEB · MOBILE<br />· IoT</p>
+          <p class="retro-sticker retro-sticker-coral">BREAK →<br />PROVE →<br />DISCLOSE</p>
+          <div class="retro-board-caption">
+            <span>IDENT_CARD.04</span>
+            <strong>{profile.handle}</strong>
+            <p>{profile.current.title}<br />{profile.current.detail}</p>
+          </div>
+          <span class="retro-board-spark" aria-hidden="true">✦</span>
+          <svg class="retro-ring" viewBox="0 0 180 90" aria-hidden="true">
+            <path d="M7 47C18 4 147-9 173 31c25 40-115 74-160 39C3 62 2 53 7 47Z" />
+          </svg>
+        </aside>
+      </section>
+
+      <section class="retro-strip" aria-label="Working principles">
+        <span>AUTH BOUNDARIES</span><i>✦</i>
+        <span>REPRODUCIBLE EVIDENCE</span><i>✦</i>
+        <span>EXPLOIT PROTOTYPES</span><i>✦</i>
+        <span>OPEN RESEARCH</span>
+      </section>
+
+      <section class="retro-section retro-cases" id="case-files">
+        <header class="retro-section-heading">
+          <div>
+            <span class="retro-pixel-label">01 / CASE FILES</span>
+            <h2>Selected findings</h2>
+          </div>
+          <p>Claims are cheap.<br /><strong>Keep the receipts.</strong></p>
+        </header>
+
+        <div class="retro-case-grid">
+          <svg class="retro-case-thread" viewBox="0 0 1000 900" preserveAspectRatio="none" aria-hidden="true">
+            <path pathLength="1" d="M116 190C342 72 472 267 668 166S924 86 910 318 635 404 674 616 842 766 944 726" />
+            <circle cx="116" cy="190" r="9" />
+            <circle cx="674" cy="616" r="9" />
+            <path d="m923 707 21 19-28 10" />
+            <text x="72" y="158">ENTRY</text>
+            <text x="610" y="586">BOUNDARY</text>
+            <text x="832" y="690">EFFECT</text>
+          </svg>
+          {research.map((entry, index) => (
+            <article class:list={["retro-case", `retro-case-${(index % 4) + 1}`]}>
+              <a href={`/research/${entry.id}/`}>
+                <div class="retro-case-top">
+                  <span>FILE_{String(index + 1).padStart(2, "0")}</span>
+                  <span>{entry.data.year}</span>
+                </div>
+                <p class="retro-case-role">{entry.data.roleLabel}</p>
+                <h3>{entry.data.title}</h3>
+                <p class="retro-case-dek">{entry.data.dek}</p>
+                <div class="retro-case-tags">
+                  {entry.data.tags.slice(0, 2).map((tag) => <span>{tag}</span>)}
+                </div>
+                <footer>
+                  <span>{entry.data.cves.join(" · ") || "FIELD NOTE"}</span>
+                  <b aria-hidden="true">↗</b>
+                </footer>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="retro-section retro-workbench" id="workbench">
+        <header class="retro-section-heading retro-section-heading-light">
+          <div>
+            <span class="retro-pixel-label">02 / WORKBENCH</span>
+            <h2>Tools & traces</h2>
+          </div>
+          <p>Build the missing tool.<br /><strong>Leave it open.</strong></p>
+        </header>
+
+        <div class="retro-work-grid">
+          <svg class="retro-work-scribble" viewBox="0 0 560 440" aria-hidden="true">
+            <path d="M27 300C141 417 363 406 520 267" />
+            <path d="m495 261 28 5-13 25" />
+          </svg>
+          <div class="retro-projects">
+            {projects.map((entry, index) => (
+              <article class="retro-project">
+                <span class="retro-project-index">0{index + 1}</span>
+                <div>
+                  <p>{entry.data.status} / {entry.data.year}</p>
+                  <h3>{entry.data.title}</h3>
+                  <p>{entry.data.description}</p>
+                  <div>{entry.data.stack.map((item) => <span>{item}</span>)}</div>
+                </div>
+                <a href={entry.data.href} target="_blank" rel="noreferrer" aria-label={`Open ${entry.data.title}`}>↗</a>
+              </article>
+            ))}
+          </div>
+
+          <aside class="retro-now-card">
+            <span>NOW/STUDY</span>
+            <h3>{profile.current.title}</h3>
+            <p>{profile.current.detail}</p>
+            <div class="retro-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="retro-hand-note">deeper theory,<br />same curiosity</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="retro-section retro-contact" id="contact">
+        <span class="retro-contact-spark" aria-hidden="true">✦</span>
+        <p class="retro-pixel-label">03 / OPEN CHANNEL</p>
+        <div>
+          <h2>Got a strange<br />attack surface?</h2>
+          <div class="retro-contact-note">
+            <p>Research collaborations, consulting, or careful full-time work.</p>
+            <ProtectedEmail label="hello [at] thanh [dot] vc" class="retro-email" />
+            <svg viewBox="0 0 260 32" aria-hidden="true"><path d="M3 22c56-15 142 9 252-9" /></svg>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="retro-footer">
+      <span>© 2026 {profile.name}</span>
+      <div>
+        {profile.socials.map((social) => <a href={social.href} target="_blank" rel="noreferrer">{social.label}</a>)}
+      </div>
+      <span>FIELD NOTES / ALT VIEW</span>
+    </footer>
+  </div>
+
+  <dialog class="retro-command" data-command-dialog aria-labelledby="retro-command-title">
+    <form method="dialog" class="retro-command-shell">
+      <header>
+        <div>
+          <span>TTY_04 / QUICK NAVIGATOR</span>
+          <h2 id="retro-command-title">Where to?</h2>
+        </div>
+        <button type="submit" value="close" aria-label="Close navigator">×</button>
+      </header>
+
+      <label class="retro-command-input">
+        <span>root@thanh:~$</span>
+        <input data-command-input type="search" autocomplete="off" spellcheck="false" placeholder="type a path or command…" />
+      </label>
+
+      <nav class="retro-command-list" aria-label="Quick destinations">
+        <a class="retro-command-item" data-command-item data-keywords="research cases cve vulnerability" href="#case-files">
+          <span><code>/case-files</code><small>Selected vulnerability research</small></span><kbd>01</kbd>
+        </a>
+        <a class="retro-command-item" data-command-item data-keywords="projects tools github code" href="#workbench">
+          <span><code>~/workbench</code><small>Open-source tools and experiments</small></span><kbd>02</kbd>
+        </a>
+        <a class="retro-command-item" data-command-item data-keywords="resume cv experience education" href="/resume/">
+          <span><code>/resume.pdf</code><small>Experience, education, and recognition</small></span><kbd>03</kbd>
+        </a>
+        <a class="retro-command-item" data-command-item data-keywords="email consulting contact" href="#contact">
+          <span><code>mail --protected</code><small>Open the communication channel</small></span><kbd>04</kbd>
+        </a>
+        <a class="retro-command-item" data-command-item data-keywords="github source repository" href="https://github.com/vcth4nh" target="_blank" rel="noreferrer">
+          <span><code>git remote -v</code><small>github.com/vcth4nh</small></span><kbd>05</kbd>
+        </a>
+      </nav>
+
+      <footer><span>↑↓ select</span><span>enter open</span><span>esc close</span></footer>
+    </form>
+  </dialog>
+
+  <script>
+    const root = document.documentElement;
+    const commandDialog = document.querySelector<HTMLDialogElement>("[data-command-dialog]");
+    const commandInput = document.querySelector<HTMLInputElement>("[data-command-input]");
+    const commandTriggers = document.querySelectorAll<HTMLButtonElement>("[data-command-trigger]");
+    const commandItems = Array.from(document.querySelectorAll<HTMLAnchorElement>("[data-command-item]"));
+    let activeCommand = 0;
+
+    const isTyping = (target: EventTarget | null) =>
+      target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement;
+
+    const visibleCommands = () => commandItems.filter((item) => !item.hidden);
+
+    const selectCommand = (index: number) => {
+      const visible = visibleCommands();
+      if (!visible.length) return;
+      activeCommand = (index + visible.length) % visible.length;
+      commandItems.forEach((item) => item.classList.remove("is-active"));
+      visible[activeCommand]?.classList.add("is-active");
+      visible[activeCommand]?.scrollIntoView({ block: "nearest" });
+    };
+
+    const openCommands = () => {
+      if (root.dataset.presentation !== "field-notes" || !commandDialog || commandDialog.open) return;
+      commandDialog.showModal();
+      if (commandInput) commandInput.value = "";
+      commandItems.forEach((item) => { item.hidden = false; });
+      selectCommand(0);
+      window.requestAnimationFrame(() => commandInput?.focus());
+    };
+
+    commandTriggers.forEach((trigger) => trigger.addEventListener("click", openCommands));
+
+    commandInput?.addEventListener("input", () => {
+      const query = commandInput.value.trim().toLowerCase();
+      commandItems.forEach((item) => {
+        const haystack = `${item.textContent} ${item.dataset.keywords || ""}`.toLowerCase();
+        item.hidden = query.length > 0 && !haystack.includes(query);
+      });
+      selectCommand(0);
+    });
+
+    commandInput?.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        event.preventDefault();
+        selectCommand(activeCommand + (event.key === "ArrowDown" ? 1 : -1));
+      }
+
+      if (event.key === "Enter") {
+        const active = visibleCommands()[activeCommand];
+        if (!active) return;
+        event.preventDefault();
+        commandDialog?.close();
+        active.click();
+      }
+    });
+
+    commandItems.forEach((item) => item.addEventListener("click", () => commandDialog?.close()));
+    commandDialog?.addEventListener("close", () => {
+      if (root.dataset.presentation === "field-notes") commandTriggers[0]?.focus();
+    });
+
+    window.addEventListener("presentationchange", ((event: CustomEvent<{ presentation: string }>) => {
+      if (event.detail.presentation === "classic" && commandDialog?.open) commandDialog.close();
+    }) as EventListener);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && commandDialog?.open) {
+        event.preventDefault();
+        commandDialog.close();
+        return;
+      }
+
+      if (root.dataset.presentation === "field-notes" && event.key === "/" && !isTyping(event.target) && !commandDialog?.open) {
+        event.preventDefault();
+        openCommands();
+      }
+
+    });
+
+    console.info("%c/vcth4nh%c  quick navigator: press /", "color:#d8e05b;background:#28192f;padding:4px 7px", "color:#0a746a;padding:4px");
+  </script>

@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import ArrowIcon from "../../components/ArrowIcon.astro";
+import ProtectedEmail from "../../components/ProtectedEmail.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -60,8 +61,8 @@ const { Content } = await render(entry);
     </div>
 
     <footer class="case-footer">
-      <p>Need a vulnerability assessment, research collaborator, or technical speaker?</p>
-      <a href="mailto:hello@thanh.vc">Start a conversation <ArrowIcon /></a>
+      <p>Need a vulnerability assessment, research collaborator, or focused security review?</p>
+      <ProtectedEmail label="Start a conversation" keepLabel />
     </footer>
   </article>
 </BaseLayout>
