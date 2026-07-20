@@ -16,6 +16,10 @@ const research = (await getCollection("research"))
 const projects = (await getCollection("projects"))
   .filter((entry) => entry.data.featured)
   .sort((a, b) => a.data.order - b.data.order);
+
+const competitionAwards = profile.awards.filter(
+  (award) => !award.title.startsWith("Pwn2Own"),
+);
 ---
 
 <BaseLayout>
@@ -114,6 +118,23 @@ const projects = (await getCollection("projects"))
           <p>Incoming MSc Computing Science student, Cyber Security specialisation.</p>
         </div>
       </aside>
+    </div>
+
+    <div class="competition-record">
+      <header>
+        <p class="eyebrow">Selected competition record</p>
+        <p>Placements that complement the research record without replacing it.</p>
+      </header>
+      <div class="competition-list">
+        {competitionAwards.map((award, index) => (
+          <article>
+            <span class="competition-index">{String(index + 1).padStart(2, "0")}</span>
+            <time>{award.year}</time>
+            <h3>{award.title}</h3>
+            <p>{award.issuer}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 

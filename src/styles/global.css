@@ -832,6 +832,67 @@ a {
   color: #43150d;
 }
 
+.competition-record {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.5fr) minmax(0, 1.5fr);
+  gap: clamp(3rem, 8vw, 9rem);
+  margin-top: clamp(5rem, 9vw, 9rem);
+  border-top: 1px solid var(--line);
+  padding-top: 1.4rem;
+}
+
+.competition-record > header > p:last-child {
+  max-width: 22rem;
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.competition-record .eyebrow {
+  color: var(--signal);
+}
+
+.competition-list {
+  border-top: 1px solid var(--line);
+}
+
+.competition-list article {
+  display: grid;
+  grid-template-columns: 2.5rem 4.5rem minmax(0, 1fr) minmax(9rem, 0.55fr);
+  gap: 1rem;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  padding-block: 1rem;
+}
+
+.competition-index,
+.competition-list time {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+}
+
+.competition-list time {
+  color: var(--signal);
+}
+
+.competition-list h3,
+.competition-list p {
+  margin: 0;
+}
+
+.competition-list h3 {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.competition-list p {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
 .homelab-section {
   overflow: hidden;
   background: var(--signal);
@@ -1621,6 +1682,7 @@ a {
   }
 
   .record-grid,
+  .competition-record,
   .page-hero-grid,
   .method-grid,
   .case-layout,
@@ -1750,6 +1812,14 @@ a {
   .principle-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .competition-list article {
+    grid-template-columns: 2rem 3.6rem 1fr;
+  }
+
+  .competition-list article p {
+    grid-column: 3;
   }
 
   .proof-block {
