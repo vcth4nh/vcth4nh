@@ -8,7 +8,7 @@ Vulnerability Researcher | Exploit Development & AI-Assisted Security Tooling | 
 
 I am a vulnerability researcher working across web, mobile, IoT, and enterprise applications. I focus on authentication boundaries and the places where different components disagree about trust, identity, or input.
 
-My work includes responsible disclosures affecting GoAnywhere MFT, a-blog cms, and 9Router, alongside open-source tooling for code analysis, reverse engineering, fuzzing workflows, and LLM-assisted verification.
+My work includes responsible disclosures affecting GoAnywhere MFT, authentik, a-blog cms, and 9Router, alongside open-source tooling for code analysis, reverse engineering, fuzzing workflows, and LLM-assisted verification.
 
 I previously worked at Viettel Cyber Security and VinSOC. In 2026, I begin the MSc Computing Science programme at Radboud University, specialising in Cyber Security.
 

@@ -36,6 +36,7 @@ Do not resolve the August/September intake discrepancy in public copy; year-only
 - GoAnywhere article timeline: use **27 January 2024**, not 2025, where that date appears.
 - Describe CVE-2024-0204 as independently discovered and reported; do not imply exclusive vendor credit.
 - For CVE-2024-25156, the Fortra advisory explicitly credits vcth4nh.
+- Add the authentik SAML account-takeover advisory as co-research: `CVE-2026-57580` / `GHSA-35v6-hv2g-6992`.
 - Keep Pwn2Own participation brief. Label 2024 as a VCS team result and 2025 as Team ANTHUD participation.
 - For 9Router, lead with `GHSA-g6g7-pvmx-m74p` until its primary advisory lists a CVE consistently.
 
