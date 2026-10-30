@@ -1,0 +1,130 @@
+---
+import { profile, pwn2ownResults } from "../data/profile";
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+const activity = profile.latestActivity;
+---
+
+<section class="latest-activity" aria-labelledby={id}>
+  <h2 id={id}>Latest activity</h2>
+  <div class="activity-content">
+    <div class="activity-summary">
+      <h3>{activity.title}</h3>
+      <time datetime={activity.date}>{activity.dateLabel}</time>
+      <p>{activity.summary}</p>
+      <a href={activity.sourceUrl} target="_blank" rel="noreferrer">Read ZDI’s results</a>
+    </div>
+    <div class="activity-record">
+      <h3>Pwn2Own Ireland team placements</h3>
+      <ol>
+        {pwn2ownResults.map((result) => (
+          <li>
+            <time>{result.year}</time>
+            <strong>{result.placement} place</strong>
+            <span>{result.team}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<style>
+  .latest-activity {
+    width: min(var(--shell), calc(100% - 2 * var(--gutter)));
+    margin: 0 auto;
+    border-block: 1px solid var(--line);
+    padding-block: clamp(2rem, 4vw, 4rem);
+  }
+
+  .latest-activity h2 {
+    margin: 0 0 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.1;
+  }
+
+  .activity-content {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .activity-content h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .activity-summary > time {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .activity-summary p {
+    max-width: 65ch;
+    margin: 1rem 0;
+  }
+
+  .activity-summary a {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    color: var(--signal);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  .activity-summary a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .activity-record ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .activity-record li {
+    display: grid;
+    grid-template-columns: 3rem 5.5rem 1fr;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--line);
+    padding-block: 0.85rem;
+    font-size: 1rem;
+  }
+
+  .activity-record time {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :global(html[data-presentation="field-notes"]) .latest-activity {
+    width: auto;
+    border-color: color-mix(in srgb, var(--retro-jade) 28%, transparent);
+    padding: clamp(2rem, 4vw, 4rem) clamp(1.25rem, 6vw, 6rem);
+  }
+
+  :global(html[data-presentation="field-notes"]) .latest-activity h2 {
+    color: var(--retro-jade-dark);
+    font-family: var(--retro-pixel);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  :global(html[data-presentation="field-notes"]) .activity-summary > time,
+  :global(html[data-presentation="field-notes"]) .activity-summary a {
+    color: var(--retro-jade-dark);
+  }
+
+  :global(html[data-presentation="field-notes"]) .activity-record li {
+    border-color: color-mix(in srgb, var(--retro-jade) 28%, transparent);
+  }
+
+  @media (max-width: 820px) {
+    .activity-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

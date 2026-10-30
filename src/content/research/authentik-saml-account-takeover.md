@@ -24,7 +24,7 @@ authentik can link an inbound SAML identity to a local user by username or email
 
 ## The impact
 
-An attacker with an account at the source identity provider—and control over their own NameID—could make the truncated value match a victim's username or email. That linked the attacker's external identity to the existing account and enabled persistent account takeover without the victim's password or the identity provider's private key.
+An attacker with an account at the source identity provider and control over their own NameID could make the truncated value match a victim's username or email. That linked the attacker's external identity to the existing account and enabled persistent account takeover without the victim's password or the identity provider's private key.
 
 ## The outcome
 

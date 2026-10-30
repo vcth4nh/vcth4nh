@@ -1,3 +1,9 @@
+export const pwn2ownResults = [
+  { year: "2026", placement: "5th", team: "VinSOC" },
+  { year: "2025", placement: "2nd", team: "ANHTUD" },
+  { year: "2024", placement: "1st", team: "Viettel Cyber Security" },
+] as const;
+
 export const profile = {
   name: "Vũ Chí Thành",
   shortName: "Thành",
@@ -8,10 +14,11 @@ export const profile = {
     domain: "thanh.vc",
   },
   title: "Vulnerability researcher",
+  quote: "Absence of evidence is not evidence of absence.",
   positioning:
     "Vulnerability researcher building exploits and AI-assisted security tooling.",
   summary:
-    "I investigate the assumptions around authentication, trust boundaries, and complex application behavior—then turn the findings into clear, reproducible security research.",
+    "I investigate authentication, trust boundaries, and complex application behavior, then turn the findings into reproducible security research.",
   availability: [
     "Research collaboration",
     "Security consulting",
@@ -31,12 +38,21 @@ export const profile = {
     title: "MSc Computing Science student",
     detail: "Cyber Security specialisation · Radboud University · 2026–2028",
   },
+  latestActivity: {
+    title: "Pwn2Own Ireland 2026",
+    date: "2026-10",
+    dateLabel: "October 2026",
+    summary:
+      "Huỳnh Đức Tin and I exploited the Philips Hue Bridge Pro for VinSOC, earning US$40,000.",
+    sourceUrl:
+      "https://www.thezdi.com/blog/2026/10/6/pwn2own-ireland-2026-day-one-results",
+  },
   experience: [
     {
       organization: "VinSOC",
       role: "Cyber Security Specialist",
       team: "Security Technology Research Department",
-      period: "Jan 2026 — Jul 2026",
+      period: "Jan 2026 - Jul 2026",
       highlights: [
         "Built LLM-integrated offensive tooling for patch diffing, fuzz-harness generation, and exploit prototyping.",
         "Engineered custom exploits and infrastructure for red-team operations.",
@@ -46,7 +62,7 @@ export const profile = {
       organization: "Viettel Cyber Security",
       role: "Cyber Security Researcher",
       team: "Offensive Security Service Center",
-      period: "Oct 2023 — Jan 2026",
+      period: "Oct 2023 - Jan 2026",
       highlights: [
         "Researched pre-authentication vulnerabilities across web, mobile, and IoT products.",
         "Produced proofs of concept and coordinated responsible disclosure leading to vendor advisories and CVE records.",
@@ -56,7 +72,7 @@ export const profile = {
       organization: "Korea Internet & Security Agency",
       role: "Cyber Security Mentor",
       team: "Part-time",
-      period: "Apr 2024 — Sep 2025",
+      period: "Apr 2024 - Sep 2025",
       highlights: [
         "Led small-cohort exploitation labs, project guidance, and career mentoring.",
       ],
@@ -65,7 +81,7 @@ export const profile = {
       organization: "Viettel Cyber Security",
       role: "Cyber Security Research Intern",
       team: "Part-time",
-      period: "Dec 2021 — Oct 2023",
+      period: "Dec 2021 - Oct 2023",
       highlights: [
         "Trained across application security, systems security, red teaming, and exploit analysis.",
       ],
@@ -74,23 +90,23 @@ export const profile = {
   education: [
     {
       school: "Radboud University",
-      degree: "MSc Computing Science — Cyber Security specialisation",
-      period: "2026 — 2028",
+      degree: "MSc Computing Science, Cyber Security specialisation",
+      period: "2026 - 2028",
       note: "Current student",
     },
     {
       school: "Hanoi University of Science and Technology",
       degree: "BSc Information Technology",
-      period: "2020 — 2024",
+      period: "2020 - 2024",
       note: "English-taught programme · GPA 3.2/4.0",
     },
   ],
   awards: [
-    {
-      title: "Pwn2Own Ireland — team participation",
-      issuer: "VCS team · Team ANTHUD",
-      year: "2024–25",
-    },
+    ...pwn2ownResults.map((result) => ({
+      title: `Pwn2Own Ireland, ${result.placement} place (team)`,
+      issuer: result.team,
+      year: result.year,
+    })),
     {
       title: "2nd place, Cybersecurity Arena",
       issuer: "Security Bootcamp",
@@ -156,9 +172,9 @@ export const profile = {
     },
   ],
   homelab: {
-    title: "A lab that never quite stays finished.",
+    title: "Homelab",
     description:
-      "Outside formal research, I run a homelab for self-hosted services, monitoring, automation, network segmentation, and small local AI experiments. It is where infrastructure becomes tangible—and where I can break things on purpose.",
+      "I run a homelab for self-hosted services, monitoring, automation, network segmentation, and local AI experiments.",
     areas: [
       "Wazuh · Uptime Kuma",
       "n8n · Home Assistant",

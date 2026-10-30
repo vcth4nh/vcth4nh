@@ -1,0 +1,121 @@
+<dialog class="retro-command" data-command-dialog aria-labelledby="retro-command-title">
+  <form method="dialog" class="retro-command-shell">
+    <header>
+      <div>
+        <span>TTY_04 / QUICK NAVIGATOR</span>
+        <h2 id="retro-command-title">Where to?</h2>
+      </div>
+      <button type="submit" value="close" aria-label="Close navigator">×</button>
+    </header>
+
+    <label class="retro-command-input">
+      <span>root@thanh:~$</span>
+      <input data-command-input type="search" aria-label="Search destinations" autocomplete="off" spellcheck="false" placeholder="type a path or command…" />
+    </label>
+
+    <nav class="retro-command-list" aria-label="Quick destinations">
+      <a class="retro-command-item" data-command-item data-keywords="research cases cve vulnerability" href="/research/">
+        <span><code>/research/</code><small>Selected vulnerability research</small></span><kbd>01</kbd>
+      </a>
+      <a class="retro-command-item" data-command-item data-keywords="projects tools github code" href="/projects/">
+        <span><code>/projects/</code><small>Open-source tools and experiments</small></span><kbd>02</kbd>
+      </a>
+      <a class="retro-command-item" data-command-item data-keywords="resume cv experience education" href="/resume/">
+        <span><code>/resume/</code><small>Experience, education, and recognition</small></span><kbd>03</kbd>
+      </a>
+      <a class="retro-command-item" data-command-item data-keywords="email consulting contact" href="/#contact">
+        <span><code>mail --protected</code><small>Research, consulting, and hiring enquiries</small></span><kbd>04</kbd>
+      </a>
+      <a class="retro-command-item" data-command-item data-keywords="github source repository" href="https://github.com/vcth4nh" target="_blank" rel="noreferrer">
+        <span><code>git remote -v</code><small>github.com/vcth4nh</small></span><kbd>05</kbd>
+      </a>
+    </nav>
+
+    <p data-command-empty hidden role="status">No matching destinations.</p>
+
+    <footer><span>↑↓ select</span><span>enter open</span><span>esc close</span></footer>
+  </form>
+</dialog>
+
+<script>
+  const root = document.documentElement;
+  const commandDialog = document.querySelector<HTMLDialogElement>("[data-command-dialog]");
+  const commandInput = document.querySelector<HTMLInputElement>("[data-command-input]");
+  const commandEmpty = document.querySelector<HTMLElement>("[data-command-empty]");
+  const commandTriggers = document.querySelectorAll<HTMLButtonElement>("[data-command-trigger]");
+  const commandItems = Array.from(document.querySelectorAll<HTMLAnchorElement>("[data-command-item]"));
+  let activeCommand = 0;
+
+  const isTyping = (target: EventTarget | null) =>
+    target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement;
+
+  const visibleCommands = () => commandItems.filter((item) => !item.hidden);
+
+  const selectCommand = (index: number) => {
+    const visible = visibleCommands();
+    if (!visible.length) return;
+    activeCommand = (index + visible.length) % visible.length;
+    commandItems.forEach((item) => item.classList.remove("is-active"));
+    visible[activeCommand]?.classList.add("is-active");
+    visible[activeCommand]?.scrollIntoView({ block: "nearest" });
+  };
+
+  const openCommands = () => {
+    if (root.dataset.presentation !== "field-notes" || !commandDialog || commandDialog.open) return;
+    commandDialog.showModal();
+    if (commandInput) commandInput.value = "";
+    commandItems.forEach((item) => { item.hidden = false; });
+    if (commandEmpty) commandEmpty.hidden = true;
+    selectCommand(0);
+    window.requestAnimationFrame(() => commandInput?.focus());
+  };
+
+  commandTriggers.forEach((trigger) => trigger.addEventListener("click", openCommands));
+
+  commandInput?.addEventListener("input", () => {
+    const query = commandInput.value.trim().toLowerCase();
+    commandItems.forEach((item) => {
+      const haystack = `${item.textContent} ${item.dataset.keywords || ""}`.toLowerCase();
+      item.hidden = query.length > 0 && !haystack.includes(query);
+    });
+    if (commandEmpty) commandEmpty.hidden = visibleCommands().length > 0;
+    selectCommand(0);
+  });
+
+  commandInput?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      selectCommand(activeCommand + (event.key === "ArrowDown" ? 1 : -1));
+    }
+
+    if (event.key === "Enter") {
+      const active = visibleCommands()[activeCommand];
+      event.preventDefault();
+      if (!active) return;
+      commandDialog?.close();
+      active.click();
+    }
+  });
+
+  commandItems.forEach((item) => item.addEventListener("click", () => commandDialog?.close()));
+  commandDialog?.addEventListener("close", () => {
+    if (root.dataset.presentation === "field-notes") commandTriggers[0]?.focus();
+  });
+
+  window.addEventListener("presentationchange", ((event: CustomEvent<{ presentation: string }>) => {
+    if (event.detail.presentation === "classic" && commandDialog?.open) commandDialog.close();
+  }) as EventListener);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && commandDialog?.open) {
+      event.preventDefault();
+      commandDialog.close();
+      return;
+    }
+
+    if (root.dataset.presentation === "field-notes" && event.key === "/" && !isTyping(event.target) && !commandDialog?.open) {
+      event.preventDefault();
+      openCommands();
+    }
+  });
+</script>

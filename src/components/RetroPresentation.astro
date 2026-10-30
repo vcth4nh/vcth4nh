@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import PresentationSwitch from "./PresentationSwitch.astro";
 import ProtectedEmail from "./ProtectedEmail.astro";
+import LatestActivity from "./LatestActivity.astro";
 import { profile } from "../data/profile";
 
 const research = (await getCollection("research"))
@@ -13,29 +13,7 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<a class="retro-skip" href="#retro-main">Skip to content</a>
-
 <div class="retro-site">
-    <header class="retro-header">
-      <a class="retro-logo" href="#top" aria-label={`${profile.name}, top of page`}>
-        <span aria-hidden="true">V4</span>
-        <strong>/{profile.handle}</strong>
-      </a>
-
-      <nav aria-label="Field Notes navigation">
-        <a href="#case-files"><span>01</span>/case-files</a>
-        <a href="#workbench"><span>02</span>~/workbench</a>
-        <a href="#contact"><span>03</span>/open-channel</a>
-      </nav>
-
-      <div class="retro-system-controls">
-        <button class="retro-command-trigger" type="button" data-command-trigger aria-haspopup="dialog">
-          jump<kbd>/</kbd>
-        </button>
-        <PresentationSwitch current="field-notes" class="retro-presentation-switch" />
-      </div>
-    </header>
-
     <div id="retro-main">
       <section class="retro-hero" id="top">
         <svg class="retro-hero-thread" viewBox="0 0 900 620" aria-hidden="true">
@@ -50,12 +28,12 @@ const projects = (await getCollection("projects"))
 
         <div class="retro-hero-copy">
           <p class="retro-status"><i aria-hidden="true"></i> uid=vcth4nh · mode=research</p>
-          <p class="retro-name">Hey—I'm {profile.name}.</p>
+          <p class="retro-name">I'm {profile.name}.</p>
           <h1>
             <span>Vulnerability</span>
-            <span>research,</span>
-            <em>made inspectable.</em>
+            <span>research</span>
           </h1>
+          <blockquote class="retro-quote"><p>{profile.quote}</p></blockquote>
           <p class="retro-lead">{profile.summary}</p>
 
           <div class="retro-actions">
@@ -63,12 +41,6 @@ const projects = (await getCollection("projects"))
             <ProtectedEmail label="Send a signal" class="retro-button retro-button-secondary" />
           </div>
 
-          <p class="retro-margin-note" aria-hidden="true">
-            precise findings<br />messy notebook
-            <svg viewBox="0 0 96 54">
-              <path d="M8 8c22 3 42 15 68 34m0 0-5-14m5 14-15-1" />
-            </svg>
-          </p>
         </div>
 
         <aside class="retro-board" aria-label="Profile quick facts">
@@ -100,6 +72,8 @@ const projects = (await getCollection("projects"))
         </aside>
       </section>
 
+      <LatestActivity id="field-notes-latest-activity" />
+
       <section class="retro-strip" aria-label="Working principles">
         <span>AUTH BOUNDARIES</span><i>✦</i>
         <span>REPRODUCIBLE EVIDENCE</span><i>✦</i>
@@ -113,7 +87,7 @@ const projects = (await getCollection("projects"))
             <span class="retro-pixel-label">01 / CASE FILES</span>
             <h2>Selected findings</h2>
           </div>
-          <p>Claims are cheap.<br /><strong>Keep the receipts.</strong></p>
+          <p>Disclosed vulnerabilities with<br /><strong>advisories and research notes.</strong></p>
         </header>
 
         <div class="retro-case-grid">
@@ -155,7 +129,7 @@ const projects = (await getCollection("projects"))
             <span class="retro-pixel-label">02 / WORKBENCH</span>
             <h2>Tools & traces</h2>
           </div>
-          <p>Build the missing tool.<br /><strong>Leave it open.</strong></p>
+          <p>Open-source tools for<br /><strong>code analysis and reverse engineering.</strong></p>
         </header>
 
         <div class="retro-work-grid">
@@ -183,7 +157,6 @@ const projects = (await getCollection("projects"))
             <h3>{profile.current.title}</h3>
             <p>{profile.current.detail}</p>
             <div class="retro-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <p class="retro-hand-note">deeper theory,<br />same curiosity</p>
           </aside>
         </div>
       </section>
@@ -192,9 +165,9 @@ const projects = (await getCollection("projects"))
         <span class="retro-contact-spark" aria-hidden="true">✦</span>
         <p class="retro-pixel-label">03 / OPEN CHANNEL</p>
         <div>
-          <h2>Got a strange<br />attack surface?</h2>
+          <h2>Get in touch</h2>
           <div class="retro-contact-note">
-            <p>Research collaborations, consulting, or careful full-time work.</p>
+            <p>I’m open to research collaboration, consulting, and full-time roles.</p>
             <ProtectedEmail label="hello [at] thanh [dot] vc" class="retro-email" />
             <svg viewBox="0 0 260 32" aria-hidden="true"><path d="M3 22c56-15 142 9 252-9" /></svg>
           </div>
@@ -210,123 +183,3 @@ const projects = (await getCollection("projects"))
       <span>FIELD NOTES / ALT VIEW</span>
     </footer>
   </div>
-
-  <dialog class="retro-command" data-command-dialog aria-labelledby="retro-command-title">
-    <form method="dialog" class="retro-command-shell">
-      <header>
-        <div>
-          <span>TTY_04 / QUICK NAVIGATOR</span>
-          <h2 id="retro-command-title">Where to?</h2>
-        </div>
-        <button type="submit" value="close" aria-label="Close navigator">×</button>
-      </header>
-
-      <label class="retro-command-input">
-        <span>root@thanh:~$</span>
-        <input data-command-input type="search" autocomplete="off" spellcheck="false" placeholder="type a path or command…" />
-      </label>
-
-      <nav class="retro-command-list" aria-label="Quick destinations">
-        <a class="retro-command-item" data-command-item data-keywords="research cases cve vulnerability" href="#case-files">
-          <span><code>/case-files</code><small>Selected vulnerability research</small></span><kbd>01</kbd>
-        </a>
-        <a class="retro-command-item" data-command-item data-keywords="projects tools github code" href="#workbench">
-          <span><code>~/workbench</code><small>Open-source tools and experiments</small></span><kbd>02</kbd>
-        </a>
-        <a class="retro-command-item" data-command-item data-keywords="resume cv experience education" href="/resume/">
-          <span><code>/resume.pdf</code><small>Experience, education, and recognition</small></span><kbd>03</kbd>
-        </a>
-        <a class="retro-command-item" data-command-item data-keywords="email consulting contact" href="#contact">
-          <span><code>mail --protected</code><small>Open the communication channel</small></span><kbd>04</kbd>
-        </a>
-        <a class="retro-command-item" data-command-item data-keywords="github source repository" href="https://github.com/vcth4nh" target="_blank" rel="noreferrer">
-          <span><code>git remote -v</code><small>github.com/vcth4nh</small></span><kbd>05</kbd>
-        </a>
-      </nav>
-
-      <footer><span>↑↓ select</span><span>enter open</span><span>esc close</span></footer>
-    </form>
-  </dialog>
-
-  <script>
-    const root = document.documentElement;
-    const commandDialog = document.querySelector<HTMLDialogElement>("[data-command-dialog]");
-    const commandInput = document.querySelector<HTMLInputElement>("[data-command-input]");
-    const commandTriggers = document.querySelectorAll<HTMLButtonElement>("[data-command-trigger]");
-    const commandItems = Array.from(document.querySelectorAll<HTMLAnchorElement>("[data-command-item]"));
-    let activeCommand = 0;
-
-    const isTyping = (target: EventTarget | null) =>
-      target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement || target instanceof HTMLSelectElement;
-
-    const visibleCommands = () => commandItems.filter((item) => !item.hidden);
-
-    const selectCommand = (index: number) => {
-      const visible = visibleCommands();
-      if (!visible.length) return;
-      activeCommand = (index + visible.length) % visible.length;
-      commandItems.forEach((item) => item.classList.remove("is-active"));
-      visible[activeCommand]?.classList.add("is-active");
-      visible[activeCommand]?.scrollIntoView({ block: "nearest" });
-    };
-
-    const openCommands = () => {
-      if (root.dataset.presentation !== "field-notes" || !commandDialog || commandDialog.open) return;
-      commandDialog.showModal();
-      if (commandInput) commandInput.value = "";
-      commandItems.forEach((item) => { item.hidden = false; });
-      selectCommand(0);
-      window.requestAnimationFrame(() => commandInput?.focus());
-    };
-
-    commandTriggers.forEach((trigger) => trigger.addEventListener("click", openCommands));
-
-    commandInput?.addEventListener("input", () => {
-      const query = commandInput.value.trim().toLowerCase();
-      commandItems.forEach((item) => {
-        const haystack = `${item.textContent} ${item.dataset.keywords || ""}`.toLowerCase();
-        item.hidden = query.length > 0 && !haystack.includes(query);
-      });
-      selectCommand(0);
-    });
-
-    commandInput?.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-        event.preventDefault();
-        selectCommand(activeCommand + (event.key === "ArrowDown" ? 1 : -1));
-      }
-
-      if (event.key === "Enter") {
-        const active = visibleCommands()[activeCommand];
-        if (!active) return;
-        event.preventDefault();
-        commandDialog?.close();
-        active.click();
-      }
-    });
-
-    commandItems.forEach((item) => item.addEventListener("click", () => commandDialog?.close()));
-    commandDialog?.addEventListener("close", () => {
-      if (root.dataset.presentation === "field-notes") commandTriggers[0]?.focus();
-    });
-
-    window.addEventListener("presentationchange", ((event: CustomEvent<{ presentation: string }>) => {
-      if (event.detail.presentation === "classic" && commandDialog?.open) commandDialog.close();
-    }) as EventListener);
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && commandDialog?.open) {
-        event.preventDefault();
-        commandDialog.close();
-        return;
-      }
-
-      if (root.dataset.presentation === "field-notes" && event.key === "/" && !isTyping(event.target) && !commandDialog?.open) {
-        event.preventDefault();
-        openCommands();
-      }
-
-    });
-
-    console.info("%c/vcth4nh%c  quick navigator: press /", "color:#d8e05b;background:#28192f;padding:4px 7px", "color:#0a746a;padding:4px");
-  </script>

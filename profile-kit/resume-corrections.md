@@ -37,7 +37,8 @@ Do not resolve the August/September intake discrepancy in public copy; year-only
 - Describe CVE-2024-0204 as independently discovered and reported; do not imply exclusive vendor credit.
 - For CVE-2024-25156, the Fortra advisory explicitly credits vcth4nh.
 - Add the authentik SAML account-takeover advisory as independent research: `CVE-2026-57580` / `GHSA-35v6-hv2g-6992`. Other researchers submitted the same issue separately, so do not imply exclusive discovery.
-- Keep Pwn2Own participation brief. Label 2024 as a VCS team result and 2025 as Team ANTHUD participation.
+- Attribute Pwn2Own Ireland placements to the team: 2024, 1st with Viettel Cyber Security; 2025, 2nd with ANHTUD; 2026, 5th with VinSOC.
+- Add the 2026 Philips Hue Bridge Pro entry with Huỳnh Đức Tin, which earned US$40,000 for VinSOC. Link to [ZDI’s results](https://www.thezdi.com/blog/2026/10/6/pwn2own-ireland-2026-day-one-results).
 - For 9Router, lead with `GHSA-g6g7-pvmx-m74p` until its primary advisory lists a CVE consistently.
 
 ## Projects and homelab

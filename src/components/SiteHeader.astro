@@ -1,22 +1,21 @@
 ---
 import { profile } from "../data/profile";
+import { primaryNavigation as links } from "../data/navigation";
 import PresentationSwitch from "./PresentationSwitch.astro";
 import ProtectedEmail from "./ProtectedEmail.astro";
+import QuickNavigator from "./QuickNavigator.astro";
 
-const pathname = Astro.url.pathname;
-const links = [
-  { label: "Research", href: "/research/" },
-  { label: "Projects", href: "/projects/" },
-  { label: "Résumé", href: "/resume/" },
-];
+const pathname = Astro.url.pathname.replace(/\/+$/, "") || "/";
 
-const isActive = (href: string) =>
-  href === "/" ? pathname === href : pathname.startsWith(href);
+const isActive = (href: string) => {
+  const route = href.replace(/\/+$/, "") || "/";
+  return pathname === route || (route !== "/" && pathname.startsWith(`${route}/`));
+};
 ---
 
 <header class="site-header" data-site-header>
   <div class="shell header-inner">
-    <a class="wordmark header-wordmark" href="/" aria-label={`/${profile.handle} — ${profile.name}, home`}>
+    <a class="wordmark header-wordmark" href="/" aria-label={`${profile.name}, home`}>
       <span class="wordmark-prompt" aria-hidden="true">/</span>{profile.handle}
     </a>
 
@@ -47,4 +46,28 @@ const isActive = (href: string) =>
       </nav>
     </details>
   </div>
+
+  <div class="retro-header header-aligned">
+    <a class="retro-logo header-logo" href="/" aria-label={`${profile.name}, home`}>
+      <span aria-hidden="true">V4</span>
+      <strong>/{profile.handle}</strong>
+    </a>
+    <nav aria-label="Primary navigation">
+      {links.map((link, index) => (
+        <a href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>
+          <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+          {link.label}
+        </a>
+      ))}
+    </nav>
+    <div class="retro-system-controls header-tools">
+      <button class="retro-command-trigger" type="button" data-command-trigger aria-haspopup="dialog" aria-label="Open quick navigator">
+        <span class="header-jump-label">Jump</span><kbd>/</kbd>
+      </button>
+      <PresentationSwitch current="field-notes" class="retro-presentation-switch" />
+    </div>
+    <ProtectedEmail label="Start a conversation" class="header-contact" />
+  </div>
 </header>
+
+<QuickNavigator />

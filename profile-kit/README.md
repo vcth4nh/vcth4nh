@@ -14,4 +14,4 @@ Use `thanh.vc` as the canonical profile, the root repository README as the techn
 4. Apply the X bio and pin the introduction.
 5. Update Reactive Resume using the corrections checklist.
 
-Pwn2Own should remain a brief participation signal. The site and bios should lead with disclosed research and current tooling.
+Keep Pwn2Own placements attributed to the team: Viettel Cyber Security, 1st in 2024; ANHTUD, 2nd in 2025; VinSOC, 5th in 2026. The latest activity is the 2026 Philips Hue Bridge Pro entry, which earned US$40,000 for VinSOC. The site and bios should lead with disclosed research and current tooling.

@@ -7,11 +7,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Résumé"
-  description="Résumé of Vũ Chí Thành — vulnerability researcher, exploit developer, and open-source tool builder."
+  description="Résumé of Vũ Chí Thành, vulnerability researcher, exploit developer, and open-source tool builder."
   pageClass="resume-page"
 >
   <div class="resume-toolbar shell" aria-label="Résumé actions">
-    <p>Web résumé · updated July 2026</p>
+    <p>Web résumé · updated October 2026</p>
     <div>
       <button class="button button-quiet" type="button" data-print-resume>Print / save PDF</button>
       <a class="button button-primary" href="/resume.pdf" download>Download PDF <ArrowIcon /></a>
@@ -60,6 +60,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         <section class="resume-section resume-research-section">
           <h2>Selected security research</h2>
           <div class="resume-stack compact-stack">
+            <article class="resume-item">
+              <div class="resume-item-heading">
+                <div><h3>{profile.latestActivity.title}</h3><p>Philips Hue Bridge Pro · VinSOC</p></div>
+                <time>2026</time>
+              </div>
+              <p>{profile.latestActivity.summary} <a href={profile.latestActivity.sourceUrl}>ZDI results</a>.</p>
+            </article>
             <article class="resume-item">
               <div class="resume-item-heading">
                 <div><h3>GoAnywhere MFT authentication boundary</h3><p>CVE-2024-0204 · CVE-2024-25156</p></div>

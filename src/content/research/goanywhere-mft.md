@@ -25,7 +25,7 @@ links:
 
 ## The boundary
 
-GoAnywhere MFT exposes a first-run setup flow that should become unreachable after an administrator account exists. I examined how the application decided whether a request belonged inside that trusted setup path—and whether different layers agreed on the same path.
+GoAnywhere MFT exposes a first-run setup flow that should become unreachable after an administrator account exists. I examined how the application decided whether a request belonged inside that trusted setup path and whether different layers agreed on the same path.
 
 ## The finding
 
@@ -35,4 +35,4 @@ A crafted path could pass the authorization check and still resolve to the initi
 
 I reported both issues to Fortra in 2023. The pre-authentication administrative access was later tracked as **CVE-2024-0204**; the related path-traversal issue was tracked as **CVE-2024-25156**, for which Fortra's advisory credits vcth4nh.
 
-This page describes independent discovery—not exclusive discovery. The vendor's CVE-2024-0204 advisory credits the researchers named in that advisory.
+Other researchers also discovered the issue. The vendor's CVE-2024-0204 advisory names its credited researchers.

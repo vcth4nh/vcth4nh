@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import ArrowIcon from "../components/ArrowIcon.astro";
+import LatestActivity from "../components/LatestActivity.astro";
 import PortraitPlaceholder from "../components/PortraitPlaceholder.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProtectedEmail from "../components/ProtectedEmail.astro";
@@ -36,12 +37,13 @@ const competitionAwards = profile.awards.filter(
         <h1 class="reveal reveal-2">
           <span class="hero-name">{profile.name}</span>
           <span class="hero-statement">
-            Vulnerability<br />research,<br /><em class="hero-decode">made inspectable.</em>
+            Vulnerability<br />research
           </span>
         </h1>
+        <blockquote class="hero-quote reveal reveal-3"><p>{profile.quote}</p></blockquote>
         <p class="hero-lead reveal reveal-3">{profile.positioning}</p>
         <div class="hero-actions reveal reveal-4">
-          <a class="button button-primary" href="/research/">View the evidence <ArrowIcon /></a>
+          <a class="button button-primary" href="/research/">View research <ArrowIcon /></a>
           <ProtectedEmail label="Start a conversation" class="button button-quiet" />
         </div>
       </div>
@@ -63,11 +65,13 @@ const competitionAwards = profile.awards.filter(
     </div>
   </section>
 
+  <LatestActivity id="classic-latest-activity" />
+
   <section class="section shell" id="selected-research">
     <SectionHeading
       index="01"
-      title="Selected evidence"
-      intro="Research is strongest when the path from claim to primary source is short."
+      title="Selected research"
+      intro="Disclosed vulnerabilities with links to advisories and research notes."
       link={{ label: "All research", href: "/research/" }}
     />
     <div class="research-grid">
@@ -79,8 +83,8 @@ const competitionAwards = profile.awards.filter(
     <div class="shell">
       <SectionHeading
         index="02"
-        title="Tools for the work"
-        intro="Small, composable systems that make analysis less repetitive and evidence easier to test."
+        title="Open-source tools"
+        intro="Tools for code analysis and reverse engineering."
         link={{ label: "All projects", href: "/projects/" }}
       />
       <div class="project-list">
@@ -92,7 +96,7 @@ const competitionAwards = profile.awards.filter(
   <section class="section shell">
     <SectionHeading
       index="03"
-      title="A record of practice"
+      title="Experience"
       intro="From a part-time research internship to coordinated disclosure, mentoring, and international competition."
       link={{ label: "Full résumé", href: "/resume/" }}
     />
@@ -112,11 +116,6 @@ const competitionAwards = profile.awards.filter(
       </div>
 
       <aside class="proof-panel">
-        <div class="proof-block proof-signal">
-          <span>2024 / 2025</span>
-          <strong>Pwn2Own<br />Ireland</strong>
-          <p>Participated as a team member across two editions.</p>
-        </div>
         <div class="proof-block">
           <span>2026 / 2028</span>
           <strong>Radboud<br />University</strong>
@@ -128,7 +127,6 @@ const competitionAwards = profile.awards.filter(
     <div class="competition-record">
       <header>
         <p class="eyebrow">Selected competition record</p>
-        <p>Placements that complement the research record without replacing it.</p>
       </header>
       <div class="competition-list">
         {competitionAwards.map((award, index) => (
@@ -147,7 +145,6 @@ const competitionAwards = profile.awards.filter(
     <div class="shell homelab-grid">
       <div class="homelab-heading">
         <span class="section-kicker"><span>04</span><span aria-hidden="true">↘</span></span>
-        <p class="eyebrow">Beyond the report</p>
         <h2>{profile.homelab.title}</h2>
       </div>
       <div class="homelab-copy">
@@ -162,11 +159,10 @@ const competitionAwards = profile.awards.filter(
   </section>
 
   <section class="closing-section shell">
-    <p class="eyebrow">The useful kind of conversation</p>
     <div class="closing-grid">
-      <h2>Have a difficult target,<br />an open research question,<br /><em>or a boundary to test?</em></h2>
+      <h2>Get in touch</h2>
       <div>
-        <p>I am open to serious work where careful technical thinking matters.</p>
+        <p>I’m open to research collaboration, consulting, and full-time roles.</p>
         <ProtectedEmail label="hello [at] thanh [dot] vc" class="closing-email" />
       </div>
     </div>
