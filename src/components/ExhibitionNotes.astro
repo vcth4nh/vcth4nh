@@ -1,0 +1,96 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ArrowIcon from "./ArrowIcon.astro";
+import ProtectedEmail from "./ProtectedEmail.astro";
+import { profile, pwn2ownResults } from "../data/profile";
+import "../styles/exhibition-notes.css";
+
+interface Props {
+  projects: CollectionEntry<"projects">[];
+}
+
+const { projects } = Astro.props;
+const activity = profile.latestActivity;
+const awardParts = activity.summary.split(/(US\$[\d,]+[.!?]?)/);
+---
+
+<div class="ex-notes">
+  <section class="ex-result" aria-labelledby="ex-result-title">
+    <div class="ex-shell">
+      <div class="ex-dateline">
+        <p>Latest activity</p>
+        <time datetime={activity.date}>{activity.dateLabel}</time>
+      </div>
+      <div class="ex-result-grid">
+        <div class="ex-result-entry">
+          <h2 id="ex-result-title">{activity.title}</h2>
+          <p class="ex-result-credit">
+            {awardParts.map((part, index) =>
+              index % 2 ? <strong>{part}</strong> : part
+            )}
+          </p>
+          <a class="ex-link" href={activity.sourceUrl} target="_blank" rel="noreferrer">
+            Read ZDI’s results <ArrowIcon size={17} />
+          </a>
+        </div>
+        <div class="ex-standings">
+          <table>
+            <caption>Pwn2Own Ireland team placements</caption>
+            <thead class="sr-only"><tr><th scope="col">Year</th><th scope="col">Team</th><th scope="col">Placement</th></tr></thead>
+            <tbody>
+              {pwn2ownResults.map(({ year, placement, team }) => (
+                <tr>
+                  <th scope="row"><time>{year}</time></th>
+                  <td>{team}</td>
+                  <td><strong>{placement}</strong><span class="sr-only"> place</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workbench" class="ex-tools ex-shell" aria-labelledby="ex-tools-title">
+    <div class="ex-tools-intro">
+      <h2 id="ex-tools-title">Open-source<br /> tools</h2>
+      <a class="ex-link" href="/projects/">All projects <ArrowIcon size={16} /></a>
+    </div>
+    <div class="ex-projects">
+      {projects.map(({ data }) => (
+        <article class="ex-project">
+          <h3>
+            <a href={data.href} target="_blank" rel="noreferrer">
+              {data.title}<ArrowIcon size={25} />
+            </a>
+          </h3>
+          <p>{data.description}</p>
+          <ul aria-label={`${data.title} technologies`}>
+            {data.stack.map((technology) => <li>{technology}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <div class="ex-afterword ex-shell">
+    <blockquote class="ex-quote"><p>{profile.quote}</p></blockquote>
+    <section class="ex-study" aria-labelledby="ex-study-title">
+      <h2 id="ex-study-title">Currently studying</h2>
+      <p>{profile.current.title}</p>
+      <p>{profile.current.detail}</p>
+      <a class="ex-link" href="/resume/">Education & experience <ArrowIcon size={16} /></a>
+    </section>
+  </div>
+
+  <section id="contact" class="ex-contact" aria-labelledby="ex-contact-title">
+    <div class="ex-contact-inner ex-shell">
+      <h2 id="ex-contact-title">Get in touch.</h2>
+      <div>
+        <p>I’m open to research collaborations, consulting, and full-time roles.</p>
+        <ProtectedEmail class="ex-email" />
+      </div>
+    </div>
+  </section>
+</div>

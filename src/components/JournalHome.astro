@@ -1,8 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { profile, pwn2ownResults } from "../data/profile";
-import ProtectedEmail from "./ProtectedEmail.astro";
 import ArrowIcon from "./ArrowIcon.astro";
+import BoundarySculpture from "./BoundarySculpture.astro";
+import ExhibitionNotes from "./ExhibitionNotes.astro";
+import { profile } from "../data/profile";
 import "../styles/journal-home.css";
 
 interface Props {
@@ -11,122 +12,120 @@ interface Props {
 }
 
 const { research, projects } = Astro.props;
-const activity = profile.latestActivity;
-const signalRows = Array.from({ length: 24 }, (_, row) => ({
-  offset: 36 + row * 2.55,
-  amplitude: 0.8 + row * 0.025,
-}));
+const number = (value: number) => String(value).padStart(2, "0");
 ---
-<div class="journal-home">
-  <section class="jh-intro jh-shell" aria-labelledby="jh-title">
-    <div class="jh-intro-copy">
-      <p class="jh-availability"><i aria-hidden="true"></i>Open to collaboration</p>
-      <h1 id="jh-title">Vulnerability<br /><em>researcher.</em></h1>
-      <p class="jh-introduction">I’m <strong>{profile.name}</strong>. I investigate trust boundaries, build exploits, and develop AI-assisted security tools.</p>
-      <div class="jh-actions">
-        <a class="jh-button" href="#case-files">Explore research
-          <svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v13m-5-5 5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a class="jh-underlink" href="/resume/">View résumé <ArrowIcon size={14} /></a>
+<research-exhibition class="exhibition" id="case-files">
+  <div class="exhibit-layout">
+    <div class="exhibit-stage">
+      <h1 class="exhibit-title" aria-label="Boundary studies">
+        <span>Boundary</span>
+        <em>studies.</em>
+      </h1>
+      <span class="exhibit-outline" aria-hidden="true">Boundary</span>
+      <div class="exhibit-form">
+        <BoundarySculpture />
       </div>
     </div>
-    <figure class="jh-figure">
-      <div class="jh-plate">
-        <img src="/images/signal-study.webp" alt="A graphite CRT monitor displays a violet wireframe mountain range." width="1120" height="896" fetchpriority="high" />
-        <span aria-hidden="true" class="jh-register jh-register-tl"></span>
-        <span aria-hidden="true" class="jh-register jh-register-tr"></span>
-        <span aria-hidden="true" class="jh-register jh-register-bl"></span>
-        <span aria-hidden="true" class="jh-register jh-register-br"></span>
-      </div>
-      <figcaption>
-        <svg width="23" height="15" viewBox="0 0 23 15" aria-hidden="true" fill="none"><path d="M1 8h4l2-4 3 9 3-12 2.5 9L18 6l1 2h3" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        <blockquote>{profile.quote}</blockquote>
-      </figcaption>
-    </figure>
-  </section>
 
-  <section class="jh-dispatch latest-activity" aria-labelledby="jh-dispatch-title">
-    <div class="jh-shell jh-dispatch-grid">
-      <div class="jh-dispatch-date">
-        <p><i aria-hidden="true"></i> Latest activity</p>
-        <time datetime={activity.date}>{activity.dateLabel}</time>
-      </div>
-      <div class="jh-dispatch-copy">
-        <h2 id="jh-dispatch-title">{activity.title}</h2>
-        <p>{activity.summary}</p>
-      </div>
-      <a class="jh-dispatch-link" href={activity.sourceUrl} target="_blank" rel="noreferrer">ZDI results <ArrowIcon size={16} /></a>
-      <svg class="jh-signal" aria-hidden="true" viewBox="0 0 156 105" fill="none" preserveAspectRatio="xMidYMid meet">
-        <defs><path id="journal-trace" d="M4 0h32c8 0 13-.4 17-2 5-2 8-4 11-9 2-2 3-1 5-4 3-4 5-12 8-12s4 7 7 10 4 3 7 7 5 4 7 6c5 4 13 4 21 4h30" /></defs>
-        {signalRows.map(({ offset, amplitude }) => <use href="#journal-trace" transform={`translate(0 ${offset}) scale(1 ${amplitude})`} />)}
-      </svg>
+    <div class="exhibit-bio">
+      <p class="exhibit-author">{profile.name}</p>
+      <p>Vulnerability researcher working on authentication, trust boundaries, and AI-assisted security tools.</p>
     </div>
-  </section>
 
-  <section class="jh-archive jh-shell" id="case-files" aria-labelledby="jh-cases-title">
-    <div class="jh-section-head">
-      <h2 id="jh-cases-title">Selected research<span>.</span></h2>
-      <a class="jh-underlink" href="/research/">Research archive <ArrowIcon size={14} /></a>
-    </div>
-    <div class="jh-rows">
-      {research.map(({ id, data }) => (
-        <article>
-          <a class="jh-record" href={`/research/${id}/`}>
-            <time>{data.year}</time>
-            <div class="jh-record-main">
-              <h3>{data.title}</h3>
-              <p>{data.cves.length ? data.cves.join(" · ") : data.tags.join(" · ")}</p>
-            </div>
-            <span class="jh-credit">{data.roleLabel}</span>
-            <span class="jh-record-link"><ArrowIcon size={19} /></span>
-          </a>
-        </article>
-      ))}
-    </div>
-  </section>
+    {research.length > 0 && (
+      <>
+        <div class="exhibit-index">
+          <div class="exhibit-index-label">
+            <h2 id="exhibit-index-title">Study index</h2>
+            <a href="/research/">Full archive <ArrowIcon size={12} /></a>
+          </div>
+          <div class="exhibit-tabs" data-study-tabs aria-labelledby="exhibit-index-title">
+            {research.map(({ id, data }, index) => (
+              <a href={`/research/${id}/`} id={`select-${id}`} data-study-tab data-active={index === 0 ? "true" : undefined}>
+                <span class="exhibit-tab-number" aria-hidden="true">{number(index + 1)}</span>
+                <span>{data.product ?? data.title}</span>
+                <svg class="exhibit-tab-mark" viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.4"/></svg>
+              </a>
+            ))}
+          </div>
+        </div>
 
-  <section class="jh-workbench" id="workbench" aria-labelledby="jh-projects-title">
-    <div class="jh-shell">
-      <div class="jh-section-head">
-        <h2 id="jh-projects-title">Open-source tools<span>.</span></h2>
-        <a class="jh-underlink" href="/projects/">All projects <ArrowIcon size={14} /></a>
-      </div>
-      <div class="jh-projects">
-        {projects.map(({ data }) => (
-          <article class="jh-project">
-            <span class="jh-stack">{data.stack.join(" / ")}</span>
-            <h3><a href={data.href} target="_blank" rel="noreferrer">{data.title}<ArrowIcon size={24} /></a></h3>
-            <p>{data.description}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <div class="jh-shell jh-background">
-    <section class="jh-study" aria-labelledby="jh-study-title">
-      <h2 id="jh-study-title">Currently studying</h2>
-      <p>{profile.current.title}</p>
-      <small>{profile.current.detail}</small>
-      <a class="jh-underlink" href="/resume/">Education & experience <ArrowIcon size={14} /></a>
-    </section>
-    <section class="jh-placements" aria-labelledby="jh-results-title">
-      <h2 id="jh-results-title">Pwn2Own Ireland team placements</h2>
-      <ol>
-        {pwn2ownResults.map((result) => (
-          <li><time>{result.year}</time><strong>{result.placement} place</strong><span>{result.team}</span></li>
-        ))}
-      </ol>
-    </section>
+        <div class="exhibit-case">
+          {research.map(({ id, data }, index) => (
+            <article id={`study-${id}`} data-study-panel hidden={index !== 0}>
+              <p class="exhibit-case-meta"><span>{number(index + 1)} / {number(research.length)}</span><i aria-hidden="true"></i><time>{data.year}</time></p>
+              <h2><a href={`/research/${id}/`}>{data.title}</a></h2>
+              <p class="exhibit-credit">{data.roleLabel}</p>
+              <a class="exhibit-case-link" href={`/research/${id}/`}>Read case study <ArrowIcon size={14} /></a>
+            </article>
+          ))}
+        </div>
+      </>
+    )}
   </div>
+</research-exhibition>
+<ExhibitionNotes {projects} />
 
-  <section class="jh-contact" id="contact" aria-labelledby="jh-contact-title">
-    <div class="jh-shell jh-contact-inner">
-      <h2 id="jh-contact-title">Get in touch<span>.</span></h2>
-      <div>
-        <p>I’m open to research collaborations, consulting, and full-time roles.</p>
-        <ProtectedEmail class="jh-email" />
-      </div>
-    </div>
-  </section>
-</div>
+<script>
+  class ResearchExhibition extends HTMLElement {
+    connectedCallback() {
+      const tablist = this.querySelector<HTMLElement>("[data-study-tabs]");
+      const tabs = Array.from(this.querySelectorAll<HTMLAnchorElement>("[data-study-tab]"));
+      const panels = Array.from(this.querySelectorAll<HTMLElement>("[data-study-panel]"));
+      if (!tablist || !tabs.length || tabs.length !== panels.length || tablist.hasAttribute("role")) return;
+      tablist.setAttribute("role", "tablist");
+
+      const choose = (selected: number, updateUrl = false) => {
+        this.dataset.selectedStudy = String(selected);
+        if (updateUrl && window.location.hash !== "#" + panels[selected].id) {
+          window.history.pushState(window.history.state, "", "#" + panels[selected].id);
+        }
+        tabs.forEach((tab, index) => {
+          const active = index === selected;
+          tab.setAttribute("aria-selected", String(active));
+          tab.tabIndex = active ? 0 : -1;
+          tab.dataset.active = String(active);
+          panels[index].hidden = !active;
+        });
+        window.dispatchEvent(new CustomEvent("research-select", { detail: { index: selected } }));
+      };
+
+      tabs.forEach((tab, index) => {
+        const panel = panels[index];
+        tab.setAttribute("role", "tab");
+        tab.setAttribute("aria-controls", panel.id);
+        panel.setAttribute("role", "tabpanel");
+        panel.setAttribute("aria-labelledby", tab.id);
+        tab.addEventListener("click", (event) => {
+          if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+          event.preventDefault();
+          choose(index, true);
+        });
+        tab.addEventListener("keydown", (event) => {
+          let selected = index;
+          switch (event.key) {
+            case "ArrowLeft": selected = (index - 1 + tabs.length) % tabs.length; break;
+            case "ArrowRight": selected = (index + 1) % tabs.length; break;
+            case "Home": selected = 0; break;
+            case "End": selected = tabs.length - 1; break;
+            case " ": break;
+            default: return;
+          }
+          event.preventDefault();
+          choose(selected, true);
+          tabs[selected].focus();
+        });
+      });
+      const restore = () => {
+        const index = panels.findIndex(panel => "#" + panel.id === window.location.hash);
+        choose(Math.max(0, index));
+      };
+      restore();
+      window.addEventListener("hashchange", restore);
+    }
+  }
+
+  if (!customElements.get("research-exhibition")) {
+    customElements.define("research-exhibition", ResearchExhibition);
+  }
+</script>

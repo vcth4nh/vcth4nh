@@ -1,18 +1,367 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="title description">
+  <title id="title">Boundary studies. Vũ Chí Thành, vulnerability researcher.</title>
+  <desc id="description">An orange ring sculpture on charcoal, from the research portfolio at thanh.vc.</desc>
+  <rect width="1200" height="630" fill="#161614"/>
+  <path fill="#ff592f" transform="translate(51 39) scale(1.45)" d="M2 6.5 12 1l10 5.5-10 5.4L2 6.5Zm0 4.2 10 5.4 10-5.4v3.1l-10 5.5-10-5.5v-3.1Zm0 7.3 10 5.4L22 18v-3.1l-10 5.4-10-5.4V18Z"/>
+  <g aria-label="vcth4nh" transform="translate(100 68) scale(0.03100 -0.03100)" fill="#f5f1e7"><path d="M187 0 10 496H167L273 158L379 496H536L358 0ZM773 -12Q691 -12 634.5 21Q578 54 548.5 113.5Q519 173 519 251Q519 329 551 387.5Q583 446 640.5 478Q698 510 773 510Q816 510 858.5 498Q901 486 937.5 457.5Q974 429 997 380L870 334Q858 366 834.5 379Q811 392 782 392Q755 392 730 378.5Q705 365 689.5 334Q674 303 674 250Q674 196 690 164.5Q706 133 730.5 119.5Q755 106 782 106Q814 106 836 118.5Q858 131 871 153L995 108Q970 63 933 36.5Q896 10 854.5 -1Q813 -12 773 -12ZM1248 0Q1187 0 1151 10.5Q1115 21 1099.5 51.5Q1084 82 1084 140V380H1002V496H1084V620H1236V496H1344V380H1236V180Q1236 145 1249.5 134.5Q1263 124 1300 124H1344V0ZM1397 0V708H1549V430Q1560 449 1581.5 467Q1603 485 1633.5 497.5Q1664 510 1702 510Q1766 510 1802.5 486Q1839 462 1854 415.5Q1869 369 1869 302V0H1717V264Q1717 299 1713 328Q1709 357 1693.5 374.5Q1678 392 1641 392Q1593 392 1571 357.5Q1549 323 1549 255V0ZM2233 0V141H1908V252L2233 668H2385V275H2477V141H2385V0ZM2073 275H2233V469ZM2529 0V496H2662L2681 430Q2692 449 2713.5 467Q2735 485 2765.5 497.5Q2796 510 2834 510Q2898 510 2934.5 486Q2971 462 2986 415.5Q3001 369 3001 302V0H2849V264Q2849 299 2845 328Q2841 357 2825.5 374.5Q2810 392 2773 392Q2725 392 2703 357.5Q2681 323 2681 255V0ZM3070 0V708H3222V430Q3233 449 3254.5 467Q3276 485 3306.5 497.5Q3337 510 3375 510Q3439 510 3475.5 486Q3512 462 3527 415.5Q3542 369 3542 302V0H3390V264Q3390 299 3386 328Q3382 357 3366.5 374.5Q3351 392 3314 392Q3266 392 3244 357.5Q3222 323 3222 255V0Z"/></g>
+  <g aria-label="BOUNDARY" transform="translate(49 234) scale(0.16800 -0.16800)" fill="#f5f1e7"><path d="M245 0H56Q51 0 47.5 3.5Q44 7 44 12V688Q44 693 47.5 696.5Q51 700 56 700H223Q323 700 379.5 652Q436 604 436 509Q436 410 368 365Q364 362 367 359Q446 303 446 193Q446 100 390 50Q334 0 245 0ZM185 574V417Q185 412 190 412H226Q260 412 279 433.5Q298 455 298 494Q298 535 279.5 557Q261 579 226 579H190Q185 579 185 574ZM305 214Q305 258 286 284Q267 310 235 310H190Q185 310 185 305V127Q185 122 190 122H234Q267 122 286 146Q305 170 305 214ZM467 190V510Q467 600 522 654Q577 708 669 708Q761 708 816.5 654Q872 600 872 510V190Q872 100 816.5 46Q761 -8 669 -8Q577 -8 522 46Q467 100 467 190ZM731 184V516Q731 548 714 567.5Q697 587 669 587Q641 587 624.5 567.5Q608 548 608 516V184Q608 152 624.5 132.5Q641 113 669 113Q697 113 714 132.5Q731 152 731 184ZM910 199V688Q910 693 913.5 696.5Q917 700 922 700H1039Q1044 700 1047.5 696.5Q1051 693 1051 688V185Q1051 153 1067 133Q1083 113 1109 113Q1135 113 1150.5 133Q1166 153 1166 185V688Q1166 693 1169.5 696.5Q1173 700 1178 700H1295Q1300 700 1303.5 696.5Q1307 693 1307 688V199Q1307 105 1252.5 48.5Q1198 -8 1109 -8Q1019 -8 964.5 48.5Q910 105 910 199ZM1647 700H1763Q1768 700 1771.5 696.5Q1775 693 1775 688V12Q1775 7 1771.5 3.5Q1768 0 1763 0H1631Q1621 0 1618 10L1494 397Q1493 400 1490.5 399.5Q1488 399 1488 396L1489 12Q1489 7 1485.5 3.5Q1482 0 1477 0H1361Q1356 0 1352.5 3.5Q1349 7 1349 12V688Q1349 693 1352.5 696.5Q1356 700 1361 700H1492Q1502 700 1505 690L1630 303Q1631 300 1633.5 300.5Q1636 301 1636 304L1635 688Q1635 693 1638.5 696.5Q1642 700 1647 700ZM1826 12V688Q1826 693 1829.5 696.5Q1833 700 1838 700H2019Q2110 700 2165 647Q2220 594 2220 506V194Q2220 106 2165 53Q2110 0 2019 0H1838Q1833 0 1829.5 3.5Q1826 7 1826 12ZM1972 121 2017 122Q2044 123 2061 145Q2078 167 2079 203V497Q2079 535 2062 557Q2045 579 2016 579H1972Q1967 579 1967 574V126Q1967 121 1972 121ZM2526 11 2510 107Q2510 112 2504 112H2377Q2371 112 2371 107L2355 11Q2354 0 2342 0H2225Q2212 0 2215 13L2362 689Q2364 700 2375 700H2510Q2521 700 2523 689L2669 13L2670 9Q2670 0 2659 0H2539Q2527 0 2526 11ZM2395 221H2485Q2490 221 2489 226L2442 499Q2441 502 2439 502Q2437 502 2436 499L2391 226Q2391 221 2395 221ZM2952 10 2875 286Q2873 290 2870 290H2836Q2831 290 2831 285V12Q2831 7 2827.5 3.5Q2824 0 2819 0H2702Q2697 0 2693.5 3.5Q2690 7 2690 12V688Q2690 693 2693.5 696.5Q2697 700 2702 700H2904Q2959 700 3002 673.5Q3045 647 3068.5 599Q3092 551 3092 489Q3092 430 3069.5 385Q3047 340 3007 315Q3005 314 3004 312.5Q3003 311 3004 309L3096 14L3097 10Q3097 0 3086 0H2966Q2955 0 2952 10ZM2831 574V403Q2831 398 2836 398H2881Q2912 398 2931.5 422.5Q2951 447 2951 488Q2951 530 2931.5 554.5Q2912 579 2881 579H2836Q2831 579 2831 574ZM3218 13V273L3217 279L3077 686Q3076 688 3076 691Q3076 700 3087 700H3210Q3221 700 3224 690L3286 451Q3287 448 3289 448Q3291 448 3292 451L3354 690Q3357 700 3368 700H3491Q3497 700 3500 696.5Q3503 693 3501 686L3360 279L3359 273V13Q3359 8 3355.5 4.5Q3352 1 3347 1H3230Q3225 1 3221.5 4.5Q3218 8 3218 13Z"/></g>
   <defs>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0v48" fill="none" stroke="#fff5d6" stroke-opacity=".065"/>
-    </pattern>
+    <linearGradient id="surface">
+      <stop offset="0" stop-color="#34100b"/>
+      <stop offset="0.24" stop-color="#5a160d"/>
+      <stop offset="0.43" stop-color="#831a09"/>
+      <stop offset="0.68" stop-color="#a7250b"/>
+      <stop offset="0.86" stop-color="#ce360f"/>
+      <stop offset="1" stop-color="#93270b"/>
+    </linearGradient>
+    <linearGradient id="edge">
+      <stop offset="0" stop-color="#af2910"/>
+      <stop offset="0.24" stop-color="#ed3813"/>
+      <stop offset="0.43" stop-color="#ff5227"/>
+      <stop offset="0.68" stop-color="#ff8450"/>
+      <stop offset="0.86" stop-color="#ffc08c"/>
+      <stop offset="1" stop-color="#ff7642"/>
+    </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="#0c2c4a"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect x="72" y="64" width="8" height="502" fill="#7ee56d"/>
-  <rect x="80" y="64" width="8" height="168" fill="#f9e897"/>
-  <rect x="80" y="232" width="8" height="168" fill="#ffb44c"/>
-  <rect x="80" y="400" width="8" height="166" fill="#ff6376"/>
-  <text x="116" y="118" fill="#7ee56d" font-family="JetBrains Mono, monospace" font-size="24" letter-spacing="2">/VCTH4NH</text>
-  <text x="116" y="268" fill="#fff5d6" font-family="JetBrains Mono, monospace" font-size="70" font-weight="600" letter-spacing="-4">Vũ Chí Thành</text>
-  <text x="116" y="370" fill="#f9e897" font-family="JetBrains Mono, monospace" font-size="46" letter-spacing="-3">Vulnerability researcher.</text>
-  <text x="116" y="438" fill="#9dc08b" font-family="Atkinson Hyperlegible Next, sans-serif" font-size="29">Exploits · AI-assisted security tooling · Open research</text>
-  <text x="116" y="535" fill="#ffb44c" font-family="JetBrains Mono, monospace" font-size="22">THANH.VC →</text>
-</svg>
+  <g transform="translate(460 67) scale(1.0)" fill="url(#surface)" stroke="url(#edge)">
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-3.75 3.05 36.26 -31.80 480.88 136.31)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-0.27 2.29 35.06 -33.42 473.99 128.77)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-7.05 3.34 37.17 -30.17 487.37 144.05)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(3.38 0.99 33.50 -34.99 466.70 121.47)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-10.14 3.20 37.85 -28.57 493.43 151.95)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-10.50 -37.00 -6.74 -28.74 268.68 257.54)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-8.98 -38.25 -9.28 -26.93 261.81 259.38)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(7.12 -0.90 31.50 -36.45 459.06 114.42)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-13.02 2.68 38.33 -27.01 499.03 159.98)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.27 -35.77 -4.31 -30.35 275.44 255.76)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-7.75 -39.51 -11.90 -24.89 254.86 261.30)" stroke-width="0.75" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.25 -34.59 -2.01 -31.75 282.07 254.03)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(10.88 -3.43 28.98 -37.69 451.09 107.67)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.68 1.84 38.67 -25.51 504.16 168.11)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-6.86 -40.73 -14.56 -22.65 247.85 263.30)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.38 -33.48 0.15 -32.96 288.53 252.35)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(14.54 -6.61 25.87 -38.60 442.82 101.24)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.12 0.72 38.89 -24.07 508.80 176.29)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-6.32 -41.89 -17.23 -20.21 240.83 265.39)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.61 -32.45 2.15 -33.99 294.82 250.69)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.33 -0.67 39.01 -22.69 512.95 184.50)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(17.91 -10.40 22.14 -39.04 434.30 95.16)" stroke-width="0.76" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-6.14 -42.95 -19.86 -17.59 233.82 267.58)" stroke-width="0.77" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.88 -31.50 4.00 -34.86 300.92 249.05)" stroke-width="0.77" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.33 -2.28 39.06 -21.37 516.59 192.69)" stroke-width="0.77" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(20.80 -14.70 17.80 -38.88 425.55 89.45)" stroke-width="0.77" stroke-opacity="0.81"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-6.31 -43.87 -22.42 -14.82 226.85 269.86)" stroke-width="0.77" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.10 -4.10 39.04 -20.11 519.73 200.83)" stroke-width="0.77" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.15 -30.63 5.67 -35.59 306.80 247.42)" stroke-width="0.77" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(23.02 -19.32 12.95 -38.01 416.62 84.13)" stroke-width="0.78" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-6.83 -44.64 -24.86 -11.93 219.96 272.25)" stroke-width="0.78" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.65 -6.09 38.98 -18.91 522.36 208.89)" stroke-width="0.78" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.36 -29.84 7.19 -36.20 312.45 245.76)" stroke-width="0.78" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(24.40 -24.03 7.77 -36.42 407.53 79.23)" stroke-width="0.78" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.96 -8.25 38.87 -17.76 524.49 216.82)" stroke-width="0.79" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-7.65 -45.23 -27.16 -8.97 213.19 274.74)" stroke-width="0.79" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.50 -29.11 8.54 -36.69 317.86 244.09)" stroke-width="0.79" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(24.85 -28.57 2.49 -34.15 398.35 74.75)" stroke-width="0.79" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.05 -10.54 38.73 -16.67 526.11 224.60)" stroke-width="0.79" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.51 -28.43 9.73 -37.09 323.04 242.37)" stroke-width="0.80" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-8.73 -45.63 -29.27 -5.96 206.56 277.34)" stroke-width="0.80" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(24.41 -32.75 -2.66 -31.36 389.09 70.73)" stroke-width="0.80" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.89 -12.94 38.57 -15.64 527.24 232.19)" stroke-width="0.80" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-31.40 -27.79 10.76 -37.42 327.96 240.59)" stroke-width="0.81" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(23.16 -36.41 -7.49 -28.22 379.81 67.16)" stroke-width="0.81" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.49 -15.44 38.39 -14.66 527.89 239.56)" stroke-width="0.81" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-10.04 -45.84 -31.19 -2.96 200.13 280.03)" stroke-width="0.81" stroke-opacity="0.82"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-33.14 -27.19 11.65 -37.67 332.63 238.75)" stroke-width="0.82" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.85 -18.01 38.19 -13.73 528.07 246.69)" stroke-width="0.82" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(21.27 -39.50 -11.87 -24.91 370.54 64.05)" stroke-width="0.82" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-11.52 -45.87 -32.89 0.02 193.91 282.82)" stroke-width="0.82" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.95 -20.62 37.98 -12.85 527.79 253.54)" stroke-width="0.83" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-34.72 -26.59 12.38 -37.87 337.05 236.83)" stroke-width="0.83" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(18.91 -42.01 -15.75 -21.58 361.33 61.42)" stroke-width="0.83" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.81 -23.25 37.77 -12.02 527.09 260.08)" stroke-width="0.84" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-13.13 -45.72 -34.36 2.92 187.95 285.70)" stroke-width="0.84" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-36.15 -26.00 12.97 -38.02 341.22 234.81)" stroke-width="0.84" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(16.22 -44.00 -19.12 -18.35 352.22 59.27)" stroke-width="0.84" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.41 -25.88 37.56 -11.26 525.97 266.30)" stroke-width="0.84" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.44 -25.40 13.42 -38.12 345.15 232.68)" stroke-width="0.85" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.81 -45.41 -35.62 5.74 182.27 288.66)" stroke-width="0.85" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(13.33 -45.53 -22.02 -15.27 343.24 57.61)" stroke-width="0.85" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.77 -28.47 37.35 -10.55 524.46 272.17)" stroke-width="0.85" stroke-opacity="0.83"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-38.58 -24.78 13.74 -38.19 348.85 230.44)" stroke-width="0.86" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.90 -30.99 37.15 -9.90 522.58 277.68)" stroke-width="0.86" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(10.33 -46.66 -24.50 -12.38 334.43 56.42)" stroke-width="0.87" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.54 -44.96 -36.66 8.46 176.92 291.70)" stroke-width="0.87" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-39.60 -24.13 13.91 -38.23 352.33 228.07)" stroke-width="0.87" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.80 -33.42 36.96 -9.32 520.37 282.81)" stroke-width="0.87" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(7.31 -47.44 -26.61 -9.70 325.84 55.71)" stroke-width="0.88" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.25 -44.39 -37.50 11.05 171.91 294.80)" stroke-width="0.88" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.50 -35.72 36.79 -8.81 517.85 287.53)" stroke-width="0.89" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-40.50 -23.46 13.96 -38.24 355.60 225.58)" stroke-width="0.89" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(4.29 -47.93 -28.42 -7.22 317.49 55.47)" stroke-width="0.89" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.03 -37.86 36.64 -8.38 515.05 291.86)" stroke-width="0.90" stroke-opacity="0.84"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-41.29 -22.76 13.88 -38.22 358.68 222.94)" stroke-width="0.90" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-19.94 -43.72 -38.14 13.51 167.30 297.95)" stroke-width="0.90" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.42 -39.82 36.51 -8.03 511.99 295.77)" stroke-width="0.91" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(1.32 -48.17 -29.96 -4.92 309.42 55.70)" stroke-width="0.91" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-41.99 -22.03 13.67 -38.18 361.59 220.16)" stroke-width="0.91" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.70 -41.58 36.42 -7.78 508.71 299.26)" stroke-width="0.92" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-21.57 -42.96 -38.60 15.84 163.09 301.13)" stroke-width="0.92" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-1.57 -48.19 -31.28 -2.80 301.67 56.38)" stroke-width="0.92" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-42.60 -21.28 13.34 -38.10 364.34 217.24)" stroke-width="0.92" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.92 -43.12 36.37 -7.64 505.24 302.32)" stroke-width="0.93" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-4.38 -48.01 -32.41 -0.85 294.25 57.51)" stroke-width="0.94" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-43.14 -20.52 12.90 -38.00 366.96 214.17)" stroke-width="0.94" stroke-opacity="0.85"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.13 -42.15 -38.90 18.03 159.31 304.34)" stroke-width="0.94" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-17.12 -44.42 36.36 -7.62 501.61 304.97)" stroke-width="0.94" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-43.61 -19.76 12.35 -37.86 369.47 210.95)" stroke-width="0.95" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.38 -45.48 36.40 -7.74 497.85 307.20)" stroke-width="0.95" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-7.08 -47.64 -33.39 0.97 287.21 59.06)" stroke-width="0.95" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.59 -41.29 -39.04 20.09 156.00 307.56)" stroke-width="0.96" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.01 -19.02 11.71 -37.69 371.89 207.60)" stroke-width="0.96" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-13.73 -46.30 36.50 -8.01 493.98 309.02)" stroke-width="0.96" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.67 -47.11 -34.23 2.65 280.55 61.03)" stroke-width="0.97" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.24 -46.87 36.66 -8.46 490.04 310.44)" stroke-width="0.98" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.34 -18.31 11.00 -37.49 374.25 204.11)" stroke-width="0.98" stroke-opacity="0.86"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.94 -40.40 -39.04 22.02 153.17 310.77)" stroke-width="0.98" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.14 -46.42 -34.96 4.22 274.31 63.40)" stroke-width="0.98" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-10.97 -47.21 36.89 -9.10 486.06 311.47)" stroke-width="0.99" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.60 -17.67 10.22 -37.25 376.56 200.50)" stroke-width="0.99" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.48 -45.58 -35.60 5.69 268.50 66.15)" stroke-width="1.00" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.99 -47.31 37.17 -9.96 482.05 312.13)" stroke-width="1.00" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.79 -17.11 9.40 -36.98 378.87 196.76)" stroke-width="1.00" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.18 -39.49 -38.92 23.83 150.84 313.95)" stroke-width="1.00" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.34 -47.19 37.50 -11.06 478.05 312.42)" stroke-width="1.01" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.68 -44.58 -36.15 7.05 263.14 69.25)" stroke-width="1.01" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.91 -16.65 8.55 -36.70 381.18 192.92)" stroke-width="1.01" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.09 -46.84 37.87 -12.40 474.07 312.38)" stroke-width="1.02" stroke-opacity="0.87"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.31 -38.57 -38.67 25.51 149.02 317.09)" stroke-width="1.03" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.94 -16.33 7.71 -36.39 383.53 188.99)" stroke-width="1.03" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.73 -43.44 -36.62 8.33 258.23 72.70)" stroke-width="1.03" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.27 -46.26 38.25 -13.98 470.15 312.01)" stroke-width="1.04" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.88 -16.14 6.88 -36.08 385.93 184.99)" stroke-width="1.04" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.62 -42.16 -37.03 9.54 253.80 76.46)" stroke-width="1.04" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.90 -45.46 38.60 -15.80 466.29 311.35)" stroke-width="1.05" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.31 -37.66 -38.32 27.08 147.73 320.17)" stroke-width="1.05" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.73 -16.12 6.10 -35.77 388.42 180.93)" stroke-width="1.05" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.34 -40.72 -37.39 10.66 249.84 80.52)" stroke-width="1.06" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-10.99 -44.44 38.88 -17.80 462.52 310.42)" stroke-width="1.06" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.47 -16.27 5.39 -35.47 391.01 176.82)" stroke-width="1.06" stroke-opacity="0.88"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-30.19 -36.77 -37.86 28.53 146.98 323.17)" stroke-width="1.07" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-44.11 -16.59 4.75 -35.20 393.72 172.71)" stroke-width="1.07" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.89 -39.15 -37.69 11.72 246.36 84.86)" stroke-width="1.07" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.48 -43.21 39.04 -19.93 458.84 309.24)" stroke-width="1.07" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.09 7.48 -37.34 10.50 315.53 382.09)" stroke-width="1.08" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.77 8.98 -36.42 7.77 313.85 375.71)" stroke-width="1.08" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.40 5.79 -38.09 13.26 317.37 388.41)" stroke-width="1.08" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-31.39 10.30 -35.35 5.10 312.32 369.27)" stroke-width="1.08" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.71 3.93 -38.63 16.01 319.40 394.65)" stroke-width="1.08" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-43.63 -17.08 4.22 -34.96 396.58 168.59)" stroke-width="1.08" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.94 11.46 -34.17 2.52 310.92 362.81)" stroke-width="1.08" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.06 1.91 -38.96 18.71 321.64 400.77)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-34.38 12.46 -32.91 0.06 309.60 356.33)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.30 -41.81 39.04 -22.09 455.28 307.85)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-21.50 -0.26 -39.06 21.33 324.10 406.77)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.25 -37.43 -37.95 12.72 243.36 89.44)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-35.71 13.33 -31.61 -2.25 308.37 349.85)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.06 -2.55 -38.92 23.83 326.82 412.61)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-36.91 14.08 -30.29 -4.40 307.18 343.38)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-43.03 -17.75 3.79 -34.77 399.60 164.51)" stroke-width="1.09" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.75 -4.91 -38.53 26.19 329.79 418.27)" stroke-width="1.10" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-30.94 -35.90 -37.31 29.88 146.77 326.07)" stroke-width="1.10" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.96 14.74 -29.00 -6.37 306.02 336.94)" stroke-width="1.10" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.33 -40.30 38.87 -24.20 451.83 306.26)" stroke-width="1.10" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-17.62 -7.32 -37.92 28.37 333.05 423.73)" stroke-width="1.10" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.41 -35.57 -38.18 13.65 240.84 94.25)" stroke-width="1.10" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-38.88 15.35 -27.76 -8.13 304.86 330.52)" stroke-width="1.10" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-42.30 -18.56 3.48 -34.62 402.79 160.49)" stroke-width="1.11" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.68 -9.73 -37.07 30.37 336.59 428.97)" stroke-width="1.11" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-39.64 15.91 -26.62 -9.69 303.69 324.14)" stroke-width="1.11" stroke-opacity="0.89"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.95 -12.11 -36.03 32.16 340.44 433.94)" stroke-width="1.11" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-40.26 16.47 -25.59 -11.02 302.49 317.81)" stroke-width="1.11" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.46 -38.76 38.54 -26.15 448.52 304.52)" stroke-width="1.11" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.37 -33.56 -38.36 14.53 238.78 99.27)" stroke-width="1.11" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-41.43 -19.51 3.30 -34.54 406.18 156.55)" stroke-width="1.12" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.42 -14.43 -34.79 33.74 344.59 438.64)" stroke-width="1.12" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-40.71 17.04 -24.71 -12.12 301.23 311.52)" stroke-width="1.12" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-31.58 -35.05 -36.67 31.13 147.12 328.85)" stroke-width="1.12" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-40.42 -20.58 3.24 -34.52 409.76 152.72)" stroke-width="1.13" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.10 -16.64 -33.38 35.10 349.05 443.02)" stroke-width="1.13" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-41.01 17.64 -24.02 -12.96 299.90 305.28)" stroke-width="1.13" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.55 -37.27 38.08 -27.88 445.34 302.64)" stroke-width="1.13" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.11 -31.42 -38.52 15.34 237.18 104.47)" stroke-width="1.13" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-41.14 18.30 -23.53 -13.54 298.49 299.09)" stroke-width="1.13" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.97 -18.72 -31.82 36.25 353.83 447.07)" stroke-width="1.13" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-39.25 -21.74 3.33 -34.56 413.56 149.03)" stroke-width="1.13" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-41.10 19.03 -23.29 -13.82 296.97 292.95)" stroke-width="1.14" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.63 -29.15 -38.65 16.10 236.03 109.84)" stroke-width="1.14" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.49 -35.93 37.55 -29.33 442.29 300.67)" stroke-width="1.14" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.04 -20.65 -30.14 37.19 358.93 450.76)" stroke-width="1.14" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.09 -34.24 -35.94 32.28 148.01 331.49)" stroke-width="1.14" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.93 -22.95 3.55 -34.66 417.57 145.51)" stroke-width="1.14" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-40.87 19.83 -23.32 -13.78 295.35 286.87)" stroke-width="1.15" stroke-opacity="0.90"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.29 -22.41 -28.35 37.92 364.33 454.07)" stroke-width="1.15" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.92 -26.75 -38.75 16.80 235.32 115.34)" stroke-width="1.15" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-36.44 -24.19 3.92 -34.83 421.80 142.19)" stroke-width="1.15" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-40.43 20.71 -23.65 -13.40 293.61 280.82)" stroke-width="1.15" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.22 -34.79 37.00 -30.51 439.37 298.62)" stroke-width="1.15" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.70 -24.00 -26.48 38.47 370.04 456.96)" stroke-width="1.16" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-39.76 21.66 -24.30 -12.63 291.75 274.82)" stroke-width="1.16" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.00 -24.24 -38.84 17.45 235.02 120.97)" stroke-width="1.16" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-34.80 -25.41 4.43 -35.06 426.25 139.09)" stroke-width="1.16" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.49 -33.47 -35.14 33.33 149.45 333.98)" stroke-width="1.17" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-38.82 22.63 -25.27 -11.43 289.76 268.86)" stroke-width="1.17" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.68 -33.92 36.50 -31.41 436.58 296.53)" stroke-width="1.17" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.25 -25.40 -24.54 38.83 376.05 459.43)" stroke-width="1.17" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-33.01 -26.57 5.07 -35.34 430.92 136.25)" stroke-width="1.17" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.85 -21.61 -38.90 18.03 235.11 126.70)" stroke-width="1.17" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.60 23.57 -26.55 -9.78 287.64 262.93)" stroke-width="1.17" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-31.08 -27.64 5.87 -35.67 435.80 133.70)" stroke-width="1.18" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.92 -26.62 -22.54 39.02 382.35 461.44)" stroke-width="1.18" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.50 -18.90 -38.95 18.54 235.59 132.51)" stroke-width="1.18" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-36.06 24.40 -28.09 -7.67 285.39 257.03)" stroke-width="1.18" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.85 -33.33 36.09 -32.06 433.92 294.43)" stroke-width="1.18" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.02 -28.58 6.80 -36.05 440.88 131.46)" stroke-width="1.19" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-34.21 25.00 -29.82 -5.14 283.03 251.15)" stroke-width="1.19" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-17.70 -27.64 -20.51 39.05 388.91 462.97)" stroke-width="1.19" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.95 -16.10 -38.98 18.99 236.41 138.39)" stroke-width="1.19" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.77 -32.75 -34.26 34.29 151.43 336.31)" stroke-width="1.19" stroke-opacity="0.91"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.10 25.26 -31.60 -2.26 280.54 245.28)" stroke-width="1.19" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.86 -29.33 7.88 -36.46 446.16 129.57)" stroke-width="1.19" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.22 -13.25 -39.01 19.37 237.56 144.33)" stroke-width="1.20" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.75 -33.02 35.79 -32.49 431.37 292.35)" stroke-width="1.20" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.57 -28.49 -18.45 38.94 395.73 464.01)" stroke-width="1.20" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.81 25.08 -33.32 0.84 277.95 239.42)" stroke-width="1.20" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.64 -29.87 9.11 -36.89 451.63 128.03)" stroke-width="1.20" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.36 -10.35 -39.02 19.66 239.02 150.30)" stroke-width="1.20" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.50 24.41 -34.86 3.99 275.26 233.57)" stroke-width="1.21" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.39 -7.42 -39.03 19.86 240.74 156.29)" stroke-width="1.21" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-19.52 -29.16 -16.37 38.69 402.78 464.54)" stroke-width="1.21" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.32 23.25 -36.13 7.01 272.50 227.71)" stroke-width="1.21" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.39 -30.16 10.47 -37.33 457.26 126.90)" stroke-width="1.21" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.38 -32.97 35.63 -32.71 428.93 290.32)" stroke-width="1.21" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.36 -4.49 -39.04 19.96 242.71 162.30)" stroke-width="1.21" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.42 21.64 -37.11 9.78 269.66 221.85)" stroke-width="1.21" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.94 -32.07 -33.30 35.16 153.94 338.44)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-21.91 19.68 -37.82 12.19 266.78 215.98)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.31 -1.57 -39.04 19.93 244.90 168.32)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.16 -30.17 11.97 -37.76 463.03 126.17)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.52 -29.65 -14.29 38.31 410.05 464.55)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.84 17.45 -38.30 14.23 263.88 210.08)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.31 1.34 -39.03 19.77 247.28 174.33)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.23 15.02 -38.61 15.88 260.97 204.17)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-21.42 4.20 -39.01 19.45 249.82 180.34)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.03 12.45 -38.80 17.19 258.09 198.25)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.69 7.02 -38.98 18.93 252.48 186.32)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.21 9.77 -38.92 18.20 255.25 192.29)" stroke-width="1.22" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-17.99 -29.88 13.60 -38.16 468.94 125.89)" stroke-width="1.23" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.75 -33.16 35.59 -32.76 426.58 288.36)" stroke-width="1.23" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-21.57 -29.99 -12.21 37.82 417.50 464.02)" stroke-width="1.23" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.94 -29.28 15.36 -38.52 474.95 126.06)" stroke-width="1.23" stroke-opacity="0.92"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-33.00 -31.45 -32.27 35.95 156.97 340.38)" stroke-width="1.24" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.06 -28.36 17.22 -38.81 481.04 126.71)" stroke-width="1.24" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.64 -30.17 -10.14 37.22 425.11 462.94)" stroke-width="1.24" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.90 -33.57 35.68 -32.64 424.31 286.50)" stroke-width="1.24" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.42 -27.13 19.18 -39.00 487.18 127.84)" stroke-width="1.25" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.74 -30.20 -8.08 36.53 432.86 461.31)" stroke-width="1.25" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-11.05 -25.62 21.22 -39.06 493.35 129.48)" stroke-width="1.25" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.83 -34.16 35.88 -32.37 422.11 284.76)" stroke-width="1.26" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-10.00 -23.84 23.30 -38.97 499.51 131.64)" stroke-width="1.26" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.85 -30.09 -6.04 35.74 440.71 459.11)" stroke-width="1.26" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.96 -30.88 -31.17 36.65 160.50 342.10)" stroke-width="1.26" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.31 -21.84 25.40 -38.69 505.63 134.31)" stroke-width="1.27" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.96 -29.84 -4.02 34.87 448.62 456.36)" stroke-width="1.27" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.57 -34.90 36.17 -31.94 419.94 283.17)" stroke-width="1.27" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.01 -19.68 27.47 -38.20 511.69 137.51)" stroke-width="1.27" stroke-opacity="0.93"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.06 -29.48 -2.02 33.92 456.58 453.04)" stroke-width="1.28" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.10 -17.40 29.48 -37.48 517.64 141.23)" stroke-width="1.28" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.82 -30.37 -29.99 37.26 164.52 343.60)" stroke-width="1.28" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.13 -35.76 36.53 -31.36 417.81 281.75)" stroke-width="1.29" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-9.57 -15.08 31.39 -36.52 523.45 145.49)" stroke-width="1.29" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.15 -29.00 -0.05 32.91 464.53 449.16)" stroke-width="1.29" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-10.41 -12.79 33.14 -35.29 529.09 150.26)" stroke-width="1.29" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.21 -28.40 1.89 31.82 472.45 444.73)" stroke-width="1.30" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-11.59 -10.58 34.71 -33.82 534.54 155.55)" stroke-width="1.30" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.53 -36.71 36.94 -30.62 415.68 280.51)" stroke-width="1.30" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-13.05 -8.53 36.06 -32.11 539.74 161.34)" stroke-width="1.30" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-30.23 -27.71 3.80 30.67 480.31 439.76)" stroke-width="1.31" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.59 -29.93 -28.75 37.78 169.01 344.85)" stroke-width="1.31" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.74 -6.68 37.17 -30.18 544.67 167.63)" stroke-width="1.31" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-31.22 -26.92 5.68 29.46 488.05 434.25)" stroke-width="1.31" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.79 -37.72 37.38 -29.72 413.53 279.48)" stroke-width="1.32" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.60 -5.08 38.02 -28.06 549.31 174.39)" stroke-width="1.32" stroke-opacity="0.94"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.17 -26.04 7.53 28.19 495.66 428.22)" stroke-width="1.32" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.56 -3.76 38.62 -25.79 553.61 181.61)" stroke-width="1.32" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.58 -2.73 38.96 -23.41 557.55 189.26)" stroke-width="1.33" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-33.06 -25.08 9.35 26.87 503.08 421.70)" stroke-width="1.33" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.27 -29.54 -27.44 38.22 173.94 345.86)" stroke-width="1.33" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.92 -38.78 37.82 -28.65 411.35 278.67)" stroke-width="1.33" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.59 -2.00 39.06 -20.95 561.10 197.33)" stroke-width="1.33" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-33.89 -24.05 11.14 25.50 510.30 414.70)" stroke-width="1.33" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.56 -1.56 38.94 -18.44 564.24 205.77)" stroke-width="1.34" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-34.65 -22.94 12.89 24.08 517.26 407.24)" stroke-width="1.34" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.44 -1.39 38.62 -15.91 566.94 214.57)" stroke-width="1.34" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.93 -39.84 38.22 -27.41 409.10 278.08)" stroke-width="1.34" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-35.35 -21.78 14.61 22.60 523.94 399.35)" stroke-width="1.35" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.20 -1.48 38.12 -13.40 569.18 223.70)" stroke-width="1.35" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-31.86 -29.23 -26.05 38.56 179.29 346.61)" stroke-width="1.35" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.83 -1.81 37.46 -10.90 570.94 233.11)" stroke-width="1.35" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-35.96 -20.56 16.30 21.08 530.30 391.06)" stroke-width="1.35" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-31.32 -2.34 36.66 -8.45 572.21 242.78)" stroke-width="1.35" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-36.49 -19.29 17.95 19.51 536.32 382.39)" stroke-width="1.35" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-32.64 -3.05 35.75 -6.06 572.98 252.66)" stroke-width="1.36" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-36.93 -17.98 19.57 17.88 541.96 373.39)" stroke-width="1.36" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-33.81 -3.92 34.73 -3.72 573.22 262.72)" stroke-width="1.36" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.85 -40.89 38.58 -25.98 406.78 277.74)" stroke-width="1.36" stroke-opacity="0.95"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.27 -16.64 21.16 16.21 547.20 364.08)" stroke-width="1.36" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-34.81 -4.91 33.63 -1.44 572.95 272.92)" stroke-width="1.36" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.51 -15.27 22.72 14.48 552.01 354.50)" stroke-width="1.36" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-35.66 -6.02 32.45 0.77 572.14 283.21)" stroke-width="1.36" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.63 -13.90 24.23 12.70 556.37 344.69)" stroke-width="1.36" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-36.34 -7.22 31.21 2.92 570.81 293.56)" stroke-width="1.37" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.64 -12.51 25.72 10.86 560.26 334.69)" stroke-width="1.37" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-36.88 -8.48 29.91 5.00 568.94 303.93)" stroke-width="1.37" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.52 -11.14 27.16 8.97 563.66 324.53)" stroke-width="1.37" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-37.27 -9.79 28.56 7.01 566.56 314.26)" stroke-width="1.37" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-31.37 -28.98 -24.60 38.82 185.02 347.10)" stroke-width="1.37" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-22.69 -41.90 38.85 -24.37 404.35 277.65)" stroke-width="1.37" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-21.48 -42.85 39.02 -22.57 401.79 277.80)" stroke-width="1.39" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-30.80 -28.80 -23.08 38.99 191.12 347.33)" stroke-width="1.39" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.24 -43.71 39.06 -20.58 399.08 278.22)" stroke-width="1.40" stroke-opacity="0.96"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-30.16 -28.69 -21.48 39.06 197.55 347.28)" stroke-width="1.41" stroke-opacity="0.97"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.99 -44.46 38.94 -18.41 396.21 278.89)" stroke-width="1.42" stroke-opacity="0.97"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-29.45 -28.66 -19.82 39.03 204.27 346.97)" stroke-width="1.43" stroke-opacity="0.97"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-17.76 -45.07 38.64 -16.07 393.15 279.81)" stroke-width="1.43" stroke-opacity="0.97"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-28.68 -28.70 -18.08 38.91 211.26 346.39)" stroke-width="1.44" stroke-opacity="0.97"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.58 -45.54 38.16 -13.57 389.88 280.99)" stroke-width="1.44" stroke-opacity="0.97"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.48 -45.85 37.47 -10.93 386.39 282.40)" stroke-width="1.46" stroke-opacity="0.98"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-27.85 -28.82 -16.28 38.68 218.48 345.55)" stroke-width="1.46" stroke-opacity="0.98"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.48 -45.99 36.56 -8.17 382.67 284.05)" stroke-width="1.47" stroke-opacity="0.98"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.97 -29.02 -14.40 38.34 225.88 344.46)" stroke-width="1.47" stroke-opacity="0.98"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-13.61 -45.95 35.45 -5.32 378.69 285.92)" stroke-width="1.48" stroke-opacity="0.98"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-26.04 -29.30 -12.45 37.89 233.45 343.11)" stroke-width="1.49" stroke-opacity="0.98"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.89 -45.73 34.12 -2.41 374.45 287.99)" stroke-width="1.49" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-25.07 -29.65 -10.44 37.32 241.13 341.53)" stroke-width="1.50" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.34 -45.35 32.59 0.53 369.95 290.26)" stroke-width="1.50" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-24.06 -30.09 -8.36 36.63 248.90 339.72)" stroke-width="1.51" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-11.96 -44.81 30.87 3.47 365.17 292.70)" stroke-width="1.51" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-11.76 -44.12 28.98 6.39 360.11 295.30)" stroke-width="1.52" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-23.03 -30.60 -6.21 35.81 256.72 337.70)" stroke-width="1.52" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-11.75 -43.32 26.94 9.25 354.77 298.04)" stroke-width="1.52" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-21.97 -31.19 -3.99 34.86 264.56 335.48)" stroke-width="1.53" stroke-opacity="0.99"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-11.90 -42.42 24.78 12.04 349.16 300.89)" stroke-width="1.53" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-20.90 -31.86 -1.72 33.78 272.37 333.09)" stroke-width="1.53" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.23 -41.45 22.51 14.72 343.27 303.83)" stroke-width="1.54" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-19.83 -32.61 0.60 32.55 280.14 330.53)" stroke-width="1.54" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-12.70 -40.42 20.15 17.28 337.12 306.84)" stroke-width="1.54" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-18.77 -33.42 2.98 31.17 287.82 327.83)" stroke-width="1.54" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-13.31 -39.37 17.73 19.72 330.71 309.89)" stroke-width="1.55" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-17.73 -34.30 5.40 29.65 295.40 325.01)" stroke-width="1.55" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.03 -38.31 15.28 22.01 324.06 312.97)" stroke-width="1.55" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-16.71 -35.24 7.85 27.97 302.83 322.09)" stroke-width="1.55" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-14.85 -37.25 12.80 24.15 317.18 316.05)" stroke-width="1.55" stroke-opacity="1.00"/>
+    <circle vector-effect="non-scaling-stroke" r="1" transform="matrix(-15.75 -36.23 10.32 26.14 310.10 319.09)" stroke-width="1.55" stroke-opacity="1.00"/>
+  </g>
+  <g aria-label="studies." transform="translate(730 571) scale(0.16500 -0.16500)" fill="#f5f1e7"><path d="M116 -9Q83 -9 46.5 1Q10 11 -9 26Q-16 32 -15 44L7 175Q9 188 19 188Q30 188 30 174L32 126Q34 69 59.5 42.5Q85 16 122 16Q154 16 177 36.5Q200 57 200 97Q200 120 193 139.5Q186 159 171 181.5Q156 204 130 236Q96 280 79.5 311.5Q63 343 63 377Q63 440 102.5 478Q142 516 203 516Q230 516 255.5 508Q281 500 298 484Q307 477 304 466L276 332Q273 319 264 319Q255 319 253 333L250 381Q246 441 234.5 467Q223 493 187 493Q155 493 135 471Q115 449 115 418Q115 385 133 357.5Q151 330 182 288Q223 234 237.5 202Q252 170 252 137Q252 95 233.5 62Q215 29 184 10Q153 -9 116 -9ZM364 -9Q330 -9 311 18Q292 45 305 105L388 467Q391 482 376 482H338Q324 482 324 495Q324 502 329 506Q334 510 341 510H377Q400 510 404 531L428 638Q431 649 442 649H483Q497 649 494 636L469 525Q466 510 481 510H538Q555 510 555 497Q555 482 534 482H480Q458 482 453 461L369 95Q364 73 370.5 60.5Q377 48 393 48Q416 48 435.5 74Q455 100 477 173Q481 186 490 186Q497 186 499 180Q501 174 496 158Q477 90 454.5 54Q432 18 409 4.5Q386 -9 364 -9ZM609 -9Q572 -9 558.5 24.5Q545 58 560 113L639 403Q647 432 643 448Q639 464 625 464Q602 464 578.5 429Q555 394 538 332Q535 321 525 321Q511 321 516 341Q539 425 576.5 470.5Q614 516 659 516Q695 516 707 483Q719 450 703 393L623 103Q604 34 636 34Q656 34 682 61Q708 88 736.5 135Q765 182 793 242Q821 302 844 368Q867 434 882 499Q885 510 896 510H936Q950 510 947 497L853 95Q842 48 870 48Q912 48 958 175Q962 188 972 188Q978 188 980.5 183Q983 178 980 170Q953 85 916 38Q879 -9 838 -9Q766 -9 790 96L816 207Q818 214 813.5 215Q809 216 806 210Q748 90 699 40.5Q650 -9 609 -9ZM1052 -9Q1015 -9 995 22Q975 53 975 113Q975 170 991 227.5Q1007 285 1035 337Q1063 389 1098.5 429Q1134 469 1173.5 492.5Q1213 516 1252 516Q1279 516 1299 502Q1313 493 1316 508L1348 640Q1353 658 1348.5 665Q1344 672 1330 673L1300 676Q1285 677 1287 689Q1289 698 1301 700Q1337 706 1365 714.5Q1393 723 1410 737Q1418 743 1425 743Q1437 743 1434 728L1292 113Q1277 48 1312 48Q1335 48 1353.5 79Q1372 110 1391 175Q1394 186 1404 186Q1411 186 1413 180Q1415 174 1413 166Q1394 72 1360.5 31.5Q1327 -9 1282 -9Q1243 -9 1226.5 24Q1210 57 1223 114L1234 160Q1236 167 1231.5 168Q1227 169 1224 163Q1176 69 1133 30Q1090 -9 1052 -9ZM1076 42Q1100 42 1129 71Q1158 100 1186.5 146Q1215 192 1239 245Q1263 298 1277.5 347Q1292 396 1292 430Q1292 491 1249 491Q1223 491 1194 467.5Q1165 444 1138.5 404Q1112 364 1090.5 313.5Q1069 263 1056 208.5Q1043 154 1043 102Q1043 67 1052.5 54.5Q1062 42 1076 42ZM1600 605Q1581 605 1568.5 618.5Q1556 632 1556 651Q1556 678 1572.5 694Q1589 710 1610 710Q1630 710 1643.5 697.5Q1657 685 1657 665Q1657 637 1640 621Q1623 605 1600 605ZM1518 -10Q1485 -10 1471 14.5Q1457 39 1470 95L1544 412Q1549 434 1545.5 446.5Q1542 459 1527 459Q1509 459 1487.5 432.5Q1466 406 1439 332Q1435 319 1425 319Q1410 319 1417 337Q1439 406 1463.5 445Q1488 484 1513 500Q1538 516 1559 516Q1594 516 1608 491.5Q1622 467 1609 411L1535 94Q1530 72 1533.5 59.5Q1537 47 1552 47Q1570 47 1591.5 73.5Q1613 100 1640 174Q1644 187 1654 187Q1669 187 1662 169Q1641 101 1615.5 61.5Q1590 22 1565 6Q1540 -10 1518 -10ZM1773 -9Q1720 -9 1688 32.5Q1656 74 1656 150Q1656 216 1679.5 281Q1703 346 1741 399Q1779 452 1824.5 484Q1870 516 1913 516Q1960 516 1980.5 493.5Q2001 471 2001 433Q2001 388 1969.5 343.5Q1938 299 1881.5 264Q1825 229 1749 212Q1727 207 1726 187Q1725 180 1725 172.5Q1725 165 1725 158Q1725 101 1744.5 72Q1764 43 1798 43Q1836 43 1871.5 78Q1907 113 1931 177Q1934 186 1943 186Q1949 186 1950.5 181Q1952 176 1950 169Q1918 81 1872.5 36Q1827 -9 1773 -9ZM1736 250Q1734 243 1738.5 238.5Q1743 234 1750 236Q1812 253 1854 287.5Q1896 322 1917.5 365Q1939 408 1939 449Q1939 491 1906 491Q1877 491 1843 457Q1809 423 1780 368Q1751 313 1736 250ZM2068 -9Q2035 -9 1998.5 1Q1962 11 1943 26Q1936 32 1937 44L1959 175Q1961 188 1971 188Q1982 188 1982 174L1984 126Q1986 69 2011.5 42.5Q2037 16 2074 16Q2106 16 2129 36.5Q2152 57 2152 97Q2152 120 2145 139.5Q2138 159 2123 181.5Q2108 204 2082 236Q2048 280 2031.5 311.5Q2015 343 2015 377Q2015 440 2054.5 478Q2094 516 2155 516Q2182 516 2207.5 508Q2233 500 2250 484Q2259 477 2256 466L2228 332Q2225 319 2216 319Q2207 319 2205 333L2202 381Q2198 441 2186.5 467Q2175 493 2139 493Q2107 493 2087 471Q2067 449 2067 418Q2067 385 2085 357.5Q2103 330 2134 288Q2175 234 2189.5 202Q2204 170 2204 137Q2204 95 2185.5 62Q2167 29 2136 10Q2105 -9 2068 -9ZM2276 -9Q2255 -9 2242 4.5Q2229 18 2229 38Q2229 64 2247 80Q2265 96 2285 96Q2305 96 2318.5 82.5Q2332 69 2332 49Q2332 23 2314 7Q2296 -9 2276 -9Z"/></g>
+  <g aria-label="Vũ Chí Thành" transform="translate(53 519) scale(0.05000 -0.05000)" fill="#f5f1e7"><path d="M238.2 0 10.9 668H148.2L313.4 147.7L479.7 668H617.6L389.3 0ZM805.6 -12Q743.1 -12 706.7 12.5Q670.3 37 654.8 82.5Q639.3 127.9 639.3 190.1V496H761.6V222.4Q761.6 186.1 766.6 154.8Q771.6 123.5 790.5 105.1Q809.3 86.8 849.8 86.8Q902.6 86.8 928.5 121.8Q954.4 156.8 954.4 230.2V496H1077.3V0H975.4L954.4 70.9Q932.9 34.3 898.8 11.2Q864.8 -12 805.6 -12ZM902 571.6Q871.1 571.6 849.8 581.8Q828.5 591.9 811.9 601.9Q795.3 611.8 775.9 611.8Q759 611.8 747.4 602.7Q735.9 593.6 733.3 575.3H654.8Q663.8 629.4 694 657.5Q724.2 685.5 771.5 685.5Q801.8 685.5 821.5 675.3Q841.2 665.1 858.1 654.3Q875.1 643.6 895.5 643.6Q909.9 643.6 919 649.3Q928.1 655.1 936.8 665.5Q944.4 675.9 952.7 680.5Q961 685.1 969.7 685.1Q985.6 685.1 996.3 674.7Q1006.9 664.3 1006.9 649Q1006.9 631.8 992.2 614Q977.6 596.2 953.8 583.9Q930.1 571.6 902 571.6ZM1742.6 -12Q1642.1 -12 1570.3 31.1Q1498.6 74.2 1460.4 152.2Q1422.1 230.2 1422.1 334.4Q1422.1 439.6 1462.3 517.1Q1502.5 594.6 1575.9 637.3Q1649.3 680 1748.3 680Q1838.5 680 1907.7 639.3Q1976.9 598.6 2013.1 526.7L1898.5 484.9Q1876.5 527.7 1835.7 550Q1794.8 572.3 1743.3 572.3Q1691.6 572.3 1649.5 544.8Q1607.3 517.4 1582.7 464.1Q1558.1 410.7 1558.1 334.4Q1558.1 258.3 1582.3 205.1Q1606.4 151.8 1649.3 123.8Q1692.2 95.7 1745.8 95.7Q1779.1 95.7 1809.1 105Q1839.2 114.4 1863.6 133.7Q1888.1 153.1 1903.1 182.5L2017.1 140.7Q1978.9 68.4 1906.9 28.2Q1834.9 -12 1742.6 -12ZM2073.3 0V708H2195.6V426.1Q2207.9 447.3 2229.4 465.5Q2250.9 483.7 2281.4 495.5Q2311.9 507.4 2351.6 507.4Q2413.9 507.4 2450.2 483.4Q2486.4 459.4 2501.9 414.6Q2517.3 369.9 2517.3 307.2V0H2395.1V274.9Q2395.1 311.2 2389.7 341.8Q2384.4 372.3 2365.4 390.9Q2346.4 409.5 2304.6 409.5Q2250.9 409.5 2223.3 371.9Q2195.6 334.4 2195.6 261.1V0ZM2642.1 0V402H2565.2V496H2764.9V0ZM2651.8 572.7 2742.4 685.7Q2755.9 702.7 2766.8 710Q2777.8 717.3 2793.6 717.3Q2815.2 717.3 2827.7 704.4Q2840.1 691.5 2840.1 671.7Q2840.1 658.6 2832 646Q2823.9 633.4 2801.8 616L2746.1 572.7ZM3285.9 0V554.4H3067.8V668H3633.9V554.4H3415.9V0ZM3680.3 0V708H3802.6V426.1Q3814.9 447.3 3836.4 465.5Q3857.9 483.7 3888.4 495.5Q3918.9 507.4 3958.6 507.4Q4020.9 507.4 4057.2 483.4Q4093.4 459.4 4108.9 414.6Q4124.3 369.9 4124.3 307.2V0H4002.1V274.9Q4002.1 311.2 3996.7 341.8Q3991.4 372.3 3972.4 390.9Q3953.4 409.5 3911.6 409.5Q3857.9 409.5 3830.3 371.9Q3802.6 334.4 3802.6 261.1V0ZM4354.4 -12Q4307.4 -12 4268.2 5.3Q4228.9 22.7 4205.7 54.8Q4182.5 86.8 4182.5 131.8Q4182.5 190.8 4223.8 226.8Q4265.1 262.8 4341 282.5Q4416.9 302.3 4519.6 310.6V323.5Q4519.6 370.3 4494.6 395.2Q4469.6 420.1 4420.2 420.1Q4382.6 420.1 4356.7 403Q4330.8 385.9 4322.8 353.2L4215.4 389.6Q4237.6 442.7 4292.5 475Q4347.4 507.4 4423.4 507.4Q4529.2 507.4 4582.7 459.3Q4636.1 411.2 4636.1 303V190.9Q4636.1 155 4638.3 119.5Q4640.6 84.1 4644.8 53.5Q4649 22.9 4653.6 0H4540.6L4521.7 63.5Q4496.7 25.4 4454.7 6.7Q4412.6 -12 4354.4 -12ZM4394.8 75.8Q4429.7 75.8 4458.1 87.6Q4486.4 99.3 4503 127.3Q4519.6 155.3 4519.6 204V230.6Q4420.7 222.9 4366.1 202.7Q4311.5 182.4 4311.5 138.9Q4311.5 110.5 4334.3 93.2Q4357.2 75.8 4394.8 75.8ZM4374.9 572.7 4319.2 616Q4297.1 633.4 4289 646Q4280.9 658.6 4280.9 671.7Q4280.9 691.5 4293.6 704.4Q4306.4 717.3 4327.4 717.3Q4343.3 717.3 4354.4 710Q4365.6 702.7 4378.6 685.7L4469.2 572.7ZM4733.3 0V496H4835.3L4855.6 426.1Q4867.9 447.3 4889.4 465.5Q4910.9 483.7 4941.4 495.5Q4971.9 507.4 5011.6 507.4Q5073.9 507.4 5110.2 483.4Q5146.4 459.4 5161.9 414.6Q5177.3 369.9 5177.3 307.2V0H5055.1V274.9Q5055.1 311.2 5049.7 341.8Q5044.4 372.3 5025.4 390.9Q5006.4 409.5 4964.6 409.5Q4910.9 409.5 4883.3 371.9Q4855.6 334.4 4855.6 261.1V0ZM5270.3 0V708H5392.6V426.1Q5404.9 447.3 5426.4 465.5Q5447.9 483.7 5478.4 495.5Q5508.9 507.4 5548.6 507.4Q5610.9 507.4 5647.2 483.4Q5683.4 459.4 5698.9 414.6Q5714.3 369.9 5714.3 307.2V0H5592.1V274.9Q5592.1 311.2 5586.7 341.8Q5581.4 372.3 5562.4 390.9Q5543.4 409.5 5501.6 409.5Q5447.9 409.5 5420.3 371.9Q5392.6 334.4 5392.6 261.1V0Z"/></g>
+  <g aria-label="Vulnerability researcher" transform="translate(53 565) scale(0.03300 -0.03300)" fill="#c7c3ba"><path d="M241 0 12 668H115L296 110L478 668H581L351 0ZM792 -12Q734 -12 699 12.5Q664 37 648.5 80.5Q633 124 633 180V496H717V205Q717 167 724 134Q731 101 753.5 81.5Q776 62 821 62Q880 62 913.5 103.5Q947 145 947 224V496H1031V0H968L947 72Q926 36 890 12Q854 -12 792 -12ZM1280 0Q1234 0 1208 10Q1182 20 1171.5 45.5Q1161 71 1161 118V708H1245V128Q1245 96 1254.5 85Q1264 74 1301 74H1335V0ZM1417 0V496H1479L1501 421Q1515 445 1536.5 463.5Q1558 482 1588.5 493Q1619 504 1661 504Q1721 504 1757 480Q1793 456 1809 413.5Q1825 371 1825 314V0H1741V289Q1741 327 1734 359.5Q1727 392 1703.5 412Q1680 432 1632 432Q1571 432 1536 390.5Q1501 349 1501 269V0ZM2164 -12Q2086 -12 2032 22.5Q1978 57 1949.5 115.5Q1921 174 1921 247Q1921 326 1953 383.5Q1985 441 2039.5 472.5Q2094 504 2162 504Q2221 504 2266 480.5Q2311 457 2340.5 417.5Q2370 378 2383.5 328Q2397 278 2393 225H2009Q2013 176 2029.5 144Q2046 112 2069 94Q2092 76 2117.5 69Q2143 62 2164 62Q2206 62 2234.5 75.5Q2263 89 2280 111L2361 87Q2334 44 2284 16Q2234 -12 2164 -12ZM2010 292H2304Q2304 327 2286.5 359Q2269 391 2237.5 411.5Q2206 432 2162 432Q2129 432 2096.5 419Q2064 406 2040.5 375.5Q2017 345 2010 292ZM2485 0V496H2546L2573 404Q2591 434 2616.5 456.5Q2642 479 2675.5 491.5Q2709 504 2750 504V417Q2682 417 2642.5 393.5Q2603 370 2586 324.5Q2569 279 2569 213V0ZM2943 -12Q2896 -12 2856.5 4.5Q2817 21 2793.5 52.5Q2770 84 2770 129Q2770 188 2811 224Q2852 260 2928.5 280Q3005 300 3111 310V319Q3111 372 3083.5 404.5Q3056 437 2997 437Q2951 437 2922 416.5Q2893 396 2885 360L2804 384Q2824 441 2875.5 472.5Q2927 504 2994 504Q3097 504 3144 454.5Q3191 405 3191 303V187Q3191 146 3193.5 112.5Q3196 79 3200.5 51.5Q3205 24 3209 0H3132L3112 68Q3091 31 3049.5 9.5Q3008 -12 2943 -12ZM2962 55Q3002 55 3036 69Q3070 83 3090.5 115.5Q3111 148 3111 204V243Q2993 233 2928 208Q2863 183 2863 131Q2863 97 2889.5 76Q2916 55 2962 55ZM3571 -12Q3532 -12 3501.5 -1.5Q3471 9 3448 29Q3425 49 3410 75L3388 0H3326V708H3410V418Q3425 444 3448 463.5Q3471 483 3501.5 493.5Q3532 504 3571 504Q3628 504 3676.5 473.5Q3725 443 3754.5 385.5Q3784 328 3784 246Q3784 164 3754.5 106.5Q3725 49 3676.5 18.5Q3628 -12 3571 -12ZM3549 60Q3613 60 3651.5 109Q3690 158 3690 246Q3690 335 3651.5 383.5Q3613 432 3549 432Q3485 432 3446.5 383.5Q3408 335 3408 246Q3408 187 3425.5 145.5Q3443 104 3475 82Q3507 60 3549 60ZM3899 0V429H3830V496H3983V0ZM3933 590Q3908 590 3889.5 608.5Q3871 627 3871 652Q3871 678 3889.5 696Q3908 714 3933 714Q3959 714 3977 696Q3995 678 3995 652Q3995 627 3977 608.5Q3959 590 3933 590ZM4234 0Q4188 0 4162 10Q4136 20 4125.5 45.5Q4115 71 4115 118V708H4199V128Q4199 96 4208.5 85Q4218 74 4255 74H4289V0ZM4400 0V429H4331V496H4484V0ZM4434 590Q4409 590 4390.5 608.5Q4372 627 4372 652Q4372 678 4390.5 696Q4409 714 4434 714Q4460 714 4478 696Q4496 678 4496 652Q4496 627 4478 608.5Q4460 590 4434 590ZM4769 0Q4722 0 4696.5 9.5Q4671 19 4661.5 46Q4652 73 4652 124V429H4568V496H4652V620H4736V496H4839V429H4736V138Q4736 96 4745.5 85Q4755 74 4787 74H4839V0ZM4919 -162V-88H4960Q4990 -88 5007.5 -83Q5025 -78 5036 -62.5Q5047 -47 5056 -17L5061 -1L4882 496H4974L5101 117L5219 496H5311L5137 -22Q5124 -62 5110 -89Q5096 -116 5077.5 -132Q5059 -148 5031.5 -155Q5004 -162 4962 -162ZM5643 0V496H5704L5731 404Q5749 434 5774.5 456.5Q5800 479 5833.5 491.5Q5867 504 5908 504V417Q5840 417 5800.5 393.5Q5761 370 5744 324.5Q5727 279 5727 213V0ZM6176 -12Q6098 -12 6044 22.5Q5990 57 5961.5 115.5Q5933 174 5933 247Q5933 326 5965 383.5Q5997 441 6051.5 472.5Q6106 504 6174 504Q6233 504 6278 480.5Q6323 457 6352.5 417.5Q6382 378 6395.5 328Q6409 278 6405 225H6021Q6025 176 6041.5 144Q6058 112 6081 94Q6104 76 6129.5 69Q6155 62 6176 62Q6218 62 6246.5 75.5Q6275 89 6292 111L6373 87Q6346 44 6296 16Q6246 -12 6176 -12ZM6022 292H6316Q6316 327 6298.5 359Q6281 391 6249.5 411.5Q6218 432 6174 432Q6141 432 6108.5 419Q6076 406 6052.5 375.5Q6029 345 6022 292ZM6664 -12Q6621 -12 6579.5 1.5Q6538 15 6505.5 42.5Q6473 70 6456 112L6537 142Q6548 101 6586 80Q6624 59 6665 59Q6714 59 6748 80Q6782 101 6782 136Q6782 168 6756 185Q6730 202 6675 214L6617 227Q6575 237 6541.5 253Q6508 269 6488.5 296Q6469 323 6469 366Q6469 409 6495 440.5Q6521 472 6564.5 489Q6608 506 6660 506Q6722 506 6775 480.5Q6828 455 6851 402L6772 373Q6759 404 6725.5 419.5Q6692 435 6654 435Q6612 435 6582.5 417.5Q6553 400 6553 368Q6553 341 6574 326.5Q6595 312 6638 302L6696 289Q6748 278 6786 261Q6824 244 6845 215.5Q6866 187 6866 140Q6866 95 6839 60.5Q6812 26 6766.5 7Q6721 -12 6664 -12ZM7163 -12Q7085 -12 7031 22.5Q6977 57 6948.5 115.5Q6920 174 6920 247Q6920 326 6952 383.5Q6984 441 7038.5 472.5Q7093 504 7161 504Q7220 504 7265 480.5Q7310 457 7339.5 417.5Q7369 378 7382.5 328Q7396 278 7392 225H7008Q7012 176 7028.5 144Q7045 112 7068 94Q7091 76 7116.5 69Q7142 62 7163 62Q7205 62 7233.5 75.5Q7262 89 7279 111L7360 87Q7333 44 7283 16Q7233 -12 7163 -12ZM7009 292H7303Q7303 327 7285.5 359Q7268 391 7236.5 411.5Q7205 432 7161 432Q7128 432 7095.5 419Q7063 406 7039.5 375.5Q7016 345 7009 292ZM7616 -12Q7569 -12 7529.5 4.5Q7490 21 7466.5 52.5Q7443 84 7443 129Q7443 188 7484 224Q7525 260 7601.5 280Q7678 300 7784 310V319Q7784 372 7756.5 404.5Q7729 437 7670 437Q7624 437 7595 416.5Q7566 396 7558 360L7477 384Q7497 441 7548.5 472.5Q7600 504 7667 504Q7770 504 7817 454.5Q7864 405 7864 303V187Q7864 146 7866.5 112.5Q7869 79 7873.5 51.5Q7878 24 7882 0H7805L7785 68Q7764 31 7722.5 9.5Q7681 -12 7616 -12ZM7635 55Q7675 55 7709 69Q7743 83 7763.5 115.5Q7784 148 7784 204V243Q7666 233 7601 208Q7536 183 7536 131Q7536 97 7562.5 76Q7589 55 7635 55ZM7999 0V496H8060L8087 404Q8105 434 8130.5 456.5Q8156 479 8189.5 491.5Q8223 504 8264 504V417Q8196 417 8156.5 393.5Q8117 370 8100 324.5Q8083 279 8083 213V0ZM8520 -12Q8449 -12 8397 21.5Q8345 55 8317 113Q8289 171 8289 246Q8289 320 8318.5 378.5Q8348 437 8402 470.5Q8456 504 8529 504Q8574 504 8610 488.5Q8646 473 8673 448Q8700 423 8716 392L8639 364Q8623 394 8592 412Q8561 430 8523 430Q8486 430 8453 410.5Q8420 391 8400 350.5Q8380 310 8380 247Q8380 185 8400.5 143.5Q8421 102 8453.5 82Q8486 62 8523 62Q8564 62 8594.5 80.5Q8625 99 8641 127L8718 99Q8700 67 8670 42Q8640 17 8602 2.5Q8564 -12 8520 -12ZM8820 0V708H8904V421Q8918 445 8939.5 463.5Q8961 482 8991.5 493Q9022 504 9064 504Q9124 504 9160 480Q9196 456 9212 413.5Q9228 371 9228 314V0H9144V289Q9144 327 9137 359.5Q9130 392 9106.5 412Q9083 432 9035 432Q8974 432 8939 390.5Q8904 349 8904 269V0ZM9567 -12Q9489 -12 9435 22.5Q9381 57 9352.5 115.5Q9324 174 9324 247Q9324 326 9356 383.5Q9388 441 9442.5 472.5Q9497 504 9565 504Q9624 504 9669 480.5Q9714 457 9743.5 417.5Q9773 378 9786.5 328Q9800 278 9796 225H9412Q9416 176 9432.5 144Q9449 112 9472 94Q9495 76 9520.5 69Q9546 62 9567 62Q9609 62 9637.5 75.5Q9666 89 9683 111L9764 87Q9737 44 9687 16Q9637 -12 9567 -12ZM9413 292H9707Q9707 327 9689.5 359Q9672 391 9640.5 411.5Q9609 432 9565 432Q9532 432 9499.5 419Q9467 406 9443.5 375.5Q9420 345 9413 292ZM9888 0V496H9949L9976 404Q9994 434 10019.5 456.5Q10045 479 10078.5 491.5Q10112 504 10153 504V417Q10085 417 10045.5 393.5Q10006 370 9989 324.5Q9972 279 9972 213V0Z"/></g>
+  </svg>

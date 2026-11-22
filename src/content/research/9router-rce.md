@@ -1,5 +1,6 @@
 ---
 title: "Unauthenticated RCE in 9Router"
+product: "9Router"
 dek: "Missing authentication exposed privileged functionality; operating-system command injection turned that access into remote code execution."
 year: 2026
 role: co-research

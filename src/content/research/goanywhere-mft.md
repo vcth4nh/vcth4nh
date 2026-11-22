@@ -1,5 +1,6 @@
 ---
 title: "Breaking the first-run boundary"
+product: "GoAnywhere MFT"
 dek: "Two independently discovered flaws in GoAnywhere MFT turned an initialization route into unauthenticated administrative access."
 year: 2024
 role: independent

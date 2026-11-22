@@ -11,6 +11,7 @@ const research = defineCollection({
   loader: glob({ base: "./src/content/research", pattern: "**/*.{md,mdx}" }),
   schema: z.object({
     title: z.string(),
+    product: z.string().optional(),
     dek: z.string(),
     year: z.number(),
     role: z.enum(["independent", "co-research", "team"]),

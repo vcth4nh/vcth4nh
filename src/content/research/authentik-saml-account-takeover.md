@@ -1,5 +1,6 @@
 ---
 title: "SAML identity mismatch in authentik"
+product: "authentik"
 dek: "An XML-comment interpretation conflict could bind an attacker's signed external identity to an existing authentik account."
 year: 2026
 role: independent

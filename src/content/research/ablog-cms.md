@@ -1,5 +1,6 @@
 ---
 title: "Chaining SSRF into session compromise"
+product: "a-blog cms"
 dek: "An unauthenticated SSRF and improper log neutralization in a-blog cms could be combined to hijack an administrative session."
 year: 2025
 role: independent

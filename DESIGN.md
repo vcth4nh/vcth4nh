@@ -1,18 +1,16 @@
 ---
 name: "thanh.vc"
-description: "A lavender research journal with a persistent Classic presentation."
+description: "Boundary studies, an interactive exhibition of Vũ Chí Thành’s research, and its alternate Classic presentation."
 colors:
-  journal-bg: "#eeecf6"
-  journal-ink: "#221f29"
-  journal-violet: "#6542a6"
-  journal-deep: "#4c3388"
-  journal-muted: "#635e6c"
-  journal-line: "#c9c3d3"
-  activity-bg: "#30263e"
-  activity-ink: "#f4effc"
-  workbench-bg: "#e2dceb"
-  button-text: "#faf8ff"
-  search-bg: "#f8f6fb"
+  gallery-dark: "#161614"
+  gallery-white: "#f5f1e7"
+  gallery-paper: "#eeeae0"
+  gallery-ink: "#1a1a17"
+  gallery-accent: "#ff592f"
+  gallery-link: "#aa340e"
+  gallery-muted: "#625e54"
+  gallery-rule: "#c2bcb0"
+  search-bg: "#fbf9f3"
   ink: "#0b0c0b"
   paper: "#f0eee6"
   line: "#31342f"
@@ -22,22 +20,27 @@ colors:
 typography:
   display:
     fontFamily: '"Barlow Condensed", "Arial Narrow", sans-serif'
-    fontSize: "clamp(5.7rem, 8.8vw, 8.2rem)"
+    fontSize: "clamp(7rem, 14.2vw, 15.4rem)"
     fontWeight: 700
-    lineHeight: 0.86
-    letterSpacing: "-0.032em"
+    lineHeight: 0.9
+    letterSpacing: "-0.037em"
+  display-italic:
+    fontFamily: '"Instrument Serif", Georgia, serif'
+    fontSize: "clamp(8.5rem, 15.5vw, 17rem)"
+    fontWeight: 400
+    lineHeight: 0.94
+    letterSpacing: "-0.04em"
   headline:
     fontFamily: '"Barlow Condensed", "Arial Narrow", sans-serif'
-    fontSize: "clamp(2.85rem, 4.3vw, 4.25rem)"
-    fontWeight: 600
-    lineHeight: 0.97
-    letterSpacing: "-0.02em"
+    fontSize: "clamp(3.6rem, 7.2vw, 6rem)"
+    fontWeight: 700
+    lineHeight: 0.98
+    letterSpacing: "-0.025em"
   title:
     fontFamily: '"Barlow Condensed", "Arial Narrow", sans-serif'
-    fontSize: "clamp(1.65rem, 2.4vw, 2.25rem)"
-    fontWeight: 600
-    lineHeight: 1.1
-    letterSpacing: "-0.012em"
+    fontSize: "clamp(1.85rem, 3.1vw, 3rem)"
+    fontWeight: 650
+    letterSpacing: "-0.015em"
   body:
     fontFamily: '"Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", sans-serif'
     fontSize: "clamp(1.04rem, 1rem + 0.15vw, 1.12rem)"
@@ -45,8 +48,9 @@ typography:
     lineHeight: 1.6
   metadata:
     fontFamily: '"JetBrains Mono Variable", monospace'
-    fontSize: "0.76rem"
-    fontWeight: 400
+    fontSize: "0.8rem"
+    fontWeight: 500
+    lineHeight: 1.5
   navigation:
     fontFamily: '"Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", sans-serif'
     fontSize: "0.98rem"
@@ -57,31 +61,32 @@ typography:
     lineHeight: 0.9
 rounded:
   square: "0px"
-  button: "4px"
   circle: "50%"
 spacing:
-  journal-gutter: "clamp(1.25rem, 5vw, 5rem)"
-  journal-section: "clamp(3.3rem, 5.4vw, 5.1rem)"
+  gallery-gutter: "clamp(1.25rem, 4.4vw, 5rem)"
+  gallery-record: "2rem 0.5rem"
   classic-gutter: "clamp(1.25rem, 4vw, 4.5rem)"
 components:
-  journal-primary:
-    backgroundColor: "{colors.journal-ink}"
-    textColor: "{colors.button-text}"
-    rounded: "{rounded.button}"
-    padding: "0.62rem 1.1rem"
-  journal-secondary:
-    textColor: "{colors.journal-ink}"
-    padding: "0.35rem 0"
-  journal-navigation:
-    textColor: "{colors.journal-ink}"
+  gallery-contact:
+    backgroundColor: "{colors.gallery-accent}"
+    textColor: "{colors.gallery-dark}"
+    rounded: "{rounded.square}"
+    padding: "0.45rem 0.95rem"
+  gallery-navigation:
+    backgroundColor: "{colors.gallery-dark}"
+    textColor: "{colors.gallery-white}"
     typography: "{typography.navigation}"
-  journal-record:
-    textColor: "{colors.journal-ink}"
-    typography: "{typography.title}"
-    padding: "1.48rem 0"
-  journal-search:
+  gallery-record-tag:
+    textColor: "{colors.gallery-link}"
+    padding: "0.15rem 0.45rem"
+  selected-study:
+    backgroundColor: "{colors.gallery-accent}"
+    textColor: "{colors.gallery-dark}"
+    rounded: "{rounded.square}"
+    padding: "0.5rem clamp(0.68rem, 1.6vw, 1.7rem)"
+  gallery-search:
     backgroundColor: "{colors.search-bg}"
-    textColor: "{colors.journal-ink}"
+    textColor: "{colors.gallery-ink}"
     padding: "0.65rem 0.75rem"
   classic-primary:
     backgroundColor: "{colors.signal}"
@@ -102,44 +107,44 @@ components:
 
 ## Overview
 
-The default presentation lays out Vũ Chí Thành’s work as a research journal. A graphite CRT with a lilac wireframe landscape sits opposite the introduction. Small registration marks frame the image and a quotation sits beneath it.
+Boundary studies presents each vulnerability disclosure as a study in an exhibition. Selecting a product changes the sculpture and the adjacent case description. The case links lead to the full finding, attribution and primary sources.
 
-- The deep-plum activity band gives the latest result, its date, credits, and source a single place on the page.
-- Research entries sit on flat ruled rows with visible years, identifiers, and attribution.
-- Classic uses dark surfaces, monospaced headings, bright accents, and its own research-card grid.
+- A dark stage holds the title and sculpture above a paper strip of selectable studies.
+- Warm paper carries long-form work. Ruled rows align years, titles and advisory identifiers across the research archive.
+- The latest contest result includes the award, both researchers’ credit and the team placements.
 
 ## Colors
 
-Lavender paper runs behind the header, introduction, and archive. Graphite carries headings and primary buttons. Violet marks emphasis, links, and the wordmark symbol. The open-source section has a slightly darker lavender ground. Classic’s phosphor theme uses the unprefixed colors above. Its sage, harbor, grove, and signal themes override the shared variables in `src/styles/global.css`.
+Vermilion marks actions on charcoal. The navigation uses warm white lettering and the contact button uses dark lettering on vermilion. Links, emphasis and keyboard focus on paper use burnt orange. Muted ink carries years, credits and secondary descriptions.
+
+Classic’s default phosphor palette pairs bright green with near-black. The sage, harbor, grove and signal variants take their values from `src/styles/global.css`.
 
 ## Typography
 
-Barlow Condensed sets journal headings. The homepage title pairs bold upright and bold italic on two lines. Atkinson Hyperlegible Next carries prose, navigation, and actions in both presentations. JetBrains Mono sets years, advisory identifiers, stack names, and the handle. Classic extends that face to display headings and controls.
+The first word of the exhibition title uses uppercase Barlow Condensed. The second uses lowercase Instrument Serif italic. Barlow Condensed also sets case headings and the large award figure. The afterword uses its bold italic cut. Atkinson Hyperlegible Next carries prose, navigation and action labels. JetBrains Mono identifies years, case numbers, advisories and technology names. Classic uses it for display text as well.
 
 ## Layout
 
-Journal content shares a 1280px shell. The introduction pairs copy and artwork in equal columns. The latest activity fills the viewport width with its content aligned to the same shell. The homepage research rows align the year, finding, credit, and link arrow. At 680px and below, the artwork follows the introduction and attribution moves beneath the finding. The journal header switches to a compact menu at 800px.
+The exhibition and its archives share a 1440px maximum content width. On wide screens the sculpture sits between the two words of the title. The author’s introduction and selected case occupy opposite corners. The horizontal study index runs beneath them. At 760px and below, the introduction, index and selected case follow the title and sculpture in reading order. The activity section places the individual contest entry alongside the team's annual placements. Project descriptions and technologies occupy the ruled rows below it.
 
-Classic has a 1380px shell and a twelve-column research grid. The résumé has a separate A4 print layout with 10mm margins.
+Inner routes use a two-column introduction with the title on the left. Archive rows put attribution in the first column and reserve the right edge for the identifier and link arrow. At 800px the header converts to a menu and the archive rows stack. The résumé retains an A4 print treatment with 10mm margins.
 
 ## Elevation & Depth
 
-Rules and changes in paper tone separate journal sections. The CRT image supplies depth through its casing, halftone texture, and contact shadow. Its short contrast and position transition respects reduced motion. Classic buttons use a solid offset shadow on hover.
+Dragging or tapping rotates the projected rings. The arrow keys rotate the sculpture in steps, and Home restores its initial pose. Changing studies briefly fades in the new form. Reduced-motion preferences show it immediately. The surrounding panels meet at flat rules. Classic buttons use a solid offset shadow on hover.
 
 ## Shapes
 
-The CRT plate has four small crosshairs. One-pixel dividers run across the archive. Homepage buttons have a slight corner radius, and each finding ends in a circular arrow control. The journal header uses a stepped violet symbol beside the handle.
+Three stacked cuts form the vermilion brand mark. The header contact button, study rows and project entries have square edges. Circular arrow controls mark links in the archive.
 
 ## Components
 
-The homepage pairs a dark primary research link with an underlined résumé link. Inside the plum band, the source link uses a light outline. The archive keeps the whole research row clickable and changes the heading and arrow color on hover.
+The study index works as linked product names before enhancement. In the interactive version, Left and Right select adjacent studies, and Home and End select the first and last. The selected study retains its direct case link. The URL records the selection so a visitor can share the study or revisit it with the browser’s Back button.
 
-The sticky journal header includes primary routes, search, and contact. The magnifier or slash key opens the native quick navigator. Search filters its destinations, the arrow keys select a match, Enter follows it, and Escape dismisses it.
-
-The journal footer holds the Classic switch. In Classic, the switch sits in the header or mobile menu. The choice persists across routes in local storage. Existing `presentation=field-notes` URLs select the journal.
+The magnifier or slash key opens the quick navigator. Typing filters its destinations, arrow keys highlight a result, Enter follows it and Escape closes the dialog. The footer contains social links and the Classic view switch. In Classic, the switch sits in the header or its mobile menu. `presentation=field-notes` selects the exhibition and the saved choice carries across routes.
 
 ## Do's and Don'ts
 
-- Do keep attribution, identifiers, and source links legible when rows reflow.
-- Do use the active presentation’s palette and preserve its keyboard focus and reduced-motion behavior.
-- Do keep screen-only navigation and controls outside the printed résumé.
+- Keep attribution, identifiers and source links legible when research rows reflow.
+- Pair vermilion with dark ink. Use burnt orange for small colored text on paper.
+- Keep screen navigation and controls outside the printed résumé.

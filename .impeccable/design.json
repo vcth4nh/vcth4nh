@@ -1,161 +1,133 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-22T04:58:23.845Z",
+  "generatedAt": "2026-11-22T05:09:18.927Z",
   "title": "Design System: thanh.vc",
   "extensions": {
     "colorMeta": {
-      "journal-bg": {
+      "gallery-dark": {
         "role": "neutral",
-        "displayName": "Lavender paper",
+        "displayName": "Gallery wall",
         "tonalRamp": [
-          "oklch(15% 0.0061 295.32)",
-          "oklch(27% 0.0097 295.32)",
-          "oklch(38% 0.0124 295.32)",
-          "oklch(50% 0.0135 295.32)",
-          "oklch(61% 0.0127 295.32)",
-          "oklch(73% 0.0101 295.32)",
-          "oklch(84% 0.0065 295.32)",
-          "oklch(95% 0.0022 295.32)"
+          "oklch(15% 0.0018 106.75)",
+          "oklch(27% 0.0028 106.75)",
+          "oklch(38% 0.0036 106.75)",
+          "oklch(50% 0.0039 106.75)",
+          "oklch(61% 0.0037 106.75)",
+          "oklch(73% 0.0029 106.75)",
+          "oklch(84% 0.0019 106.75)",
+          "oklch(95% 0.0006 106.75)"
         ]
       },
-      "journal-ink": {
+      "gallery-white": {
         "role": "neutral",
-        "displayName": "Graphite ink",
+        "displayName": "Warm white",
         "tonalRamp": [
-          "oklch(15% 0.0086 298.72)",
-          "oklch(27% 0.0138 298.72)",
-          "oklch(38% 0.0177 298.72)",
-          "oklch(50% 0.0192 298.72)",
-          "oklch(61% 0.0180 298.72)",
-          "oklch(73% 0.0144 298.72)",
-          "oklch(84% 0.0092 298.72)",
-          "oklch(95% 0.0031 298.72)"
+          "oklch(15% 0.0063 88.68)",
+          "oklch(27% 0.0100 88.68)",
+          "oklch(38% 0.0128 88.68)",
+          "oklch(50% 0.0139 88.68)",
+          "oklch(61% 0.0131 88.68)",
+          "oklch(73% 0.0105 88.68)",
+          "oklch(84% 0.0067 88.68)",
+          "oklch(95% 0.0022 88.68)"
         ]
       },
-      "journal-violet": {
+      "gallery-paper": {
+        "role": "neutral",
+        "displayName": "Uncoated paper",
+        "tonalRamp": [
+          "oklch(15% 0.0063 88.69)",
+          "oklch(27% 0.0101 88.69)",
+          "oklch(38% 0.0129 88.69)",
+          "oklch(50% 0.0140 88.69)",
+          "oklch(61% 0.0132 88.69)",
+          "oklch(73% 0.0105 88.69)",
+          "oklch(84% 0.0067 88.69)",
+          "oklch(95% 0.0022 88.69)"
+        ]
+      },
+      "gallery-ink": {
+        "role": "neutral",
+        "displayName": "Charcoal ink",
+        "tonalRamp": [
+          "oklch(15% 0.0026 106.87)",
+          "oklch(27% 0.0041 106.87)",
+          "oklch(38% 0.0053 106.87)",
+          "oklch(50% 0.0057 106.87)",
+          "oklch(61% 0.0054 106.87)",
+          "oklch(73% 0.0043 106.87)",
+          "oklch(84% 0.0028 106.87)",
+          "oklch(95% 0.0009 106.87)"
+        ]
+      },
+      "gallery-accent": {
         "role": "primary",
-        "displayName": "Journal violet",
+        "displayName": "Vermilion",
         "tonalRamp": [
-          "oklch(15% 0.0695 296.08)",
-          "oklch(27% 0.1111 296.08)",
-          "oklch(38% 0.1420 296.08)",
-          "oklch(50% 0.1544 296.08)",
-          "oklch(61% 0.1451 296.08)",
-          "oklch(73% 0.1158 296.08)",
-          "oklch(84% 0.0741 296.08)",
-          "oklch(95% 0.0247 296.08)"
+          "oklch(15% 0.0941 34.97)",
+          "oklch(27% 0.1505 34.97)",
+          "oklch(38% 0.1923 34.97)",
+          "oklch(50% 0.2090 34.97)",
+          "oklch(61% 0.1965 34.97)",
+          "oklch(73% 0.1568 34.97)",
+          "oklch(84% 0.1003 34.97)",
+          "oklch(95% 0.0334 34.97)"
         ]
       },
-      "journal-deep": {
+      "gallery-link": {
         "role": "primary",
-        "displayName": "Deep violet",
+        "displayName": "Burnt orange",
         "tonalRamp": [
-          "oklch(15% 0.0610 292.74)",
-          "oklch(27% 0.0976 292.74)",
-          "oklch(38% 0.1247 292.74)",
-          "oklch(50% 0.1355 292.74)",
-          "oklch(61% 0.1274 292.74)",
-          "oklch(73% 0.1016 292.74)",
-          "oklch(84% 0.0650 292.74)",
-          "oklch(95% 0.0217 292.74)"
+          "oklch(15% 0.0722 36.30)",
+          "oklch(27% 0.1154 36.30)",
+          "oklch(38% 0.1475 36.30)",
+          "oklch(50% 0.1603 36.30)",
+          "oklch(61% 0.1507 36.30)",
+          "oklch(73% 0.1203 36.30)",
+          "oklch(84% 0.0770 36.30)",
+          "oklch(95% 0.0257 36.30)"
         ]
       },
-      "journal-muted": {
+      "gallery-muted": {
         "role": "neutral",
         "displayName": "Muted ink",
         "tonalRamp": [
-          "oklch(15% 0.0103 301.80)",
-          "oklch(27% 0.0165 301.80)",
-          "oklch(38% 0.0210 301.80)",
-          "oklch(50% 0.0229 301.80)",
-          "oklch(61% 0.0215 301.80)",
-          "oklch(73% 0.0171 301.80)",
-          "oklch(84% 0.0110 301.80)",
-          "oklch(95% 0.0037 301.80)"
+          "oklch(15% 0.0074 88.77)",
+          "oklch(27% 0.0118 88.77)",
+          "oklch(38% 0.0151 88.77)",
+          "oklch(50% 0.0164 88.77)",
+          "oklch(61% 0.0154 88.77)",
+          "oklch(73% 0.0123 88.77)",
+          "oklch(84% 0.0079 88.77)",
+          "oklch(95% 0.0026 88.77)"
         ]
       },
-      "journal-line": {
+      "gallery-rule": {
         "role": "neutral",
-        "displayName": "Journal rule",
+        "displayName": "Paper rule",
         "tonalRamp": [
-          "oklch(15% 0.0104 302.87)",
-          "oklch(27% 0.0166 302.87)",
-          "oklch(38% 0.0212 302.87)",
-          "oklch(50% 0.0230 302.87)",
-          "oklch(61% 0.0216 302.87)",
-          "oklch(73% 0.0173 302.87)",
-          "oklch(84% 0.0110 302.87)",
-          "oklch(95% 0.0037 302.87)"
-        ]
-      },
-      "activity-bg": {
-        "role": "secondary",
-        "displayName": "Activity plum",
-        "tonalRamp": [
-          "oklch(15% 0.0201 302.86)",
-          "oklch(27% 0.0322 302.86)",
-          "oklch(38% 0.0411 302.86)",
-          "oklch(50% 0.0447 302.86)",
-          "oklch(61% 0.0420 302.86)",
-          "oklch(73% 0.0335 302.86)",
-          "oklch(84% 0.0215 302.86)",
-          "oklch(95% 0.0072 302.86)"
-        ]
-      },
-      "activity-ink": {
-        "role": "neutral",
-        "displayName": "Light activity ink",
-        "tonalRamp": [
-          "oklch(15% 0.0081 303.42)",
-          "oklch(27% 0.0130 303.42)",
-          "oklch(38% 0.0166 303.42)",
-          "oklch(50% 0.0180 303.42)",
-          "oklch(61% 0.0170 303.42)",
-          "oklch(73% 0.0135 303.42)",
-          "oklch(84% 0.0087 303.42)",
-          "oklch(95% 0.0029 303.42)"
-        ]
-      },
-      "workbench-bg": {
-        "role": "neutral",
-        "displayName": "Workbench paper",
-        "tonalRamp": [
-          "oklch(15% 0.0095 304.01)",
-          "oklch(27% 0.0153 304.01)",
-          "oklch(38% 0.0195 304.01)",
-          "oklch(50% 0.0212 304.01)",
-          "oklch(61% 0.0199 304.01)",
-          "oklch(73% 0.0159 304.01)",
-          "oklch(84% 0.0102 304.01)",
-          "oklch(95% 0.0034 304.01)"
-        ]
-      },
-      "button-text": {
-        "role": "neutral",
-        "displayName": "Primary button text",
-        "tonalRamp": [
-          "oklch(15% 0.0043 299.24)",
-          "oklch(27% 0.0068 299.24)",
-          "oklch(38% 0.0087 299.24)",
-          "oklch(50% 0.0095 299.24)",
-          "oklch(61% 0.0089 299.24)",
-          "oklch(73% 0.0071 299.24)",
-          "oklch(84% 0.0045 299.24)",
-          "oklch(95% 0.0015 299.24)"
+          "oklch(15% 0.0081 84.59)",
+          "oklch(27% 0.0129 84.59)",
+          "oklch(38% 0.0165 84.59)",
+          "oklch(50% 0.0179 84.59)",
+          "oklch(61% 0.0169 84.59)",
+          "oklch(73% 0.0135 84.59)",
+          "oklch(84% 0.0086 84.59)",
+          "oklch(95% 0.0029 84.59)"
         ]
       },
       "search-bg": {
         "role": "neutral",
         "displayName": "Search field",
         "tonalRamp": [
-          "oklch(15% 0.0031 304.24)",
-          "oklch(27% 0.0050 304.24)",
-          "oklch(38% 0.0064 304.24)",
-          "oklch(50% 0.0069 304.24)",
-          "oklch(61% 0.0065 304.24)",
-          "oklch(73% 0.0052 304.24)",
-          "oklch(84% 0.0033 304.24)",
-          "oklch(95% 0.0011 304.24)"
+          "oklch(15% 0.0037 91.48)",
+          "oklch(27% 0.0059 91.48)",
+          "oklch(38% 0.0076 91.48)",
+          "oklch(50% 0.0082 91.48)",
+          "oklch(61% 0.0077 91.48)",
+          "oklch(73% 0.0062 91.48)",
+          "oklch(84% 0.0039 91.48)",
+          "oklch(95% 0.0013 91.48)"
         ]
       },
       "ink": {
@@ -245,32 +217,36 @@
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Journal display",
-        "purpose": "Main introduction."
+        "displayName": "Exhibition title",
+        "purpose": "Uppercase opening word on the exhibition stage."
+      },
+      "display-italic": {
+        "displayName": "Exhibition italic",
+        "purpose": "Lowercase italic word in front of the sculpture."
       },
       "headline": {
-        "displayName": "Journal headline",
-        "purpose": "Section titles."
+        "displayName": "Archive headline",
+        "purpose": "The research and project archive headings."
       },
       "title": {
-        "displayName": "Research title",
-        "purpose": "Finding titles in homepage rows."
+        "displayName": "Case title",
+        "purpose": "Full-width records in the research archive."
       },
       "body": {
-        "displayName": "Discussion and descriptions",
-        "purpose": "Prose across both presentations."
+        "displayName": "Body",
+        "purpose": "Biographical copy, case text and tool descriptions."
       },
       "metadata": {
-        "displayName": "Technical metadata",
-        "purpose": "Years, identifiers, stack names and credit."
+        "displayName": "Metadata",
+        "purpose": "Years, tech stacks and identifiers."
       },
       "navigation": {
-        "displayName": "Journal navigation",
-        "purpose": "Primary destinations in the journal header."
+        "displayName": "Navigation",
+        "purpose": "Destinations in the site header."
       },
       "classic-display": {
         "displayName": "Classic display",
-        "purpose": "Monospaced headings in Classic."
+        "purpose": "Display headings in the Classic presentation."
       }
     },
     "shadows": [
@@ -282,52 +258,56 @@
     ],
     "motion": [
       {
-        "name": "journal-art",
-        "value": "680ms cubic-bezier(.2,.75,.3,1)",
-        "purpose": "Contrast and position transition on the CRT image when motion is enabled."
+        "name": "sculpture-selection",
+        "value": "220ms ease-out",
+        "purpose": "Fades in the newly selected sculpture."
       },
       {
-        "name": "journal-button",
-        "value": "140ms",
-        "purpose": "Background-color transition on the primary research link."
-      },
-      {
-        "name": "motion-hover",
-        "value": "110ms",
-        "purpose": "Shared short interaction duration."
-      },
-      {
-        "name": "motion-small",
-        "value": "150ms",
-        "purpose": "Shared component transitions."
-      },
-      {
-        "name": "motion-hero",
-        "value": "760ms",
-        "purpose": "Classic hero motion."
-      },
-      {
-        "name": "ease-productive",
-        "value": "cubic-bezier(0, 0, 0.38, 0.9)",
-        "purpose": "Shared component easing."
+        "name": "contact-hover",
+        "value": "140ms ease",
+        "purpose": "Reveals the contact link’s hover color."
       }
     ],
     "breakpoints": [
       {
+        "name": "min-1800",
+        "value": "1800px"
+      },
+      {
+        "name": "max-1050",
+        "value": "1050px"
+      },
+      {
         "name": "max-960",
         "value": "960px"
+      },
+      {
+        "name": "max-850",
+        "value": "850px"
       },
       {
         "name": "max-800",
         "value": "800px"
       },
       {
+        "name": "max-760",
+        "value": "760px"
+      },
+      {
         "name": "max-680",
         "value": "680px"
       },
       {
+        "name": "max-650",
+        "value": "650px"
+      },
+      {
         "name": "max-540",
         "value": "540px"
+      },
+      {
+        "name": "max-420",
+        "value": "420px"
       },
       {
         "name": "max-360",
@@ -337,44 +317,44 @@
   },
   "components": [
     {
-      "name": "Journal primary link",
+      "name": "Header contact",
       "kind": "button",
-      "refersTo": "journal-primary",
-      "description": "Primary action in the homepage introduction.",
-      "html": "<div class=\"ds-journal\"><a class=\"ds-primary\" href=\"/#case-files\">Explore research <svg width=\"17\" height=\"17\" aria-hidden=\"true\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M10 3v13m-5-5 5 5 5-5\"/></svg></a></div>",
-      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-primary { display:inline-flex; align-items:center; gap:1rem; min-height:2.9rem; box-sizing:border-box; padding:.62rem 1.1rem; border-radius:4px; background:var(--journal-ink,#221f29); color:#faf8ff; text-decoration:none; font-weight:620; font-size:1rem; line-height:1.35; transition:background-color 140ms; } .ds-primary:hover { background:var(--journal-deep,#4c3388); } @media(prefers-reduced-motion:reduce){ .ds-primary { transition:none; } } .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
+      "refersTo": "gallery-contact",
+      "description": "Opens an email to the public contact alias.",
+      "html": "<div class=\"ds-wall\"><a class=\"ds-contact\" href=\"/#contact\">Contact<svg width=\"12\" height=\"12\" viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M3 13 13 3M4 3h9v9\"/></svg></a></div>",
+      "css": ".ds-wall{background:var(--gallery-dark,#161614);color:var(--gallery-white,#f5f1e7);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-wall :focus-visible{outline:2px solid var(--gallery-accent,#ff592f);outline-offset:4px} .ds-contact{display:inline-flex;align-items:center;gap:.8rem;min-height:2.4rem;box-sizing:border-box;padding:.45rem .95rem;background:var(--gallery-accent,#ff592f);color:var(--gallery-dark,#161614);font-weight:550;font-size:.95rem;text-decoration:none}.ds-contact:hover{background:#ff7d56}"
     },
     {
-      "name": "Journal secondary link",
-      "kind": "button",
-      "refersTo": "journal-secondary",
-      "description": "An underlined text link accompanying the main action.",
-      "html": "<div class=\"ds-journal\"><a class=\"ds-secondary\" href=\"/resume/\">View résumé <svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M4 16 16 4M5 4h11v11\"/></svg></a></div>",
-      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-secondary { display:inline-flex; align-items:center; gap:.45rem; padding-block:.35rem; color:inherit; font-weight:620; font-size:1rem; text-decoration:underline; text-decoration-color:#aaa0b7; text-underline-offset:.31em; } .ds-secondary:hover { color:var(--journal-violet,#6542a6); text-decoration-color:currentColor; } .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
-    },
-    {
-      "name": "Journal navigation",
+      "name": "Exhibition navigation",
       "kind": "nav",
-      "refersTo": "journal-navigation",
-      "description": "Primary destinations with a visible current-page state.",
-      "html": "<div class=\"ds-journal\"><nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"/research/\" aria-current=\"page\">Research</a><a href=\"/projects/\">Projects</a><a href=\"/resume/\">Résumé</a></nav></div>",
-      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-nav { display:flex; flex-wrap:wrap; align-items:center; gap:clamp(1.25rem,3vw,3rem); } .ds-nav a { padding-block:.5rem; font-size:.98rem; font-weight:550; color:inherit; text-decoration:none; } .ds-nav a:hover,.ds-nav a[aria-current] { color:var(--journal-deep,#4c3388); text-decoration:underline; text-underline-offset:.35em; } .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
+      "refersTo": "gallery-navigation",
+      "description": "Main destinations on the dark gallery wall.",
+      "html": "<div class=\"ds-wall\"><nav aria-label=\"Primary navigation\"><a href=\"/research/\" aria-current=\"page\">Research</a><a href=\"/projects/\">Projects</a><a href=\"/resume/\">Résumé</a></nav></div>",
+      "css": ".ds-wall{background:var(--gallery-dark,#161614);color:var(--gallery-white,#f5f1e7);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-wall :focus-visible{outline:2px solid var(--gallery-accent,#ff592f);outline-offset:4px} .ds-wall nav{display:flex;align-items:center;flex-wrap:wrap;gap:clamp(1.25rem,3vw,3rem)}.ds-wall a{color:inherit;text-decoration:none;font-size:.98rem;font-weight:550;padding-block:.5rem}.ds-wall a:hover,.ds-wall a[aria-current]{color:var(--gallery-accent,#ff592f);text-decoration:underline;text-underline-offset:.35em}"
     },
     {
-      "name": "Journal research row",
-      "kind": "card",
-      "refersTo": "journal-record",
-      "description": "A linked finding with its year, identifiers, and credit.",
-      "html": "<div class=\"ds-journal\"><a class=\"ds-record\" href=\"/research/goanywhere-mft/\"><time>2024</time><span><strong>Breaking the first-run boundary</strong><small>CVE-2024-0204 · CVE-2024-25156</small></span><small>Independent research</small><span class=\"ds-arrow\"><svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M4 16 16 4M5 4h11v11\"/></svg></span></a></div>",
-      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-record { display:grid; grid-template-columns:auto minmax(0,1fr) minmax(5rem,.35fr) auto; align-items:center; gap:1rem; padding-block:1.48rem; border-block:1px solid var(--journal-line,#c9c3d3); color:inherit; text-decoration:none; } .ds-record strong { display:block; font:600 clamp(1.65rem,2.4vw,2.25rem)/1.1 var(--font-display,\"Barlow Condensed\",sans-serif); } .ds-record time,.ds-record small { color:#504659; font:.76rem/1.6 var(--font-mono,\"JetBrains Mono Variable\",monospace); } .ds-arrow { display:grid; place-items:center; width:2.4rem; height:2.4rem; border:1px solid #bbb0c6; border-radius:50%; } .ds-record:hover strong { color:var(--journal-violet,#6542a6); } .ds-record:hover .ds-arrow { background:var(--journal-violet,#6542a6); color:white; } @media(max-width:680px){ .ds-record { grid-template-columns:auto minmax(0,1fr) auto; } .ds-record > small { grid-row:2; grid-column:2; } .ds-arrow { grid-column:3; grid-row:1/3; }} .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
+      "name": "Research tag",
+      "kind": "chip",
+      "refersTo": "gallery-record-tag",
+      "description": "Technical classification in the archive.",
+      "html": "<div class=\"ds-paper\"><span class=\"ds-tag\">Authentication bypass</span></div>",
+      "css": ".ds-paper{background:var(--gallery-paper,#eeeae0);color:var(--gallery-ink,#1a1a17);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--gallery-link,#aa340e);outline-offset:4px} .ds-tag{display:inline-block;background:#dfd9ca;color:var(--gallery-link,#aa340e);padding:.15rem .45rem;font:.7rem/1.6 var(--font-mono,\"JetBrains Mono Variable\",monospace);letter-spacing:.035em;text-transform:uppercase}"
     },
     {
       "name": "Quick navigator search",
       "kind": "input",
-      "refersTo": "journal-search",
-      "description": "The search field inside the native destination dialog.",
-      "html": "<div class=\"ds-journal\"><input class=\"ds-search\" type=\"search\" aria-label=\"Search destinations\" placeholder=\"Search destinations…\"></div>",
-      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-search { width:100%; box-sizing:border-box; font:inherit; padding:.65rem .75rem; color:inherit; border:1px solid var(--journal-ink,#221f29); background:#f8f6fb; } .ds-search::placeholder { color:var(--journal-muted,#635e6c); } .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
+      "refersTo": "gallery-search",
+      "description": "Filters the available destinations in the native dialog.",
+      "html": "<div class=\"ds-paper\"><input type=\"search\" aria-label=\"Search destinations\" placeholder=\"Search destinations…\"></div>",
+      "css": ".ds-paper{background:var(--gallery-paper,#eeeae0);color:var(--gallery-ink,#1a1a17);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--gallery-link,#aa340e);outline-offset:4px} .ds-paper input{width:100%;box-sizing:border-box;background:#fbf9f3;color:inherit;border:1px solid var(--gallery-ink,#1a1a17);font:inherit;padding:.65rem .75rem}.ds-paper input::placeholder{color:var(--gallery-muted,#625e54)}"
+    },
+    {
+      "name": "Selected study",
+      "kind": "nav",
+      "refersTo": "selected-study",
+      "description": "Active product in the study index.",
+      "html": "<div class=\"ds-paper\"><a class=\"ds-study\" href=\"/research/goanywhere-mft/\"><small>01</small><strong>GoAnywhere MFT</strong></a></div>",
+      "css": ".ds-paper{background:var(--gallery-paper,#eeeae0);color:var(--gallery-ink,#1a1a17);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--gallery-link,#aa340e);outline-offset:4px} .ds-study{display:inline-grid;align-content:center;gap:.32rem;min-height:4.4rem;box-sizing:border-box;padding:.5rem clamp(.68rem,1.6vw,1.7rem);background:var(--gallery-accent,#ff592f);color:#181410;text-decoration:none;font-weight:650}.ds-study small{font:.73rem/1 var(--font-mono,\"JetBrains Mono Variable\",monospace)}"
     },
     {
       "name": "Classic primary button",
@@ -402,17 +382,18 @@
     }
   ],
   "narrative": {
-    "overview": "The default presentation lays out Vũ Chí Thành’s work as a research journal. A graphite CRT with a lilac wireframe landscape sits opposite the introduction. Small registration marks frame the image and a quotation sits beneath it.",
+    "northStar": "Boundary studies",
+    "overview": "Boundary studies presents each vulnerability disclosure as a study in an exhibition. Selecting a product changes the sculpture and the adjacent case description. The case links lead to the full finding, attribution and primary sources.",
     "keyCharacteristics": [
-      "The deep-plum activity band gives the latest result, its date, credits, and source a single place on the page.",
-      "Research entries sit on flat ruled rows with visible years, identifiers, and attribution.",
-      "Classic uses dark surfaces, monospaced headings, bright accents, and its own research-card grid."
+      "A dark stage holds the title and sculpture above a paper strip of selectable studies.",
+      "Warm paper carries long-form work. Ruled rows align years, titles and advisory identifiers across the research archive.",
+      "The latest contest result includes the award, both researchers’ credit and the team placements."
     ],
     "rules": [],
     "dos": [
-      "Do keep attribution, identifiers, and source links legible when rows reflow.",
-      "Do use the active presentation’s palette and preserve its keyboard focus and reduced-motion behavior.",
-      "Do keep screen-only navigation and controls outside the printed résumé."
+      "Keep attribution, identifiers and source links legible when research rows reflow.",
+      "Pair vermilion with dark ink. Use burnt orange for small colored text on paper.",
+      "Keep screen navigation and controls outside the printed résumé."
     ],
     "donts": []
   }

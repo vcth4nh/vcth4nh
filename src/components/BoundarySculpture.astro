@@ -1,0 +1,189 @@
+---
+import { materialAngles, sculptureMaterials, sculptureRings } from "../lib/boundary-sculpture";
+
+const id = "sculpture-" + crypto.randomUUID();
+const rings = sculptureRings(0);
+---
+<div class="boundary-sculpture" data-sculpture={id} role="img" aria-label="Vermilion contour rings folded into a trefoil knot.">
+  <svg class="sculpture-model" viewBox="0 0 720 520" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      {(["surface", "edge"] as const).map(material => (
+        <linearGradient id={id + "-" + material}>
+          {sculptureMaterials.map(stop => <stop offset={stop.offset} stop-color={stop[material]} />)}
+        </linearGradient>
+      ))}
+      {materialAngles.map((direction, index) => (["surface", "edge"] as const).map(material => (
+        <linearGradient id={id + "-" + material + index} href={'#' + id + '-' + material} {...direction} />
+      )))}
+    </defs>
+    <g data-sculpture-rings>
+      {rings.map(ring => (
+        <ellipse rx={ring.rx} ry={ring.ry} transform={ring.transform} stroke-width={ring.width}
+          stroke-opacity={ring.intensity} fill={'url(#' + id + '-surface' + ring.shade + ')'}
+          stroke={'url(#' + id + '-edge' + ring.shade + ')'} />
+      ))}
+    </g>
+  </svg>
+  <span class="sculpture-hint" aria-hidden="true">
+    <svg width="21" height="17" viewBox="0 0 24 19" fill="none" stroke="currentColor" stroke-linecap="round">
+      <circle cx="12" cy="9.5" r="6.8" stroke-width="1.2"/>
+      <path d="M5.4 8C1.6 10.3.5 12.6 1.9 13.8c2 1.9 8.1 1.1 14-1.6 3.7-1.7 6-3.7 6.6-5.1M19.5 7.6l3.2-.8.1 3.1" stroke-width="1.2"/>
+    </svg>
+    Drag to rotate
+  </span>
+  <span class="sculpture-instructions" id={id + "-instructions"}>Drag, tap, or use the arrow keys to rotate. Press Home to reset the view.</span>
+</div>
+
+<style>
+  .boundary-sculpture { position: relative; display: block; width: 100%; }
+  .boundary-sculpture[tabindex] { cursor: grab; touch-action: pan-y pinch-zoom; user-select: none; }
+  .boundary-sculpture:focus-visible { outline: 1px solid #f9b296; outline-offset: 4px; }
+  .boundary-sculpture[data-dragging] { cursor: grabbing; }
+  .sculpture-model { display: block; width: 100%; height: auto; overflow: hidden; }
+  .sculpture-hint {
+    position: absolute;
+    top: 54%;
+    right: -4%;
+    display: none;
+    align-items: center;
+    gap: .4rem;
+    padding: .27rem .42rem;
+    background: #161614;
+    color: #e5d9c7;
+    font: 450 .72rem/1.2 var(--font-mono, monospace);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .boundary-sculpture[tabindex] .sculpture-hint { display: inline-flex; }
+  .sculpture-hint svg { color: #ff8457; }
+  .sculpture-instructions { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  @media (max-width: 760px) {
+    .sculpture-hint { top: 86%; left: -8%; right: auto; font-size: .62rem; gap: .22rem; padding: .2rem; }
+    .sculpture-hint svg { width: 16px; }
+  }
+</style>
+
+<script>
+  import { sculptureRings } from "../lib/boundary-sculpture";
+
+  const labels = [
+    "Vermilion contour rings folded into a trefoil knot.",
+    "Vermilion contour rings forming a twisted ribbon.",
+    "Vermilion contour rings woven into a five-lobed knot.",
+    "Vermilion contour rings curved around a broad central aperture.",
+  ];
+
+  document.querySelectorAll<HTMLElement>("[data-sculpture]").forEach(element => {
+    const group = element.querySelector<SVGGElement>("[data-sculpture-rings]");
+    const description = element.querySelector(".sculpture-instructions");
+    if (!group || !description) return;
+
+    element.tabIndex = 0;
+    element.setAttribute("role", "application");
+    element.setAttribute("aria-roledescription", "interactive sculpture");
+    element.setAttribute("aria-describedby", description.id);
+
+    let form = 0;
+    let yaw = 0;
+    let pitch = 0;
+    let frame = 0;
+    let reveal: Animation | undefined;
+    let drag: { id: number; x: number; y: number; moved: boolean } | undefined;
+    const ellipses = Array.from(group.querySelectorAll("ellipse"));
+    const paint = "url(#" + element.dataset.sculpture;
+
+    function draw() {
+      frame = 0;
+      const rings = sculptureRings(form, yaw, pitch);
+      while (ellipses.length > rings.length) ellipses.pop()?.remove();
+
+      for (const [i, ring] of rings.entries()) {
+        let ellipse = ellipses[i];
+        if (!ellipse) {
+          ellipse = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+          group!.append(ellipse);
+          ellipses.push(ellipse);
+        }
+        ellipse.setAttribute("rx", ring.rx);
+        ellipse.setAttribute("ry", ring.ry);
+        ellipse.setAttribute("fill", paint + "-surface" + ring.shade + ")");
+        ellipse.setAttribute("stroke", paint + "-edge" + ring.shade + ")");
+        ellipse.setAttribute("transform", ring.transform);
+        ellipse.setAttribute("stroke-width", ring.width);
+        ellipse.setAttribute("stroke-opacity", ring.intensity);
+      }
+    }
+
+    function scheduleDraw() {
+      if (!frame) frame = requestAnimationFrame(draw);
+    }
+
+    element.addEventListener("pointerdown", event => {
+      if (!event.isPrimary || event.button !== 0) return;
+      drag = { id: event.pointerId, x: event.clientX, y: event.clientY, moved: false };
+      element.setPointerCapture(event.pointerId);
+    });
+
+    element.addEventListener("pointermove", event => {
+      if (!drag || drag.id !== event.pointerId) return;
+      const dx = event.clientX - drag.x;
+      const dy = event.clientY - drag.y;
+      // Leave vertical touch gestures to the page until horizontal intent is clear.
+      if (!drag.moved && Math.hypot(dx, dy) < 5) return;
+      if (!drag.moved && event.pointerType === "touch" && Math.abs(dx) < Math.abs(dy)) return;
+      drag.moved = true;
+      element.dataset.dragging = "";
+      const sensitivity = 4 / element.offsetWidth;
+      yaw += dx * sensitivity;
+      pitch += dy * sensitivity;
+      drag.x = event.clientX;
+      drag.y = event.clientY;
+      scheduleDraw();
+    });
+
+    element.addEventListener("pointerup", event => {
+      if (drag?.id === event.pointerId && !drag.moved) {
+        yaw += Math.PI / 12;
+        scheduleDraw();
+      }
+    });
+
+    element.addEventListener("lostpointercapture", () => {
+      drag = undefined;
+      delete element.dataset.dragging;
+    });
+
+    element.addEventListener("keydown", event => {
+      const step = Math.PI / 12;
+      switch (event.key) {
+        case "ArrowLeft": yaw -= step; break;
+        case "ArrowRight": yaw += step; break;
+        case "ArrowUp": pitch -= step; break;
+        case "ArrowDown": pitch += step; break;
+        case "Home": yaw = 0; pitch = 0; break;
+        default: return;
+      }
+      event.preventDefault();
+      scheduleDraw();
+    });
+
+    function selectForm(index: number, animate = true) {
+      if (!Number.isInteger(index) || index < 0) return;
+      const next = index % labels.length;
+      if (next === form) return;
+      form = next;
+      yaw = 0;
+      pitch = 0;
+      element.setAttribute("aria-label", labels[next]);
+      scheduleDraw();
+      reveal?.cancel();
+      if (animate && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        reveal = group!.animate([{ opacity: .55 }, { opacity: 1 }], { duration: 220, easing: "ease-out" });
+      }
+    }
+    selectForm(Number(element.closest<HTMLElement>("research-exhibition")?.dataset.selectedStudy ?? 0), false);
+    window.addEventListener("research-select", ((event: CustomEvent<{ index: number }>) => {
+      selectForm(event.detail?.index);
+    }) as EventListener);
+  });
+</script>

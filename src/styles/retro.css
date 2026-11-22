@@ -1,38 +1,40 @@
-/* The journal is the default presentation. Classic uses the shared base stylesheet. */
+/* Boundary studies uses a gallery wall for navigation and warm paper for reading. */
 .journal-header,
 .journal-footer {
   display: none;
 }
 
 :root[data-presentation="field-notes"] {
-  --journal-bg: #eeecf6;
-  --journal-ink: #221f29;
-  --journal-violet: #6542a6;
-  --journal-deep: #4c3388;
-  --journal-muted: #635e6c;
-  --journal-line: #c9c3d3;
-  --ink: var(--journal-bg);
-  --ink-soft: #e5e0ef;
-  --paper: var(--journal-ink);
-  --paper-muted: #494452;
-  --muted: var(--journal-muted);
-  --panel: var(--journal-bg);
-  --line: var(--journal-line);
-  --line-soft: #d8d3e1;
-  --signal: var(--journal-violet);
-  --signal-dark: var(--journal-deep);
-  --lime: var(--journal-deep);
-  --accent-2: #9d87bf;
-  --accent-3: #a06316;
-  --accent-hot: #a14269;
+  --gallery-paper: #eeeae0;
+  --gallery-ink: #1a1a17;
+  --gallery-dark: #161614;
+  --gallery-white: #f5f1e7;
+  --gallery-accent: #ff592f;
+  --gallery-link: #aa340e;
+  --gallery-muted: #625e54;
+  --gallery-rule: #c2bcb0;
+  --ink: var(--gallery-paper);
+  --ink-soft: #e6e1d6;
+  --paper: var(--gallery-ink);
+  --paper-muted: #464239;
+  --muted: var(--gallery-muted);
+  --panel: var(--gallery-paper);
+  --line: var(--gallery-rule);
+  --line-soft: #d4cec2;
+  --signal: var(--gallery-link);
+  --signal-dark: var(--gallery-link);
+  --lime: var(--gallery-link);
+  --accent-2: #847860;
+  --accent-3: #795918;
+  --accent-hot: #8e452b;
   --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-serif: var(--font-display);
-  --shell: 1280px;
-  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --shell: 1440px;
+  --gutter: clamp(1.25rem, 4.4vw, 5rem);
   color-scheme: light;
-  scrollbar-color: #ada1bf var(--journal-bg);
+  scrollbar-color: #898173 var(--gallery-paper);
   scroll-padding-top: 6rem;
-  caret-color: var(--journal-violet);
+  caret-color: var(--gallery-link);
 }
 
 html[data-presentation="field-notes"] body::before,
@@ -43,8 +45,9 @@ html[data-presentation="field-notes"] .footer-grid {
 }
 
 html[data-presentation="field-notes"] .site-header {
-  background: var(--journal-bg);
-  border-color: var(--journal-line);
+  background: var(--gallery-dark);
+  color: var(--gallery-white);
+  border-color: #393832;
   backdrop-filter: none;
 }
 
@@ -53,7 +56,7 @@ html[data-presentation="field-notes"] .journal-header {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 2rem;
-  min-height: 4.75rem;
+  min-height: 4.5rem;
 }
 
 .journal-brand,
@@ -70,12 +73,12 @@ html[data-presentation="field-notes"] .journal-header {
 .journal-brand {
   width: max-content;
   gap: .65rem;
-  font: 750 1.45rem/1 var(--font-mono);
-  letter-spacing: -.045em;
+  font: 750 1.5rem/1 var(--font-sans);
+  letter-spacing: -.035em;
 }
 
 .journal-brand svg {
-  color: var(--journal-violet);
+  color: var(--gallery-accent);
 }
 
 .journal-nav {
@@ -94,7 +97,7 @@ html[data-presentation="field-notes"] .journal-header {
 .journal-menu a:hover,
 .journal-menu a[aria-current],
 .journal-footer a:hover {
-  color: var(--journal-deep);
+  color: var(--gallery-accent);
   text-decoration: underline;
   text-underline-offset: .35em;
 }
@@ -106,14 +109,14 @@ html[data-presentation="field-notes"] .journal-header {
 
 .journal-search {
   gap: .45rem;
-  color: var(--journal-ink);
+  color: var(--gallery-white);
   cursor: pointer;
   height: 2.75rem;
   padding-inline: .35rem;
 }
 
 .journal-search:hover {
-  color: var(--journal-violet);
+  color: var(--gallery-accent);
 }
 
 .journal-search kbd {
@@ -121,17 +124,17 @@ html[data-presentation="field-notes"] .journal-header {
   place-items: center;
   width: 1.05rem;
   height: 1.2rem;
-  border: 1px solid #bcb4c8;
-  border-radius: 3px;
-  color: var(--journal-muted);
+  border: 1px solid #6d695f;
+  border-radius: 2px;
+  color: #d4cfc3;
   font: .66rem/1 var(--font-mono);
 }
 
 .journal-contact {
   min-height: 2.4rem;
   gap: .8rem;
-  background: var(--journal-ink);
-  color: var(--journal-bg);
+  background: var(--gallery-accent);
+  color: var(--gallery-dark);
   padding: .45rem .95rem;
   font-weight: 550;
   font-size: .95rem;
@@ -142,11 +145,11 @@ html[data-presentation="field-notes"] .journal-header {
   content: "";
   width: .72rem;
   height: .72rem;
-  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23eeecf6' stroke-width='1.6'%3E%3Cpath d='M3 13 13 3M4 3h9v9'/%3E%3C/svg%3E");
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='%23161614' stroke-width='1.6'%3E%3Cpath d='M3 13 13 3M4 3h9v9'/%3E%3C/svg%3E");
 }
 
 .journal-contact:hover {
-  background: var(--journal-deep);
+  background: #ff7d56;
 }
 
 .journal-menu {
@@ -174,8 +177,9 @@ html[data-presentation="field-notes"] .journal-header {
   display: grid;
   width: min(16rem, 80vw);
   padding: .4rem 1rem;
-  background: var(--journal-bg);
-  border: 1px solid var(--journal-ink);
+  background: var(--gallery-dark);
+  color: var(--gallery-white);
+  border: 1px solid #716b60;
 }
 
 .journal-menu nav a {
@@ -183,16 +187,24 @@ html[data-presentation="field-notes"] .journal-header {
 }
 
 .journal-menu nav a + a {
-  border-top: 1px solid var(--journal-line);
+  border-top: 1px solid #47443e;
 }
 
 html[data-presentation="field-notes"] .site-footer,
 html[data-presentation="field-notes"] .home-presentations .site-footer {
   display: block;
+  background: var(--gallery-dark);
+  color: var(--gallery-white);
+  border-color: #393832;
   padding-block: 1.6rem;
 }
 
+html[data-presentation="field-notes"] :is(.site-header, .site-footer) :focus-visible {
+  outline-color: var(--gallery-accent);
+}
+
 html[data-presentation="field-notes"] .journal-footer {
+  --gallery-muted: #c1baad;
   display: flex;
   gap: 1rem 2rem;
   align-items: center;
@@ -207,7 +219,7 @@ html[data-presentation="field-notes"] .journal-footer {
 }
 
 .journal-footer p {
-  color: var(--journal-muted);
+  color: var(--gallery-muted);
 }
 
 .journal-footer nav {
@@ -225,7 +237,7 @@ html[data-presentation="field-notes"] .journal-footer {
   align-items: center;
   gap: .5rem;
   cursor: pointer;
-  color: var(--journal-muted);
+  color: var(--gallery-muted);
   min-height: 2.5rem;
 }
 
@@ -235,7 +247,7 @@ html[data-presentation="field-notes"] .journal-footer {
   align-items: center;
   width: 1.9rem;
   height: 1rem;
-  border: 1px solid var(--journal-muted);
+  border: 1px solid var(--gallery-muted);
   background: transparent;
   border-radius: 1rem;
 }
@@ -247,7 +259,7 @@ html[data-presentation="field-notes"] .journal-footer {
   width: .57rem;
   height: .57rem;
   border-radius: 50%;
-  background: var(--journal-muted);
+  background: var(--gallery-muted);
 }
 
 .journal-footer .presentation-switch-state {
@@ -259,14 +271,14 @@ html[data-presentation="field-notes"] .journal-footer {
   width: min(30rem, calc(100% - 2.5rem));
   max-height: calc(100dvh - 2.5rem);
   padding: clamp(1.25rem, 4vw, 2rem);
-  background: var(--journal-bg);
-  color: var(--journal-ink);
-  border: 1px solid var(--journal-ink);
+  background: var(--gallery-paper);
+  color: var(--gallery-ink);
+  border: 1px solid var(--gallery-ink);
   overflow-y: auto;
 }
 
 .journal-dialog::backdrop {
-  background: rgb(31 23 49 / 55%);
+  background: rgb(22 22 20 / 65%);
 }
 
 .journal-dialog header,
@@ -294,18 +306,18 @@ html[data-presentation="field-notes"] .journal-footer {
   width: 100%;
   margin-block: 1.4rem .65rem;
   padding: .65rem .75rem;
-  border: 1px solid var(--journal-ink);
-  background: #f8f6fb;
+  border: 1px solid var(--gallery-ink);
+  background: #fbf9f3;
   font: inherit;
 }
 
 .journal-dialog input::placeholder {
-  color: var(--journal-muted);
+  color: var(--gallery-muted);
 }
 
 .journal-dialog nav a {
   padding: .65rem .75rem;
-  border-bottom: 1px solid var(--journal-line);
+  border-bottom: 1px solid var(--gallery-rule);
 }
 
 .journal-dialog nav a[hidden] {
@@ -314,7 +326,7 @@ html[data-presentation="field-notes"] .journal-footer {
 
 .journal-dialog nav a.is-active,
 .journal-dialog nav a:hover {
-  background: #ddd4ee;
+  background: #e4daca;
 }
 
 .journal-dialog nav strong,
@@ -323,7 +335,7 @@ html[data-presentation="field-notes"] .journal-footer {
 }
 
 .journal-dialog nav small {
-  color: var(--journal-muted);
+  color: var(--gallery-muted);
 }
 
 .journal-dialog footer {
@@ -331,7 +343,7 @@ html[data-presentation="field-notes"] .journal-footer {
   justify-content: start;
   flex-wrap: wrap;
   font-size: .75rem;
-  color: var(--journal-muted);
+  color: var(--gallery-muted);
 }
 
 /* Secondary pages share the same type, margins, and ruled paper as the home index. */
@@ -349,25 +361,25 @@ html[data-presentation="field-notes"] .page-hero-grid {
 }
 
 html[data-presentation="field-notes"] :is(.page-hero h1, .case-heading h1, .not-found h1) {
-  font-size: clamp(3.7rem, 6.8vw, 6rem);
+  font-size: clamp(3.6rem, 7.2vw, 6rem);
   font-weight: 700;
   line-height: .98;
   letter-spacing: -.025em;
 }
 
 html[data-presentation="field-notes"] :is(.page-hero h1, .not-found h1) em {
-  color: var(--journal-deep);
+  color: var(--gallery-link);
   font: inherit;
 }
 
 html[data-presentation="field-notes"] .role-legend .legend-co,
 html[data-presentation="field-notes"] .role-co-research .role-label::before {
-  background: #a06316;
+  background: #795918;
 }
 
 html[data-presentation="field-notes"] .role-legend .legend-team,
 html[data-presentation="field-notes"] .role-team .role-label::before {
-  background: #796c90;
+  background: #4b4a43;
 }
 
 html[data-presentation="field-notes"] .archive-section {
@@ -381,13 +393,13 @@ html[data-presentation="field-notes"] .research-grid-archive {
 html[data-presentation="field-notes"] .research-grid-archive .research-card {
   min-height: auto;
   border: 0;
-  border-bottom: 1px solid var(--journal-line);
+  border-bottom: 1px solid var(--gallery-rule);
   background: transparent;
-  color: var(--journal-ink);
+  color: var(--gallery-ink);
 }
 
 html[data-presentation="field-notes"] .research-grid-archive .research-card:hover {
-  background: #e8e3f1;
+  background: #e4dfd4;
   box-shadow: none;
   transform: none;
 }
@@ -405,7 +417,7 @@ html[data-presentation="field-notes"] .research-card:first-child .card-topline {
   align-items: start;
   flex-direction: column;
   gap: .65rem;
-  color: var(--journal-muted);
+  color: var(--gallery-muted);
 }
 
 html[data-presentation="field-notes"] .card-body {
@@ -433,8 +445,8 @@ html[data-presentation="field-notes"] :is(.card-body p, .research-card:first-chi
 html[data-presentation="field-notes"] :is(.case-tags span, .tag-list span) {
   border: 0;
   padding: .15rem .45rem;
-  background: #e0dbe9;
-  color: var(--journal-deep);
+  background: #dfd9ca;
+  color: var(--gallery-link);
   font-size: .7rem;
 }
 
@@ -442,25 +454,25 @@ html[data-presentation="field-notes"] .card-foot {
   flex-direction: column-reverse;
   align-items: flex-end;
   justify-content: space-between;
-  color: var(--journal-muted);
+  color: var(--gallery-muted);
   text-align: right;
   overflow-wrap: anywhere;
 }
 
 html[data-presentation="field-notes"] .round-arrow {
-  border-color: var(--journal-line);
-  color: var(--journal-violet);
+  border-color: var(--gallery-rule);
+  color: var(--gallery-link);
 }
 
 html[data-presentation="field-notes"] :is(.research-card:hover, .project-row:hover) .round-arrow {
-  background: var(--journal-deep);
-  color: var(--journal-bg);
+  background: var(--gallery-link);
+  color: var(--gallery-paper);
   transform: none;
 }
 
 html[data-presentation="field-notes"] :is(.method-section, .project-principles) {
-  background: #e3ddeb;
-  color: var(--journal-ink);
+  background: #e6e1d6;
+  color: var(--gallery-ink);
   padding-block: clamp(3rem, 7vw, 6rem);
 }
 
@@ -470,7 +482,7 @@ html[data-presentation="field-notes"] :is(.method-grid h2, .principle-grid h2, .
 }
 
 html[data-presentation="field-notes"] :is(.method-grid ol, .method-grid li, .principle-grid, .principle-grid article) {
-  border-color: var(--journal-line);
+  border-color: var(--gallery-rule);
 }
 
 html[data-presentation="field-notes"] .method-grid li p {
@@ -503,7 +515,7 @@ html[data-presentation="field-notes"] :is(.case-heading, .case-prose, .case-fact
 html[data-presentation="field-notes"] .case-prose a,
 html[data-presentation="field-notes"] .case-source-list a:hover,
 html[data-presentation="field-notes"] .back-link:hover {
-  color: var(--journal-deep);
+  color: var(--gallery-link);
 }
 
 html[data-presentation="field-notes"] .button {
@@ -514,31 +526,31 @@ html[data-presentation="field-notes"] .button {
 }
 
 html[data-presentation="field-notes"] .button-primary {
-  background: var(--journal-ink);
-  border-color: var(--journal-ink);
-  color: var(--journal-bg);
+  background: var(--gallery-ink);
+  border-color: var(--gallery-ink);
+  color: var(--gallery-paper);
 }
 
 html[data-presentation="field-notes"] .button-quiet {
-  border-color: var(--journal-ink);
-  color: var(--journal-ink);
+  border-color: var(--gallery-ink);
+  color: var(--gallery-ink);
 }
 
 html[data-presentation="field-notes"] .button:hover {
-  background: var(--journal-deep);
-  color: var(--journal-bg);
-  border-color: var(--journal-deep);
+  background: var(--gallery-link);
+  color: var(--gallery-paper);
+  border-color: var(--gallery-link);
   box-shadow: none;
   transform: none;
 }
 
 @media screen {
   html[data-presentation="field-notes"] .resume-page {
-    background: var(--journal-bg);
+    background: var(--gallery-paper);
   }
 
   html[data-presentation="field-notes"] .resume-toolbar {
-    color: var(--journal-ink);
+    color: var(--gallery-ink);
   }
 
   html[data-presentation="field-notes"] .resume-toolbar p {
@@ -546,9 +558,9 @@ html[data-presentation="field-notes"] .button:hover {
   }
 
   html[data-presentation="field-notes"] .resume-sheet {
-    border: 1px solid var(--journal-line);
+    border: 1px solid var(--gallery-rule);
     box-shadow: none;
-    background: #faf9fc;
+    background: #fbf9f3;
   }
 
   html[data-presentation="field-notes"] .resume-header h1 {
@@ -633,7 +645,7 @@ html[data-presentation="field-notes"] .button:hover {
 
 @media (max-width: 540px) {
   .journal-brand {
-    font-size: 1.2rem;
+    font-size: 1.28rem;
     gap: .4rem;
   }
 
