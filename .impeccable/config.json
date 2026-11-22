@@ -1,3 +1,18 @@
 {
-  "buildPath": "code"
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          "src/styles/paper-theatre.css"
+        ],
+        "createdAt": "2026-11-22T06:33:47.656Z",
+        "reason": "Agent review: the pull tab in the stage apron uses a darker lower edge to show the thickness of the card visitors drag to close the curtains."
+      }
+    ]
+  }
 }
