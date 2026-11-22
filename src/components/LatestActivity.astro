@@ -101,27 +101,6 @@ const activity = profile.latestActivity;
     font-variant-numeric: tabular-nums;
   }
 
-  :global(html[data-presentation="field-notes"]) .latest-activity {
-    width: auto;
-    border-color: color-mix(in srgb, var(--retro-jade) 28%, transparent);
-    padding: clamp(2rem, 4vw, 4rem) clamp(1.25rem, 6vw, 6rem);
-  }
-
-  :global(html[data-presentation="field-notes"]) .latest-activity h2 {
-    color: var(--retro-jade-dark);
-    font-family: var(--retro-pixel);
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-  }
-
-  :global(html[data-presentation="field-notes"]) .activity-summary > time,
-  :global(html[data-presentation="field-notes"]) .activity-summary a {
-    color: var(--retro-jade-dark);
-  }
-
-  :global(html[data-presentation="field-notes"]) .activity-record li {
-    border-color: color-mix(in srgb, var(--retro-jade) 28%, transparent);
-  }
-
   @media (max-width: 820px) {
     .activity-content {
       grid-template-columns: 1fr;

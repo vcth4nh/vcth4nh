@@ -1,42 +1,41 @@
-<dialog class="retro-command" data-command-dialog aria-labelledby="retro-command-title">
-  <form method="dialog" class="retro-command-shell">
+---
+import ArrowIcon from "./ArrowIcon.astro";
+import { primaryNavigation } from "../data/navigation";
+import { profile } from "../data/profile";
+
+const destinations = [
+  { ...primaryNavigation[0], description: "Disclosures and advisories", keywords: "cases cve vulnerability" },
+  { ...primaryNavigation[1], description: "Open-source tools", keywords: "tools github code" },
+  { ...primaryNavigation[2], description: "Experience and education", keywords: "resume cv career education" },
+  { label: "Contact", href: "/#contact", description: "Research, consulting, and hiring", keywords: "email consulting contact" },
+  { label: "GitHub", href: profile.socials[0].href, description: "Source repositories", keywords: "github source repository" },
+];
+---
+
+<dialog class="journal-dialog" data-command-dialog aria-labelledby="navigator-title">
+  <form method="dialog">
     <header>
-      <div>
-        <span>TTY_04 / QUICK NAVIGATOR</span>
-        <h2 id="retro-command-title">Where to?</h2>
-      </div>
-      <button type="submit" value="close" aria-label="Close navigator">×</button>
+      <h2 id="navigator-title">Quick navigator</h2>
+      <button type="submit" value="close" aria-label="Close navigator">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" stroke="currentColor" stroke-width="1.5"><path d="m4 4 12 12M16 4 4 16" /></svg>
+      </button>
     </header>
 
-    <label class="retro-command-input">
-      <span>root@thanh:~$</span>
-      <input data-command-input type="search" aria-label="Search destinations" autocomplete="off" spellcheck="false" placeholder="type a path or command…" />
-    </label>
-
-    <nav class="retro-command-list" aria-label="Quick destinations">
-      <a class="retro-command-item" data-command-item data-keywords="research cases cve vulnerability" href="/research/">
-        <span><code>/research/</code><small>Selected vulnerability research</small></span><kbd>01</kbd>
-      </a>
-      <a class="retro-command-item" data-command-item data-keywords="projects tools github code" href="/projects/">
-        <span><code>/projects/</code><small>Open-source tools and experiments</small></span><kbd>02</kbd>
-      </a>
-      <a class="retro-command-item" data-command-item data-keywords="resume cv experience education" href="/resume/">
-        <span><code>/resume/</code><small>Experience, education, and recognition</small></span><kbd>03</kbd>
-      </a>
-      <a class="retro-command-item" data-command-item data-keywords="email consulting contact" href="/#contact">
-        <span><code>mail --protected</code><small>Research, consulting, and hiring enquiries</small></span><kbd>04</kbd>
-      </a>
-      <a class="retro-command-item" data-command-item data-keywords="github source repository" href="https://github.com/vcth4nh" target="_blank" rel="noreferrer">
-        <span><code>git remote -v</code><small>github.com/vcth4nh</small></span><kbd>05</kbd>
-      </a>
+    <input type="search" data-command-input aria-label="Search destinations" autocomplete="off" spellcheck="false" placeholder="Search destinations…" />
+    <nav aria-label="Quick destinations">
+      {destinations.map((destination) => (
+        <a data-command-item data-keywords={destination.keywords} href={destination.href}
+          target={destination.href.startsWith("https:") ? "_blank" : undefined}
+          rel={destination.href.startsWith("https:") ? "noreferrer" : undefined}>
+          <span><strong>{destination.label}</strong><small>{destination.description}</small></span>
+          <ArrowIcon size={15} />
+        </a>
+      ))}
     </nav>
-
-    <p data-command-empty hidden role="status">No matching destinations.</p>
-
-    <footer><span>↑↓ select</span><span>enter open</span><span>esc close</span></footer>
+    <p data-command-empty hidden role="status">No matching destinations. Try another search.</p>
+    <footer><span>↑↓ Select</span><span>Enter to open</span><span>Esc to close</span></footer>
   </form>
 </dialog>
-
 <script>
   const root = document.documentElement;
   const commandDialog = document.querySelector<HTMLDialogElement>("[data-command-dialog]");

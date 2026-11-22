@@ -1,161 +1,161 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T07:26:50.969Z",
+  "generatedAt": "2026-11-22T04:58:23.845Z",
   "title": "Design System: thanh.vc",
   "extensions": {
     "colorMeta": {
-      "retro-ink": {
+      "journal-bg": {
         "role": "neutral",
-        "displayName": "Field Notes ink",
+        "displayName": "Lavender paper",
         "tonalRamp": [
-          "oklch(15% 0.0207 314.52)",
-          "oklch(27% 0.0342 314.52)",
-          "oklch(38% 0.0424 314.52)",
-          "oklch(50% 0.0456 314.52)",
-          "oklch(61% 0.0429 314.52)",
-          "oklch(73% 0.0342 314.52)",
-          "oklch(84% 0.0220 314.52)",
-          "oklch(95% 0.0071 314.52)"
+          "oklch(15% 0.0061 295.32)",
+          "oklch(27% 0.0097 295.32)",
+          "oklch(38% 0.0124 295.32)",
+          "oklch(50% 0.0135 295.32)",
+          "oklch(61% 0.0127 295.32)",
+          "oklch(73% 0.0101 295.32)",
+          "oklch(84% 0.0065 295.32)",
+          "oklch(95% 0.0022 295.32)"
         ]
       },
-      "retro-paper": {
+      "journal-ink": {
         "role": "neutral",
-        "displayName": "Field Notes paper",
+        "displayName": "Graphite ink",
         "tonalRamp": [
-          "oklch(15% 0.0192 92.21)",
-          "oklch(27% 0.0316 92.21)",
-          "oklch(38% 0.0392 92.21)",
-          "oklch(50% 0.0422 92.21)",
-          "oklch(61% 0.0397 92.21)",
-          "oklch(73% 0.0316 92.21)",
-          "oklch(84% 0.0203 92.21)",
-          "oklch(95% 0.0066 92.21)"
+          "oklch(15% 0.0086 298.72)",
+          "oklch(27% 0.0138 298.72)",
+          "oklch(38% 0.0177 298.72)",
+          "oklch(50% 0.0192 298.72)",
+          "oklch(61% 0.0180 298.72)",
+          "oklch(73% 0.0144 298.72)",
+          "oklch(84% 0.0092 298.72)",
+          "oklch(95% 0.0031 298.72)"
         ]
       },
-      "retro-paper-2": {
-        "role": "neutral",
-        "displayName": "Field Notes paper 2",
-        "tonalRamp": [
-          "oklch(15% 0.0299 87.64)",
-          "oklch(27% 0.0493 87.64)",
-          "oklch(38% 0.0612 87.64)",
-          "oklch(50% 0.0658 87.64)",
-          "oklch(61% 0.0619 87.64)",
-          "oklch(73% 0.0493 87.64)",
-          "oklch(84% 0.0317 87.64)",
-          "oklch(95% 0.0103 87.64)"
-        ]
-      },
-      "retro-jade": {
+      "journal-violet": {
         "role": "primary",
-        "displayName": "Field Notes jade",
+        "displayName": "Journal violet",
         "tonalRamp": [
-          "oklch(15% 0.0394 184.29)",
-          "oklch(27% 0.0651 184.29)",
-          "oklch(38% 0.0807 184.29)",
-          "oklch(50% 0.0868 184.29)",
-          "oklch(61% 0.0817 184.29)",
-          "oklch(73% 0.0651 184.29)",
-          "oklch(84% 0.0418 184.29)",
-          "oklch(95% 0.0136 184.29)"
+          "oklch(15% 0.0695 296.08)",
+          "oklch(27% 0.1111 296.08)",
+          "oklch(38% 0.1420 296.08)",
+          "oklch(50% 0.1544 296.08)",
+          "oklch(61% 0.1451 296.08)",
+          "oklch(73% 0.1158 296.08)",
+          "oklch(84% 0.0741 296.08)",
+          "oklch(95% 0.0247 296.08)"
         ]
       },
-      "retro-jade-dark": {
-        "role": "secondary",
-        "displayName": "Field Notes jade dark",
+      "journal-deep": {
+        "role": "primary",
+        "displayName": "Deep violet",
         "tonalRamp": [
-          "oklch(15% 0.0298 188.93)",
-          "oklch(27% 0.0492 188.93)",
-          "oklch(38% 0.0610 188.93)",
-          "oklch(50% 0.0656 188.93)",
-          "oklch(61% 0.0618 188.93)",
-          "oklch(73% 0.0492 188.93)",
-          "oklch(84% 0.0316 188.93)",
-          "oklch(95% 0.0103 188.93)"
+          "oklch(15% 0.0610 292.74)",
+          "oklch(27% 0.0976 292.74)",
+          "oklch(38% 0.1247 292.74)",
+          "oklch(50% 0.1355 292.74)",
+          "oklch(61% 0.1274 292.74)",
+          "oklch(73% 0.1016 292.74)",
+          "oklch(84% 0.0650 292.74)",
+          "oklch(95% 0.0217 292.74)"
         ]
       },
-      "retro-citron": {
-        "role": "secondary",
-        "displayName": "Field Notes citron",
-        "tonalRamp": [
-          "oklch(15% 0.0704 112.41)",
-          "oklch(27% 0.1163 112.41)",
-          "oklch(38% 0.1441 112.41)",
-          "oklch(50% 0.1550 112.41)",
-          "oklch(61% 0.1459 112.41)",
-          "oklch(73% 0.1163 112.41)",
-          "oklch(84% 0.0747 112.41)",
-          "oklch(95% 0.0243 112.41)"
-        ]
-      },
-      "retro-dragonfruit": {
-        "role": "secondary",
-        "displayName": "Field Notes dragonfruit",
-        "tonalRamp": [
-          "oklch(15% 0.0732 3.88)",
-          "oklch(27% 0.1210 3.88)",
-          "oklch(38% 0.1500 3.88)",
-          "oklch(50% 0.1613 3.88)",
-          "oklch(61% 0.1518 3.88)",
-          "oklch(73% 0.1210 3.88)",
-          "oklch(84% 0.0777 3.88)",
-          "oklch(95% 0.0252 3.88)"
-        ]
-      },
-      "retro-apricot": {
-        "role": "secondary",
-        "displayName": "Field Notes apricot",
-        "tonalRamp": [
-          "oklch(15% 0.0562 52.94)",
-          "oklch(27% 0.0928 52.94)",
-          "oklch(38% 0.1151 52.94)",
-          "oklch(50% 0.1237 52.94)",
-          "oklch(61% 0.1164 52.94)",
-          "oklch(73% 0.0928 52.94)",
-          "oklch(84% 0.0596 52.94)",
-          "oklch(95% 0.0194 52.94)"
-        ]
-      },
-      "retro-indigo": {
-        "role": "secondary",
-        "displayName": "Field Notes indigo",
-        "tonalRamp": [
-          "oklch(15% 0.0412 295.84)",
-          "oklch(27% 0.0681 295.84)",
-          "oklch(38% 0.0845 295.84)",
-          "oklch(50% 0.0909 295.84)",
-          "oklch(61% 0.0855 295.84)",
-          "oklch(73% 0.0681 295.84)",
-          "oklch(84% 0.0438 295.84)",
-          "oklch(95% 0.0142 295.84)"
-        ]
-      },
-      "retro-lacquer": {
-        "role": "secondary",
-        "displayName": "Field Notes lacquer",
-        "tonalRamp": [
-          "oklch(15% 0.0735 3.47)",
-          "oklch(27% 0.1214 3.47)",
-          "oklch(38% 0.1505 3.47)",
-          "oklch(50% 0.1619 3.47)",
-          "oklch(61% 0.1523 3.47)",
-          "oklch(73% 0.1214 3.47)",
-          "oklch(84% 0.0780 3.47)",
-          "oklch(95% 0.0253 3.47)"
-        ]
-      },
-      "retro-white": {
+      "journal-muted": {
         "role": "neutral",
-        "displayName": "Field Notes white",
+        "displayName": "Muted ink",
         "tonalRamp": [
-          "oklch(15% 0.0094 88.72)",
-          "oklch(27% 0.0155 88.72)",
-          "oklch(38% 0.0193 88.72)",
-          "oklch(50% 0.0207 88.72)",
-          "oklch(61% 0.0195 88.72)",
-          "oklch(73% 0.0155 88.72)",
-          "oklch(84% 0.0100 88.72)",
-          "oklch(95% 0.0032 88.72)"
+          "oklch(15% 0.0103 301.80)",
+          "oklch(27% 0.0165 301.80)",
+          "oklch(38% 0.0210 301.80)",
+          "oklch(50% 0.0229 301.80)",
+          "oklch(61% 0.0215 301.80)",
+          "oklch(73% 0.0171 301.80)",
+          "oklch(84% 0.0110 301.80)",
+          "oklch(95% 0.0037 301.80)"
+        ]
+      },
+      "journal-line": {
+        "role": "neutral",
+        "displayName": "Journal rule",
+        "tonalRamp": [
+          "oklch(15% 0.0104 302.87)",
+          "oklch(27% 0.0166 302.87)",
+          "oklch(38% 0.0212 302.87)",
+          "oklch(50% 0.0230 302.87)",
+          "oklch(61% 0.0216 302.87)",
+          "oklch(73% 0.0173 302.87)",
+          "oklch(84% 0.0110 302.87)",
+          "oklch(95% 0.0037 302.87)"
+        ]
+      },
+      "activity-bg": {
+        "role": "secondary",
+        "displayName": "Activity plum",
+        "tonalRamp": [
+          "oklch(15% 0.0201 302.86)",
+          "oklch(27% 0.0322 302.86)",
+          "oklch(38% 0.0411 302.86)",
+          "oklch(50% 0.0447 302.86)",
+          "oklch(61% 0.0420 302.86)",
+          "oklch(73% 0.0335 302.86)",
+          "oklch(84% 0.0215 302.86)",
+          "oklch(95% 0.0072 302.86)"
+        ]
+      },
+      "activity-ink": {
+        "role": "neutral",
+        "displayName": "Light activity ink",
+        "tonalRamp": [
+          "oklch(15% 0.0081 303.42)",
+          "oklch(27% 0.0130 303.42)",
+          "oklch(38% 0.0166 303.42)",
+          "oklch(50% 0.0180 303.42)",
+          "oklch(61% 0.0170 303.42)",
+          "oklch(73% 0.0135 303.42)",
+          "oklch(84% 0.0087 303.42)",
+          "oklch(95% 0.0029 303.42)"
+        ]
+      },
+      "workbench-bg": {
+        "role": "neutral",
+        "displayName": "Workbench paper",
+        "tonalRamp": [
+          "oklch(15% 0.0095 304.01)",
+          "oklch(27% 0.0153 304.01)",
+          "oklch(38% 0.0195 304.01)",
+          "oklch(50% 0.0212 304.01)",
+          "oklch(61% 0.0199 304.01)",
+          "oklch(73% 0.0159 304.01)",
+          "oklch(84% 0.0102 304.01)",
+          "oklch(95% 0.0034 304.01)"
+        ]
+      },
+      "button-text": {
+        "role": "neutral",
+        "displayName": "Primary button text",
+        "tonalRamp": [
+          "oklch(15% 0.0043 299.24)",
+          "oklch(27% 0.0068 299.24)",
+          "oklch(38% 0.0087 299.24)",
+          "oklch(50% 0.0095 299.24)",
+          "oklch(61% 0.0089 299.24)",
+          "oklch(73% 0.0071 299.24)",
+          "oklch(84% 0.0045 299.24)",
+          "oklch(95% 0.0015 299.24)"
+        ]
+      },
+      "search-bg": {
+        "role": "neutral",
+        "displayName": "Search field",
+        "tonalRamp": [
+          "oklch(15% 0.0031 304.24)",
+          "oklch(27% 0.0050 304.24)",
+          "oklch(38% 0.0064 304.24)",
+          "oklch(50% 0.0069 304.24)",
+          "oklch(61% 0.0065 304.24)",
+          "oklch(73% 0.0052 304.24)",
+          "oklch(84% 0.0033 304.24)",
+          "oklch(95% 0.0011 304.24)"
         ]
       },
       "ink": {
@@ -172,48 +172,6 @@
           "oklch(95% 0.0004 145.44)"
         ]
       },
-      "ink-soft": {
-        "role": "neutral",
-        "displayName": "ink soft",
-        "tonalRamp": [
-          "oklch(15% 0.0023 145.37)",
-          "oklch(27% 0.0038 145.37)",
-          "oklch(38% 0.0047 145.37)",
-          "oklch(50% 0.0051 145.37)",
-          "oklch(61% 0.0048 145.37)",
-          "oklch(73% 0.0038 145.37)",
-          "oklch(84% 0.0024 145.37)",
-          "oklch(95% 0.0008 145.37)"
-        ]
-      },
-      "panel": {
-        "role": "neutral",
-        "displayName": "panel",
-        "tonalRamp": [
-          "oklch(15% 0.0022 145.40)",
-          "oklch(27% 0.0037 145.40)",
-          "oklch(38% 0.0046 145.40)",
-          "oklch(50% 0.0049 145.40)",
-          "oklch(61% 0.0047 145.40)",
-          "oklch(73% 0.0037 145.40)",
-          "oklch(84% 0.0024 145.40)",
-          "oklch(95% 0.0008 145.40)"
-        ]
-      },
-      "line": {
-        "role": "neutral",
-        "displayName": "line",
-        "tonalRamp": [
-          "oklch(15% 0.0044 132.59)",
-          "oklch(27% 0.0072 132.59)",
-          "oklch(38% 0.0090 132.59)",
-          "oklch(50% 0.0096 132.59)",
-          "oklch(61% 0.0091 132.59)",
-          "oklch(73% 0.0072 132.59)",
-          "oklch(84% 0.0046 132.59)",
-          "oklch(95% 0.0015 132.59)"
-        ]
-      },
       "paper": {
         "role": "neutral",
         "displayName": "paper",
@@ -228,32 +186,18 @@
           "oklch(95% 0.0017 95.17)"
         ]
       },
-      "paper-muted": {
+      "line": {
         "role": "neutral",
-        "displayName": "paper muted",
+        "displayName": "line",
         "tonalRamp": [
-          "oklch(15% 0.0063 93.00)",
-          "oklch(27% 0.0105 93.00)",
-          "oklch(38% 0.0130 93.00)",
-          "oklch(50% 0.0140 93.00)",
-          "oklch(61% 0.0131 93.00)",
-          "oklch(73% 0.0105 93.00)",
-          "oklch(84% 0.0067 93.00)",
-          "oklch(95% 0.0022 93.00)"
-        ]
-      },
-      "muted": {
-        "role": "neutral",
-        "displayName": "muted",
-        "tonalRamp": [
-          "oklch(15% 0.0047 119.66)",
-          "oklch(27% 0.0077 119.66)",
-          "oklch(38% 0.0096 119.66)",
-          "oklch(50% 0.0103 119.66)",
-          "oklch(61% 0.0097 119.66)",
-          "oklch(73% 0.0077 119.66)",
-          "oklch(84% 0.0049 119.66)",
-          "oklch(95% 0.0016 119.66)"
+          "oklch(15% 0.0044 132.59)",
+          "oklch(27% 0.0072 132.59)",
+          "oklch(38% 0.0090 132.59)",
+          "oklch(50% 0.0096 132.59)",
+          "oklch(61% 0.0091 132.59)",
+          "oklch(73% 0.0072 132.59)",
+          "oklch(84% 0.0046 132.59)",
+          "oklch(95% 0.0015 132.59)"
         ]
       },
       "signal": {
@@ -284,34 +228,6 @@
           "oklch(95% 0.0277 124.94)"
         ]
       },
-      "accent-2": {
-        "role": "secondary",
-        "displayName": "accent 2",
-        "tonalRamp": [
-          "oklch(15% 0.0413 228.22)",
-          "oklch(27% 0.0682 228.22)",
-          "oklch(38% 0.0845 228.22)",
-          "oklch(50% 0.0909 228.22)",
-          "oklch(61% 0.0855 228.22)",
-          "oklch(73% 0.0682 228.22)",
-          "oklch(84% 0.0438 228.22)",
-          "oklch(95% 0.0142 228.22)"
-        ]
-      },
-      "accent-3": {
-        "role": "secondary",
-        "displayName": "accent 3",
-        "tonalRamp": [
-          "oklch(15% 0.0612 86.06)",
-          "oklch(27% 0.1011 86.06)",
-          "oklch(38% 0.1253 86.06)",
-          "oklch(50% 0.1348 86.06)",
-          "oklch(61% 0.1268 86.06)",
-          "oklch(73% 0.1011 86.06)",
-          "oklch(84% 0.0649 86.06)",
-          "oklch(95% 0.0211 86.06)"
-        ]
-      },
       "accent-hot": {
         "role": "secondary",
         "displayName": "accent hot",
@@ -329,33 +245,35 @@
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Field Notes display",
-        "purpose": "Pixel headings in the Field Notes presentation."
+        "displayName": "Journal display",
+        "purpose": "Main introduction."
       },
-      "hand": {
-        "displayName": "Handwritten annotation",
-        "purpose": "Names, marginal notes, and secondary links."
+      "headline": {
+        "displayName": "Journal headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Research title",
+        "purpose": "Finding titles in homepage rows."
+      },
+      "body": {
+        "displayName": "Discussion and descriptions",
+        "purpose": "Prose across both presentations."
+      },
+      "metadata": {
+        "displayName": "Technical metadata",
+        "purpose": "Years, identifiers, stack names and credit."
+      },
+      "navigation": {
+        "displayName": "Journal navigation",
+        "purpose": "Primary destinations in the journal header."
       },
       "classic-display": {
         "displayName": "Classic display",
         "purpose": "Monospaced headings in Classic."
-      },
-      "navigation": {
-        "displayName": "Field Notes navigation",
-        "purpose": "Shared primary destinations in the accepted homepage header."
       }
     },
     "shadows": [
-      {
-        "name": "field-notes-primary",
-        "value": "drop-shadow(6px 7px 0 var(--retro-ink))",
-        "purpose": "Filter on primary clipped controls."
-      },
-      {
-        "name": "field-notes-case",
-        "value": "drop-shadow(0.8rem 0.9rem 0 var(--retro-ink))",
-        "purpose": "Filter behind research notes."
-      },
       {
         "name": "classic-hover",
         "value": "var(--boundary) var(--boundary) 0 var(--accent-hot)",
@@ -363,6 +281,16 @@
       }
     ],
     "motion": [
+      {
+        "name": "journal-art",
+        "value": "680ms cubic-bezier(.2,.75,.3,1)",
+        "purpose": "Contrast and position transition on the CRT image when motion is enabled."
+      },
+      {
+        "name": "journal-button",
+        "value": "140ms",
+        "purpose": "Background-color transition on the primary research link."
+      },
       {
         "name": "motion-hover",
         "value": "110ms",
@@ -382,84 +310,71 @@
         "name": "ease-productive",
         "value": "cubic-bezier(0, 0, 0.38, 0.9)",
         "purpose": "Shared component easing."
-      },
-      {
-        "name": "field-notes-button",
-        "value": "140ms steps(2, end)",
-        "purpose": "Stepped button transforms and filters."
       }
     ],
     "breakpoints": [
-      {
-        "name": "max-1180",
-        "value": "1180px"
-      },
-      {
-        "name": "max-1120",
-        "value": "1120px"
-      },
       {
         "name": "max-960",
         "value": "960px"
       },
       {
-        "name": "max-820",
-        "value": "820px"
+        "name": "max-800",
+        "value": "800px"
       },
       {
         "name": "max-680",
         "value": "680px"
       },
       {
-        "name": "max-620",
-        "value": "620px"
+        "name": "max-540",
+        "value": "540px"
       },
       {
-        "name": "max-390",
-        "value": "390px"
+        "name": "max-360",
+        "value": "360px"
       }
     ]
   },
   "components": [
     {
-      "name": "Field Notes primary link",
+      "name": "Journal primary link",
       "kind": "button",
-      "refersTo": "field-notes-primary-link",
-      "description": "Current primary anchor, including its existing inherited text color.",
-      "html": "<div class=\"ds-field-notes\"><a class=\"ds-button ds-button-primary\" href=\"#\">Open case files</a></div>",
-      "css": ".ds-field-notes { color:var(--retro-ink); font-family:var(--retro-copy); line-height:1.55; } .ds-field-notes a { color:inherit; text-decoration:none; }\n.ds-button { position: relative; display: inline-flex; min-height: 3.5rem; align-items: center; justify-content: space-between; gap: 1.5rem; border: 0; padding: 0.8rem 1.25rem; font-family: var(--retro-mono); font-size: clamp(0.9rem, 0.84rem + 0.16vw, 1rem); font-weight: 700; letter-spacing: 0.01em; text-transform: uppercase; cursor: pointer; transition: filter 140ms steps(2, end), transform 140ms steps(2, end); }\n.ds-button-primary { background: var(--retro-blue); clip-path: polygon(3% 8%, 96% 0, 100% 34%, 97% 93%, 69% 97%, 42% 94%, 5% 100%, 0 61%); filter: drop-shadow(6px 7px 0 var(--retro-ink)); color: var(--retro-white); transform: rotate(2deg); }\n@media (hover: hover) and (pointer: fine) { .ds-button:hover { filter: drop-shadow(-5px 7px 0 var(--retro-coral)); transform: translate(0.35rem, -0.45rem) rotate(-2deg); } }\n.ds-field-notes :focus-visible { outline: 4px solid var(--retro-coral); outline-offset: 5px; }\n@media (prefers-reduced-motion: reduce) { [class^=\"ds-\"] { animation-duration:0.01ms!important; transition-duration:0.01ms!important; } }"
+      "refersTo": "journal-primary",
+      "description": "Primary action in the homepage introduction.",
+      "html": "<div class=\"ds-journal\"><a class=\"ds-primary\" href=\"/#case-files\">Explore research <svg width=\"17\" height=\"17\" aria-hidden=\"true\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M10 3v13m-5-5 5 5 5-5\"/></svg></a></div>",
+      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-primary { display:inline-flex; align-items:center; gap:1rem; min-height:2.9rem; box-sizing:border-box; padding:.62rem 1.1rem; border-radius:4px; background:var(--journal-ink,#221f29); color:#faf8ff; text-decoration:none; font-weight:620; font-size:1rem; line-height:1.35; transition:background-color 140ms; } .ds-primary:hover { background:var(--journal-deep,#4c3388); } @media(prefers-reduced-motion:reduce){ .ds-primary { transition:none; } } .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
     },
     {
-      "name": "Field Notes secondary link",
+      "name": "Journal secondary link",
       "kind": "button",
-      "refersTo": "field-notes-secondary-link",
-      "description": "Handwritten secondary contact link with a citron underline.",
-      "html": "<div class=\"ds-field-notes\"><a class=\"ds-button ds-button-secondary\" href=\"#\">Start a conversation</a></div>",
-      "css": ".ds-field-notes { color:var(--retro-ink); font-family:var(--retro-copy); line-height:1.55; } .ds-field-notes a { color:inherit; text-decoration:none; }\n.ds-button { position: relative; display: inline-flex; min-height: 3.5rem; align-items: center; justify-content: space-between; gap: 1.5rem; border: 0; padding: 0.8rem 1.25rem; font-family: var(--retro-mono); font-size: clamp(0.9rem, 0.84rem + 0.16vw, 1rem); font-weight: 700; letter-spacing: 0.01em; text-transform: uppercase; cursor: pointer; transition: filter 140ms steps(2, end), transform 140ms steps(2, end); }\n.ds-button-secondary { color: var(--retro-ink); font-family: var(--retro-hand); font-size: 1.45rem; font-weight: 750; text-transform: none; transform: rotate(-3deg); }\n.ds-button-secondary::after { position: absolute; right: 0.7rem; bottom: 0.45rem; left: 0.6rem; z-index: -1; height: 0.65rem; background: var(--retro-yellow); clip-path: polygon(0 43%, 12% 20%, 24% 49%, 39% 13%, 54% 51%, 70% 18%, 85% 48%, 100% 25%, 99% 100%, 0 100%); content: \"\"; }\n@media (hover: hover) and (pointer: fine) { .ds-button:hover { filter: drop-shadow(-5px 7px 0 var(--retro-coral)); transform: translate(0.35rem, -0.45rem) rotate(-2deg); } }\n@media (hover: hover) and (pointer: fine) { .ds-button-secondary:hover { filter: none; color: var(--retro-blue); transform: translateY(-0.35rem) rotate(2deg); } }\n.ds-field-notes :focus-visible { outline: 4px solid var(--retro-coral); outline-offset: 5px; }\n@media (prefers-reduced-motion: reduce) { [class^=\"ds-\"] { animation-duration:0.01ms!important; transition-duration:0.01ms!important; } }"
+      "refersTo": "journal-secondary",
+      "description": "An underlined text link accompanying the main action.",
+      "html": "<div class=\"ds-journal\"><a class=\"ds-secondary\" href=\"/resume/\">View résumé <svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M4 16 16 4M5 4h11v11\"/></svg></a></div>",
+      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-secondary { display:inline-flex; align-items:center; gap:.45rem; padding-block:.35rem; color:inherit; font-weight:620; font-size:1rem; text-decoration:underline; text-decoration-color:#aaa0b7; text-underline-offset:.31em; } .ds-secondary:hover { color:var(--journal-violet,#6542a6); text-decoration-color:currentColor; } .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
     },
     {
-      "name": "Field Notes navigation",
+      "name": "Journal navigation",
       "kind": "nav",
-      "refersTo": "field-notes-navigation",
-      "description": "Shared Field Notes navigation on every route, with handwritten labels, numbered prefixes, and an underline for the current page.",
-      "html": "<div class=\"ds-field-notes\"><nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"/research/\" aria-current=\"page\"><span aria-hidden=\"true\">01</span>Research</a><a href=\"/projects/\"><span aria-hidden=\"true\">02</span>Projects</a><a href=\"/resume/\"><span aria-hidden=\"true\">03</span>Résumé</a></nav></div>",
-      "css": ".ds-field-notes { color:var(--retro-ink); font-family:var(--retro-copy); line-height:1.55; } .ds-field-notes a { color:inherit; text-decoration:none; }\n.ds-nav { display: flex; gap: clamp(0.8rem, 2vw, 2rem); align-items: center; margin-inline: auto; }\n.ds-nav a { position: relative; display: inline-flex; min-height: 2.75rem; align-items: center; gap: 0.4rem; font-family: var(--retro-hand); font-size: clamp(1.2rem, 1.6vw, 1.55rem); font-weight: 700; line-height: 1; transform: rotate(-2deg); }\n.ds-nav a::after { position: absolute; right: 0; bottom: 0.2rem; left: 0; height: 0.22rem; background: var(--retro-coral); clip-path: polygon(0 58%, 11% 29%, 23% 61%, 39% 18%, 55% 59%, 72% 25%, 88% 67%, 100% 35%, 99% 100%, 0 100%); content: \"\"; transform: scaleX(0); transform-origin: left; transition: transform 180ms steps(5, end); }\n.ds-nav a > span { color: var(--retro-blue); font-family: var(--retro-mono); font-size: 0.66rem; }\n@media (hover: hover) and (pointer: fine) { .ds-nav a:hover::after { transform: scaleX(1); } }\n@media (hover: hover) and (pointer: fine) { .ds-nav a:hover { color: var(--retro-blue); } }\n.ds-field-notes :focus-visible { outline: 4px solid var(--retro-coral); outline-offset: 5px; }\n@media (prefers-reduced-motion: reduce) { [class^=\"ds-\"] { animation-duration:0.01ms!important; transition-duration:0.01ms!important; } }.ds-nav { gap:1.35rem; } .ds-nav a { min-height:2.75rem; font-size:1.5rem; transform:none; } .ds-nav a > span { font-size:.75rem; color:var(--retro-jade-dark); } @media (max-width:680px) { .ds-nav { justify-content:space-between; gap:.55rem; } .ds-nav a { font-size:1.3rem; } }\n.ds-nav a[aria-current=\"page\"]::after { transform:scaleX(1); }"
+      "refersTo": "journal-navigation",
+      "description": "Primary destinations with a visible current-page state.",
+      "html": "<div class=\"ds-journal\"><nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"/research/\" aria-current=\"page\">Research</a><a href=\"/projects/\">Projects</a><a href=\"/resume/\">Résumé</a></nav></div>",
+      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-nav { display:flex; flex-wrap:wrap; align-items:center; gap:clamp(1.25rem,3vw,3rem); } .ds-nav a { padding-block:.5rem; font-size:.98rem; font-weight:550; color:inherit; text-decoration:none; } .ds-nav a:hover,.ds-nav a[aria-current] { color:var(--journal-deep,#4c3388); text-decoration:underline; text-underline-offset:.35em; } .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
     },
     {
-      "name": "Field Notes research case",
+      "name": "Journal research row",
       "kind": "card",
-      "refersTo": "field-notes-case",
-      "description": "A clipped research note with explicit attribution.",
-      "html": "<div class=\"ds-field-notes\"><article class=\"ds-case\"><a href=\"#\"><p class=\"ds-case-role\">Independent research</p><h3>Breaking the first-run boundary</h3><p class=\"ds-case-dek\">GoAnywhere MFT</p></a></article></div>",
-      "css": ".ds-field-notes { color:var(--retro-ink); font-family:var(--retro-copy); line-height:1.55; } .ds-field-notes a { color:inherit; text-decoration:none; }\n.ds-case { width:min(100%,28rem); filter:drop-shadow(0.8rem 0.9rem 0 var(--retro-ink)); transition:filter 170ms steps(3,end), transform 170ms steps(3,end); }\n.ds-case > a { display: flex; min-height: 29rem; flex-direction: column; background: var(--retro-yellow); clip-path: polygon(1% 2%, 10% 4%, 18% 1%, 29% 3%, 41% 0, 52% 3%, 63% 1%, 75% 4%, 87% 1%, 99% 4%, 97% 18%, 100% 31%, 98% 45%, 100% 57%, 97% 69%, 99% 82%, 96% 98%, 84% 96%, 73% 99%, 61% 96%, 49% 100%, 36% 97%, 22% 100%, 12% 96%, 1% 98%, 3% 83%, 0 69%, 3% 54%, 0 39%, 2% 22%); padding: clamp(1.6rem, 3vw, 2.7rem); }\n.ds-case-role { position: relative; width: max-content; max-width: 100%; margin: 1.8rem 0 0; font-family: var(--retro-hand); font-size: 1.25rem; font-weight: 750; line-height: 1; transform: rotate(-2deg); }\n.ds-case-role::after { position: absolute; right: -0.2rem; bottom: -0.1rem; left: -0.2rem; z-index: -1; height: 0.48em; background: rgba(255, 249, 234, 0.64); content: \"\"; transform: rotate(1deg); }\n.ds-case h3 { max-width: 15ch; margin: auto 0 0; padding-top: 2.4rem; font-family: var(--retro-pixel); font-size: clamp(2rem, 3.5vw, 3.8rem); font-weight: 700; letter-spacing: -0.015em; line-height: 1; }\n.ds-case-dek { max-width: 48rem; margin: 1.2rem 0 0; font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.48; }\n@media (hover: hover) and (pointer: fine) { .ds-case:hover h3 { color: var(--retro-blue-dark); } }\n.ds-case:focus-within { z-index: 15; filter: drop-shadow(-0.7rem 1rem 0 var(--retro-coral)); }\n@media (hover:hover) and (pointer:fine) { .ds-case:hover { filter:drop-shadow(-0.7rem 1rem 0 var(--retro-blue)); transform:translateY(-0.8rem) rotate(0deg); } }\n.ds-field-notes :focus-visible { outline: 4px solid var(--retro-coral); outline-offset: 5px; }\n@media (prefers-reduced-motion: reduce) { [class^=\"ds-\"] { animation-duration:0.01ms!important; transition-duration:0.01ms!important; } }"
+      "refersTo": "journal-record",
+      "description": "A linked finding with its year, identifiers, and credit.",
+      "html": "<div class=\"ds-journal\"><a class=\"ds-record\" href=\"/research/goanywhere-mft/\"><time>2024</time><span><strong>Breaking the first-run boundary</strong><small>CVE-2024-0204 · CVE-2024-25156</small></span><small>Independent research</small><span class=\"ds-arrow\"><svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M4 16 16 4M5 4h11v11\"/></svg></span></a></div>",
+      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-record { display:grid; grid-template-columns:auto minmax(0,1fr) minmax(5rem,.35fr) auto; align-items:center; gap:1rem; padding-block:1.48rem; border-block:1px solid var(--journal-line,#c9c3d3); color:inherit; text-decoration:none; } .ds-record strong { display:block; font:600 clamp(1.65rem,2.4vw,2.25rem)/1.1 var(--font-display,\"Barlow Condensed\",sans-serif); } .ds-record time,.ds-record small { color:#504659; font:.76rem/1.6 var(--font-mono,\"JetBrains Mono Variable\",monospace); } .ds-arrow { display:grid; place-items:center; width:2.4rem; height:2.4rem; border:1px solid #bbb0c6; border-radius:50%; } .ds-record:hover strong { color:var(--journal-violet,#6542a6); } .ds-record:hover .ds-arrow { background:var(--journal-violet,#6542a6); color:white; } @media(max-width:680px){ .ds-record { grid-template-columns:auto minmax(0,1fr) auto; } .ds-record > small { grid-row:2; grid-column:2; } .ds-arrow { grid-column:3; grid-row:1/3; }} .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
     },
     {
-      "name": "Field Notes navigator search",
+      "name": "Quick navigator search",
       "kind": "input",
-      "refersTo": "field-notes-search",
-      "description": "The transparent search input from the existing navigator dialog.",
-      "html": "<div class=\"ds-field-notes\"><label class=\"ds-search\"><span>FIND</span><input aria-label=\"Find a destination\" placeholder=\"Type a destination\" /></label></div>",
-      "css": ".ds-field-notes { color:var(--retro-ink); font-family:var(--retro-copy); line-height:1.55; } .ds-field-notes a { color:inherit; text-decoration:none; }\n.ds-search { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.65rem; align-items: center; margin-top: 2rem; border-bottom: 3px solid var(--retro-ink); padding: 0 0.2rem 0.65rem; font-family: var(--retro-mono); }\n.ds-search > span { color: var(--retro-lacquer); font-size: 0.78rem; font-weight: 800; }\n.ds-search input { min-width: 0; border: 0; outline: 0; background: transparent; color: var(--retro-ink); font: inherit; font-size: 0.9rem; }\n.ds-search input::placeholder { color: color-mix(in srgb, var(--retro-ink) 55%, transparent); }\n.ds-field-notes :focus-visible { outline: 4px solid var(--retro-coral); outline-offset: 5px; }\n@media (prefers-reduced-motion: reduce) { [class^=\"ds-\"] { animation-duration:0.01ms!important; transition-duration:0.01ms!important; } }"
+      "refersTo": "journal-search",
+      "description": "The search field inside the native destination dialog.",
+      "html": "<div class=\"ds-journal\"><input class=\"ds-search\" type=\"search\" aria-label=\"Search destinations\" placeholder=\"Search destinations…\"></div>",
+      "css": ".ds-journal { background:var(--journal-bg,#eeecf6); color:var(--journal-ink,#221f29); font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif); padding:1rem; } .ds-search { width:100%; box-sizing:border-box; font:inherit; padding:.65rem .75rem; color:inherit; border:1px solid var(--journal-ink,#221f29); background:#f8f6fb; } .ds-search::placeholder { color:var(--journal-muted,#635e6c); } .ds-journal :focus-visible { outline:2px solid var(--journal-deep,#4c3388); outline-offset:4px; }"
     },
     {
       "name": "Classic primary button",
@@ -487,23 +402,18 @@
     }
   ],
   "narrative": {
-    "overview": "This record describes the implemented site. Its sources are `src/styles/retro.css`, `src/styles/global.css`, the Astro components, and computed styles sampled at desktop and mobile widths. It establishes no new aesthetic direction.\n\nField Notes is the default presentation: ruled paper, irregular cut-paper shapes, pixel headings, handwritten annotations, colored research notes, and hard offset shadows. Classic is a separate presentation with dark surfaces, monospaced headings, rectangular panels, fine borders, and bright accents. The switch changes presentation across routes; preserve its behavior when editing either view.",
+    "overview": "The default presentation lays out Vũ Chí Thành’s work as a research journal. A graphite CRT with a lilac wireframe landscape sits opposite the introduction. Small registration marks frame the image and a quotation sits beneath it.",
     "keyCharacteristics": [
-      "Field Notes combines Pixelify Sans, Caveat, Atkinson Hyperlegible Next, and JetBrains Mono for distinct roles.",
-      "Classic uses JetBrains Mono for headings and labels, with Atkinson Hyperlegible Next for prose.",
-      "Research cards retain readable attribution, identifiers, and source destinations in both presentations."
+      "The deep-plum activity band gives the latest result, its date, credits, and source a single place on the page.",
+      "Research entries sit on flat ruled rows with visible years, identifiers, and attribution.",
+      "Classic uses dark surfaces, monospaced headings, bright accents, and its own research-card grid."
     ],
     "rules": [],
     "dos": [
-      "Do use the active presentation's existing CSS variables and font roles.",
-      "Do preserve responsive positioning, focus behavior, and reduced-motion handling when refining a component.",
-      "Do keep attribution and primary-source links visible in research components.",
-      "Do preserve the résumé's separate print treatment."
+      "Do keep attribution, identifiers, and source links legible when rows reflow.",
+      "Do use the active presentation’s palette and preserve its keyboard focus and reduced-motion behavior.",
+      "Do keep screen-only navigation and controls outside the printed résumé."
     ],
-    "donts": [
-      "Don't merge the two presentations' palettes or type systems during a narrow refinement.",
-      "Don't treat historical variable names as instructions to introduce new colors or fonts.",
-      "Don't promote the documented primary-link cascade discrepancy into a design requirement."
-    ]
+    "donts": []
   }
 }

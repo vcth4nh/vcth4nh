@@ -1,4 +1,5 @@
 ---
+import PresentationSwitch from "./PresentationSwitch.astro";
 import ArrowIcon from "./ArrowIcon.astro";
 import { profile } from "../data/profile";
 
@@ -23,5 +24,14 @@ const year = new Date().getFullYear();
     </nav>
 
     <p class="footer-meta">© {year} {profile.name}<br />Built with Astro. Deployed at the edge.</p>
+  </div>
+  <div class="journal-footer shell">
+    <p>© {year} {profile.name}</p>
+    <nav aria-label="Social links">
+      {profile.socials.map((social) => (
+        <a href={social.href} target="_blank" rel="noreferrer">{social.label}<ArrowIcon size={11} /></a>
+      ))}
+    </nav>
+    <PresentationSwitch current="field-notes" />
   </div>
 </footer>

@@ -18,7 +18,7 @@ const { current, class: className = "" } = Astro.props;
     aria-label="Classic presentation"
     data-presentation-toggle
   >
-    <span class="presentation-switch-label">Classic</span>
+    <span class="presentation-switch-label">{current === "field-notes" ? "Classic view" : "Classic"}</span>
     <span class="presentation-switch-track" aria-hidden="true">
       <span class="presentation-switch-thumb"></span>
     </span>
@@ -57,7 +57,7 @@ const { current, class: className = "" } = Astro.props;
 
     if (themeColor) {
       themeColor.content = presentation === "field-notes"
-        ? "#0a746a"
+        ? "#eeecf6"
         : classicThemeColors[root.dataset.theme ?? "phosphor"] ?? classicThemeColors.phosphor;
     }
 
@@ -79,6 +79,14 @@ const { current, class: className = "" } = Astro.props;
     toggle.addEventListener("click", () => {
       const presentation = root.dataset.presentation === "classic" ? "field-notes" : "classic";
       applyPresentation(presentation, true);
+      // Both layouts render their own switch. Restore keyboard focus when this one disappears.
+      if (!toggle.getClientRects().length) {
+        const visibleToggle = presentationToggles.find((button) => button.getClientRects().length);
+        const fallback = document.querySelector<HTMLElement>(
+          presentation === "classic" ? ".header-wordmark" : ".journal-brand",
+        );
+        (visibleToggle ?? fallback)?.focus({ preventScroll: true });
+      }
     });
   });
 

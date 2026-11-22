@@ -46,12 +46,12 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-presentation="field-notes">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#0b0c0b" />
+    <meta name="theme-color" content="#eeecf6" />
     <script is:inline>
       (() => {
         let presentation = "field-notes";
@@ -79,10 +79,14 @@ const jsonLd = {
         const requestedTheme = new URLSearchParams(window.location.search).get("theme");
         let theme = requestedTheme;
 
-        if (theme && allowedThemes.has(theme)) {
-          window.sessionStorage.setItem("preview-theme", theme);
-        } else {
-          theme = window.sessionStorage.getItem("preview-theme") || "phosphor";
+        try {
+          if (theme && allowedThemes.has(theme)) {
+            window.sessionStorage.setItem("preview-theme", theme);
+          } else {
+            theme = window.sessionStorage.getItem("preview-theme") || "phosphor";
+          }
+        } catch {
+          theme = requestedTheme || "phosphor";
         }
 
         if (!allowedThemes.has(theme)) theme = "phosphor";
@@ -96,7 +100,7 @@ const jsonLd = {
           signal: "#0c2c4a",
         };
         const activeBrowserColor = document.documentElement.dataset.presentation === "field-notes"
-          ? "#0a746a"
+          ? "#eeecf6"
           : browserColors[theme];
         document.querySelector('meta[name="theme-color"]')?.setAttribute("content", activeBrowserColor);
       })();

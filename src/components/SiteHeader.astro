@@ -47,26 +47,37 @@ const isActive = (href: string) => {
     </details>
   </div>
 
-  <div class="retro-header header-aligned">
-    <a class="retro-logo header-logo" href="/" aria-label={`${profile.name}, home`}>
-      <span aria-hidden="true">V4</span>
-      <strong>/{profile.handle}</strong>
+  <div class="journal-header shell">
+    <a class="journal-brand" href="/" aria-label={`${profile.name}, home`}>
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+        <path d="M10 0h4v5h3V3h4v4h-2v3h5v4h-5v3h2v4h-4v-2h-3v5h-4v-5H7v2H3v-4h2v-3H0v-4h5V7H3V3h4v2h3z" />
+      </svg>
+      <span>{profile.handle}</span>
     </a>
-    <nav aria-label="Primary navigation">
-      {links.map((link, index) => (
-        <a href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>
-          <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-          {link.label}
-        </a>
+
+    <nav class="journal-nav" aria-label="Primary navigation">
+      {links.map((link) => (
+        <a href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>{link.label}</a>
       ))}
     </nav>
-    <div class="retro-system-controls header-tools">
-      <button class="retro-command-trigger" type="button" data-command-trigger aria-haspopup="dialog" aria-label="Open quick navigator">
-        <span class="header-jump-label">Jump</span><kbd>/</kbd>
+
+    <div class="journal-controls">
+      <button class="journal-search" type="button" data-command-trigger aria-haspopup="dialog" aria-label="Search destinations">
+        <svg width="18" height="18" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8.5" cy="8.5" r="5.3" /><path d="m12.5 12.5 4.3 4.3" /></svg>
+        <kbd aria-hidden="true">/</kbd>
       </button>
-      <PresentationSwitch current="field-notes" class="retro-presentation-switch" />
+      <ProtectedEmail label="Contact" keepLabel class="journal-contact" />
+      <details class="journal-menu">
+        <summary aria-label="Navigation menu">
+          <svg aria-hidden="true" width="21" height="21" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h16M2 13h16" /></svg>
+        </summary>
+        <nav aria-label="Mobile navigation">
+          {links.map((link) => (
+            <a href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>{link.label}</a>
+          ))}
+        </nav>
+      </details>
     </div>
-    <ProtectedEmail label="Start a conversation" class="header-contact" />
   </div>
 </header>
 
