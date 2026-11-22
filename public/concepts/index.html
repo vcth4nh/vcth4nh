@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>Five homepage concepts · Vũ Chí Thành</title>
+  <meta name="description" content="Five visual directions for Vũ Chí Thành’s research portfolio.">
+  <meta property="og:title" content="Five homepage concepts for Vũ Chí Thành">
+  <meta property="og:image" content="https://preview-theme-gallery.vcth4nh.pages.dev/concepts/overview.jpg">
+  <style>
+    :root { color-scheme:light; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:#20211f; background:#f6f5f1; }
+    * { box-sizing:border-box; }
+    body { margin:0; }
+    body:has(dialog[open]) { overflow:hidden; }
+    main { max-width:1720px; margin:auto; padding:clamp(24px,4vw,70px); }
+    header { display:flex; justify-content:space-between; align-items:end; gap:2.5rem; padding-bottom:clamp(1.5rem,2.5vw,2.75rem); border-bottom:1px solid #8b8d83; margin-bottom:clamp(1.4rem,2.6vw,2.8rem); }
+    h1,h2,p,figure { margin:0; }
+    h1 { font-size:clamp(2.45rem,5vw,5rem); font-weight:600; letter-spacing:-.06em; line-height:1; }
+    header p { max-width:36ch; font-size:1rem; line-height:1.45; color:#52554c; }
+    .gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(1.8rem,3vw,3.1rem) clamp(1rem,2vw,2.1rem); }
+    .concept { display:block; color:inherit; text-decoration:none; }
+    .plate { position:relative; width:100%; aspect-ratio:3/2; display:grid; place-items:center; background:#e3e3dd; overflow:hidden; box-shadow:0 0 0 1px #28292326; }
+    .plate img { width:100%; height:100%; object-fit:contain; display:block; }
+    .caption { display:grid; grid-template-columns:2.2rem minmax(0,1fr) auto; align-items:baseline; gap:.2rem .25rem; margin-top:.85rem; }
+    .num { font:500 .78rem/1.25 ui-monospace,monospace; color:#626559; font-variant-numeric:tabular-nums; }
+    h2 { font-size:clamp(1.22rem,1.55vw,1.65rem); font-weight:600; line-height:1.15; letter-spacing:-.045em; }
+    .caption p { grid-column:2/-1; color:#57594f; font-size:.91rem; line-height:1.45; }
+    .expand { align-self:center; width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:1.5; }
+    .concept:hover h2,.concept:focus-visible h2 { text-decoration:underline; text-underline-offset:.15em; }
+    .concept:hover .plate { box-shadow:0 0 0 2px #292a26; }
+    :focus-visible { outline:3px solid #2e5894; outline-offset:5px; }
+    dialog { position:fixed; inset:0; margin:auto; border:0; padding:0; color:#f6f5f1; background:#151614; width:100vw; height:100dvh; max-height:none; max-width:none; }
+    dialog::backdrop { background:#151614; }
+    dialog[open] { display:grid; grid-template-rows:auto minmax(0,1fr) auto; }
+    .viewer-head,.viewer-foot { padding:.7rem clamp(1rem,3.2vw,3rem); display:flex; gap:1rem; align-items:center; justify-content:space-between; }
+    .viewer-head { border-bottom:1px solid #494a43; }
+    .viewer-head h2 { display:flex; gap:.7rem; align-items:baseline; font-size:clamp(1.2rem,2.1vw,2rem); }
+    .viewer-head .num { color:#cbcdbd; }
+    .viewer-foot { border-top:1px solid #494a43; }
+    .viewer-foot div { display:flex; gap:.5rem; }
+    dialog button,dialog a { font:inherit; color:inherit; }
+    dialog button { display:inline-flex; align-items:center; justify-content:center; cursor:pointer; border:1px solid #686a60; background:transparent; padding:.55rem .85rem; min-height:44px; }
+    dialog button:hover { background:#363732; }
+    dialog a { text-underline-offset:.25em; }
+    .view-image { display:block; width:100%; height:100%; object-fit:contain; min-height:0; padding:clamp(.5rem,1.1vw,1.1rem); }
+    @media(max-width:1000px) { .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:640px) { header { display:block; } header p { margin-top:.9rem; } .gallery { grid-template-columns:1fr; } .caption { grid-template-columns:1.9rem minmax(0,1fr) auto; } }
+    @media(max-width:360px) { main { padding:1rem; } .viewer-head,.viewer-foot { padding-inline:.65rem; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Choose a direction.</h1>
+    <p>Five homepage mockups for Vũ Chí Thành’s portfolio. Open one for a closer look, then tell me your favorite in chat.</p>
+  </header>
+  <div class="gallery">
+    <a class="concept" id="carbon-copy" href="./carbon-copy.webp" aria-label="Open concept 1, Carbon Copy">
+      <div class="plate"><img src="./carbon-copy.webp" alt="A cream forensic research file with offset red and blue type and a red acetate overlay." width="1536" height="1024"></div>
+      <div class="caption"><span class="num">01</span><h2>Carbon Copy</h2><svg class="expand" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5M14 2l-5 5M7 14H2V9m0 5 5-5"/></svg><p>Slide a red acetate sheet over a research file.</p></div>
+    </a>
+    <a class="concept" id="hanoi-after-rain" href="./hanoi-after-rain.webp" aria-label="Open concept 2, Hanoi After Rain">
+      <div class="plate"><img src="./hanoi-after-rain.webp" alt="A hand-painted Hanoi street at blue hour, with rain reflections and illuminated storefronts." width="1536" height="1024"></div>
+      <div class="caption"><span class="num">02</span><h2>Hanoi After Rain</h2><svg class="expand" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5M14 2l-5 5M7 14H2V9m0 5 5-5"/></svg><p>Browse research and tools by exploring a street after dark.</p></div>
+    </a>
+    <a class="concept" id="wrong-floor" href="./wrong-floor.webp" aria-label="Open concept 3, Wrong Floor">
+      <div class="plate"><img src="./wrong-floor.webp" alt="An isometric pixel-art office in which an elevator and a floor sign disagree." width="1536" height="1024"></div>
+      <div class="caption"><span class="num">03</span><h2>Wrong Floor</h2><svg class="expand" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5M14 2l-5 5M7 14H2V9m0 5 5-5"/></svg><p>Step out of the elevator and investigate a mismatch.</p></div>
+    </a>
+    <a class="concept" id="paper-theatre" href="./paper-theatre.webp" aria-label="Open concept 4, Paper Theatre">
+      <div class="plate"><img src="./paper-theatre.webp" alt="A layered cobalt and coral paper theatre with a key, a shadow, and a pull tab." width="1536" height="1024"></div>
+      <div class="caption"><span class="num">04</span><h2>Paper Theatre</h2><svg class="expand" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5M14 2l-5 5M7 14H2V9m0 5 5-5"/></svg><p>Pull a tab to uncover the second scene in a case.</p></div>
+    </a>
+    <a class="concept" id="pirate-radio" href="./pirate-radio.webp" aria-label="Open concept 5, Pirate Radio">
+      <div class="plate"><img src="./pirate-radio.webp" alt="A late-night radio console with a glowing frequency dial and tactile tuning controls." width="1536" height="1024"></div>
+      <div class="caption"><span class="num">05</span><h2>Pirate Radio</h2><svg class="expand" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5M14 2l-5 5M7 14H2V9m0 5 5-5"/></svg><p>Tune a vintage receiver to a research case or a tool.</p></div>
+    </a>
+  </div>
+</main>
+<dialog aria-labelledby="viewer-title">
+  <div class="viewer-head">
+    <h2 id="viewer-title"><span class="num" id="viewer-number"></span><span id="viewer-name"></span></h2>
+    <button type="button" id="dismiss">Close</button>
+  </div>
+  <img class="view-image" alt="">
+  <div class="viewer-foot">
+    <a id="original" target="_blank" rel="noreferrer">Original image</a>
+    <div><button type="button" id="previous">Previous</button><button type="button" id="next">Next</button></div>
+  </div>
+</dialog>
+<script>
+  const plates = Array.from(document.querySelectorAll('.concept'));
+  const viewer = document.querySelector('dialog');
+  const bigImage = viewer.querySelector('img');
+  let current = 0;
+  function show(index) {
+    current = (index + plates.length) % plates.length;
+    const link = plates[current];
+    const thumbnail = link.querySelector('img');
+    document.querySelector('#viewer-number').textContent = link.querySelector('.num').textContent;
+    document.querySelector('#viewer-name').textContent = link.querySelector('h2').textContent;
+    bigImage.src = link.href;
+    bigImage.alt = thumbnail.alt;
+    document.querySelector('#original').href = link.href;
+    if (!viewer.open) viewer.showModal();
+    history.replaceState(history.state, '', '#' + link.id);
+  }
+  plates.forEach((plate, index) => plate.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || typeof viewer.showModal !== 'function') return;
+    event.preventDefault();
+    show(index);
+  }));
+  document.querySelector('#dismiss').addEventListener('click', () => viewer.close());
+  document.querySelector('#previous').addEventListener('click', () => show(current-1));
+  document.querySelector('#next').addEventListener('click', () => show(current+1));
+  viewer.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      show(current + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  viewer.addEventListener('close', () => {
+    history.replaceState(history.state, '', location.pathname + location.search);
+    plates[current].focus({preventScroll:true});
+  });
+  function syncViewer() {
+    const index = plates.findIndex(plate => '#' + plate.id === location.hash);
+    if (index >= 0 && typeof viewer.showModal === 'function') show(index);
+    else if (viewer.open) viewer.close();
+  }
+  syncViewer();
+  window.addEventListener('hashchange', syncViewer);
+</script>
+</body>
+</html>
