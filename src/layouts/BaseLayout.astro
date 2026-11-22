@@ -51,7 +51,7 @@ const jsonLd = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#161614" />
+    <meta name="theme-color" content="#f6e5c4" />
     <script is:inline>
       (() => {
         let presentation = "field-notes";
@@ -67,7 +67,7 @@ const jsonLd = {
             presentation = savedPresentation;
           }
         } catch {
-          // The exhibition remains the default when storage is unavailable.
+          // Paper Theatre remains the default when storage is unavailable.
         }
 
         document.documentElement.dataset.presentation = presentation;
@@ -100,7 +100,7 @@ const jsonLd = {
           signal: "#0c2c4a",
         };
         const activeBrowserColor = document.documentElement.dataset.presentation === "field-notes"
-          ? "#161614"
+          ? "#f6e5c4"
           : browserColors[theme];
         document.querySelector('meta[name="theme-color"]')?.setAttribute("content", activeBrowserColor);
       })();

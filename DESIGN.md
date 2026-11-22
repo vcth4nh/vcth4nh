@@ -1,16 +1,16 @@
 ---
 name: "thanh.vc"
-description: "Boundary studies, an interactive exhibition of Vũ Chí Thành’s research, and its alternate Classic presentation."
+description: "Paper Theatre, a cut-paper stage and printed programme for Vũ Chí Thành’s vulnerability research."
 colors:
-  gallery-dark: "#161614"
-  gallery-white: "#f5f1e7"
-  gallery-paper: "#eeeae0"
-  gallery-ink: "#1a1a17"
-  gallery-accent: "#ff592f"
-  gallery-link: "#aa340e"
-  gallery-muted: "#625e54"
-  gallery-rule: "#c2bcb0"
-  search-bg: "#fbf9f3"
+  theatre-paper: "#f6e5c4"
+  theatre-white: "#fff3d9"
+  theatre-ink: "#142c69"
+  theatre-shadow: "#10214c"
+  theatre-coral: "#c44334"
+  theatre-link: "#963326"
+  theatre-muted: "#645640"
+  theatre-rule: "#bcaa8b"
+  search-bg: "#fff5df"
   ink: "#0b0c0b"
   paper: "#f0eee6"
   line: "#31342f"
@@ -18,27 +18,21 @@ colors:
   lime: "#d0ff70"
   accent-hot: "#ff6376"
 typography:
-  display:
-    fontFamily: '"Barlow Condensed", "Arial Narrow", sans-serif'
-    fontSize: "clamp(7rem, 14.2vw, 15.4rem)"
+  masthead:
+    fontFamily: '"Fraunces Variable", Georgia, serif'
+    fontSize: "clamp(1.45rem, 2.05vw, 2rem)"
     fontWeight: 700
-    lineHeight: 0.9
-    letterSpacing: "-0.037em"
-  display-italic:
-    fontFamily: '"Instrument Serif", Georgia, serif'
-    fontSize: "clamp(8.5rem, 15.5vw, 17rem)"
-    fontWeight: 400
-    lineHeight: 0.94
-    letterSpacing: "-0.04em"
+    lineHeight: 1.15
+    letterSpacing: "-0.035em"
   headline:
-    fontFamily: '"Barlow Condensed", "Arial Narrow", sans-serif'
-    fontSize: "clamp(3.6rem, 7.2vw, 6rem)"
+    fontFamily: '"Fraunces Variable", Georgia, serif'
+    fontSize: "clamp(3rem, 6.35vw, 6.3rem)"
     fontWeight: 700
     lineHeight: 0.98
     letterSpacing: "-0.025em"
   title:
-    fontFamily: '"Barlow Condensed", "Arial Narrow", sans-serif'
-    fontSize: "clamp(1.85rem, 3.1vw, 3rem)"
+    fontFamily: '"Fraunces Variable", Georgia, serif'
+    fontSize: "clamp(1.48rem, 2.5vw, 2.55rem)"
     fontWeight: 650
     letterSpacing: "-0.015em"
   body:
@@ -48,13 +42,12 @@ typography:
     lineHeight: 1.6
   metadata:
     fontFamily: '"JetBrains Mono Variable", monospace'
-    fontSize: "0.8rem"
-    fontWeight: 500
-    lineHeight: 1.5
+    fontSize: "clamp(0.75rem, 0.72rem + 0.1vw, 0.8rem)"
   navigation:
-    fontFamily: '"Atkinson Hyperlegible Next Variable", "Atkinson Hyperlegible Next", sans-serif'
-    fontSize: "0.98rem"
-    fontWeight: 550
+    fontFamily: '"Fraunces Variable", Georgia, serif'
+    fontSize: "clamp(1rem, 1.24vw, 1.15rem)"
+    fontWeight: 625
+    lineHeight: 1.2
   classic-display:
     fontFamily: '"JetBrains Mono Variable", "JetBrains Mono", monospace'
     fontWeight: 680
@@ -63,30 +56,24 @@ rounded:
   square: "0px"
   circle: "50%"
 spacing:
-  gallery-gutter: "clamp(1.25rem, 4.4vw, 5rem)"
-  gallery-record: "2rem 0.5rem"
+  masthead-gutter: "clamp(1rem, 2.7vw, 3rem)"
+  archive-gutter: "clamp(1.25rem, 4.4vw, 5rem)"
+  programme-section: "clamp(3.2rem, 6.4vw, 6.3rem)"
   classic-gutter: "clamp(1.25rem, 4vw, 4.5rem)"
 components:
-  gallery-contact:
-    backgroundColor: "{colors.gallery-accent}"
-    textColor: "{colors.gallery-dark}"
-    rounded: "{rounded.square}"
-    padding: "0.45rem 0.95rem"
-  gallery-navigation:
-    backgroundColor: "{colors.gallery-dark}"
-    textColor: "{colors.gallery-white}"
+  programme-signature:
+    textColor: "{colors.theatre-shadow}"
+    typography: "{typography.masthead}"
+  programme-navigation:
+    backgroundColor: "{colors.theatre-paper}"
+    textColor: "{colors.theatre-shadow}"
     typography: "{typography.navigation}"
-  gallery-record-tag:
-    textColor: "{colors.gallery-link}"
+  programme-record-tag:
+    textColor: "{colors.theatre-link}"
     padding: "0.15rem 0.45rem"
-  selected-study:
-    backgroundColor: "{colors.gallery-accent}"
-    textColor: "{colors.gallery-dark}"
-    rounded: "{rounded.square}"
-    padding: "0.5rem clamp(0.68rem, 1.6vw, 1.7rem)"
-  gallery-search:
+  programme-search:
     backgroundColor: "{colors.search-bg}"
-    textColor: "{colors.gallery-ink}"
+    textColor: "{colors.theatre-ink}"
     padding: "0.65rem 0.75rem"
   classic-primary:
     backgroundColor: "{colors.signal}"
@@ -107,44 +94,45 @@ components:
 
 ## Overview
 
-Boundary studies presents each vulnerability disclosure as a study in an exhibition. Selecting a product changes the sculpture and the adjacent case description. The case links lead to the full finding, attribution and primary sources.
+Paper Theatre turns the homepage into a toy theatre. Red curtains and layered cobalt arches frame a different cut-paper scene for each research case. The title on the apron opens the case. Pulling the tab changes the scenery.
 
-- A dark stage holds the title and sculpture above a paper strip of selectable studies.
-- Warm paper carries long-form work. Ruled rows align years, titles and advisory identifiers across the research archive.
-- The latest contest result includes the award, both researchers’ credit and the team placements.
+- Vũ Chí Thành’s name anchors a narrow cream masthead above the stage.
+- The programme lists the cases in performance order, with a product, year, title and credit for each.
+- The results section prints the latest award and researcher credits beside the annual team placements.
 
 ## Colors
 
-Vermilion marks actions on charcoal. The navigation uses warm white lettering and the contact button uses dark lettering on vermilion. Links, emphasis and keyboard focus on paper use burnt orange. Muted ink carries years, credits and secondary descriptions.
+Cobalt carries the lettering and the open-source tools section. Coral appears in the curtains and paper edges. A deeper brick ink gives small links on cream enough contrast. Tan rules separate programme entries and table rows. The radio uses walnut, metal and amber glass.
 
-Classic’s default phosphor palette pairs bright green with near-black. The sage, harbor, grove and signal variants take their values from `src/styles/global.css`.
+Classic’s phosphor palette pairs bright green with near-black. Its sage, harbor, grove and signal variants use the theme variables in `src/styles/global.css`.
 
 ## Typography
 
-The first word of the exhibition title uses uppercase Barlow Condensed. The second uses lowercase Instrument Serif italic. Barlow Condensed also sets case headings and the large award figure. The afterword uses its bold italic cut. Atkinson Hyperlegible Next carries prose, navigation and action labels. JetBrains Mono identifies years, case numbers, advisories and technology names. Classic uses it for display text as well.
+Fraunces sets the nameplate, navigation and programme headings. The bold italic cut gives the short quotation space between the tools and contact sections. Atkinson Hyperlegible Next carries biographies, project descriptions and case prose. The archive uses JetBrains Mono for advisories, years and attribution. Classic uses the same mono family for display text.
 
 ## Layout
 
-The exhibition and its archives share a 1440px maximum content width. On wide screens the sculpture sits between the two words of the title. The author’s introduction and selected case occupy opposite corners. The horizontal study index runs beneath them. At 760px and below, the introduction, index and selected case follow the title and sculpture in reading order. The activity section places the individual contest entry alongside the team's annual placements. Project descriptions and technologies occupy the ruled rows below it.
+The illustrated stage runs from edge to edge below the masthead. The apron identifies the current scene and gives readers a direct link to its case. The radio below it tunes between the same research cases. The printed programme brings all the case links together in one place.
 
-Inner routes use a two-column introduction with the title on the left. Archive rows put attribution in the first column and reserve the right edge for the identifier and link arrow. At 800px the header converts to a menu and the archive rows stack. The résumé retains an A4 print treatment with 10mm margins.
+The results, tools and afterword sit in a 1250px reading area. Two-column sections collapse below 760px. Inner pages give research titles more space beside their credit and identifiers. The masthead changes to a compact menu at 800px. The résumé has its own A4 print layout with 10mm page margins.
 
 ## Elevation & Depth
 
-Dragging or tapping rotates the projected rings. The arrow keys rotate the sculpture in steps, and Home restores its initial pose. Changing studies briefly fades in the new form. Reduced-motion preferences show it immediately. The surrounding panels meet at flat rules. Classic buttons use a solid offset shadow on hover.
+Visible folds, overlapping layers and directional shadows give the stage its depth. The next illustration appears with a short vertical reveal. A reduced-motion preference changes scenes immediately. A small sample of paper fibre carries the texture into the masthead and programme. Fine rules and changes of ink organize the longer text.
 
 ## Shapes
 
-Three stacked cuts form the vermilion brand mark. The header contact button, study rows and project entries have square edges. Circular arrow controls mark links in the archive.
+The cut-paper arch and curtain folds frame the scenery. The pull tab protrudes below the stage apron. The radio’s round knob and horizontal tuning scale operate independently of the paper control. Small circular arrows mark links in the archive.
 
 ## Components
 
-The study index works as linked product names before enhancement. In the interactive version, Left and Right select adjacent studies, and Home and End select the first and last. The selected study retains its direct case link. The URL records the selection so a visitor can share the study or revisit it with the browser’s Back button.
+Activating the pull tab advances the scene. A dragged tab, click or keyboard activation works. The selected scene has a shareable URL fragment that also restores the selection on browser navigation. The radio can tune the scene with its range input or step to the next station with the knob. Sound starts when the visitor switches it on.
 
-The magnifier or slash key opens the quick navigator. Typing filters its destinations, arrow keys highlight a result, Enter follows it and Escape closes the dialog. The footer contains social links and the Classic view switch. In Classic, the switch sits in the header or its mobile menu. `presentation=field-notes` selects the exhibition and the saved choice carries across routes.
+The masthead carries Research, Tools, Résumé and Contact. The magnifier and slash key open the quick navigator. Typing filters its destinations, arrow keys highlight a result, Enter follows it and Escape closes the dialog. The footer holds the Classic view switch. In Classic, the switch sits in its header or mobile menu. Existing `presentation=field-notes` links select Paper Theatre.
 
 ## Do's and Don'ts
 
-- Keep attribution, identifiers and source links legible when research rows reflow.
-- Pair vermilion with dark ink. Use burnt orange for small colored text on paper.
+- Keep the links to the full cases accessible in both the stage captions and the programme.
+- Preserve researcher credits, team placements and source links as layouts reflow.
+- Use the deep brick ink for small colored text on cream.
 - Keep screen navigation and controls outside the printed résumé.

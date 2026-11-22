@@ -5,6 +5,11 @@ import PresentationSwitch from "./PresentationSwitch.astro";
 import ProtectedEmail from "./ProtectedEmail.astro";
 import QuickNavigator from "./QuickNavigator.astro";
 
+const programmeLinks = links.map((link) => ({
+  ...link,
+  label: link.href === "/projects/" ? "Tools" : link.label,
+}));
+
 const pathname = Astro.url.pathname.replace(/\/+$/, "") || "/";
 
 const isActive = (href: string) => {
@@ -48,17 +53,16 @@ const isActive = (href: string) => {
   </div>
 
   <div class="journal-header shell">
-    <a class="journal-brand" href="/" aria-label={`${profile.name}, home`}>
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
-        <path d="M2 6.5 12 1l10 5.5-10 5.4L2 6.5Zm0 4.2 10 5.4 10-5.4v3.1l-10 5.5-10-5.5v-3.1Zm0 7.3 10 5.4L22 18v-3.1l-10 5.4-10-5.4V18Z" />
-      </svg>
-      <span>{profile.handle}</span>
-    </a>
+    <div class="journal-identity">
+      <a class="journal-brand" href="/" aria-label={`${profile.name}, home`}>{profile.name}</a>
+      <span class="journal-role">{profile.title}</span>
+    </div>
 
     <nav class="journal-nav" aria-label="Primary navigation">
-      {links.map((link) => (
+      {programmeLinks.map((link) => (
         <a href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>{link.label}</a>
       ))}
+      <ProtectedEmail label="Contact" keepLabel class="journal-contact" />
     </nav>
 
     <div class="journal-controls">
@@ -66,15 +70,15 @@ const isActive = (href: string) => {
         <svg width="18" height="18" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8.5" cy="8.5" r="5.3" /><path d="m12.5 12.5 4.3 4.3" /></svg>
         <kbd aria-hidden="true">/</kbd>
       </button>
-      <ProtectedEmail label="Contact" keepLabel class="journal-contact" />
       <details class="journal-menu">
         <summary aria-label="Navigation menu">
           <svg aria-hidden="true" width="21" height="21" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 6h16M2 13h16" /></svg>
         </summary>
         <nav aria-label="Mobile navigation">
-          {links.map((link) => (
+          {programmeLinks.map((link) => (
             <a href={link.href} aria-current={isActive(link.href) ? "page" : undefined}>{link.label}</a>
           ))}
+          <ProtectedEmail label="Contact" keepLabel class="journal-contact" />
         </nav>
       </details>
     </div>

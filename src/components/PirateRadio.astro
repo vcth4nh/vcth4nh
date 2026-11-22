@@ -1,0 +1,283 @@
+---
+interface Props {
+  products: string[];
+}
+
+const { products } = Astro.props;
+const scale = Array.from({ length: 11 }, (_, i) => 88 + i * 2);
+---
+
+{products.length > 0 && (
+  <pirate-radio class="receiver" data-stations={JSON.stringify(products)} role="region" aria-label="Pirate Radio">
+    <div class="receiver-face">
+      <div class="receiver-name">
+        <h2>Pirate Radio</h2>
+        <p><span data-frequency>88.0 FM</span><i aria-hidden="true"></i><span data-station>{products[0]}</span></p>
+      </div>
+
+      <div class="receiver-tuner">
+        <label class="receiver-glass">
+          <span class="sr-only">Tune radio station</span>
+          <span class="receiver-scale" aria-hidden="true">
+            <span class="receiver-numbers">{scale.map((value) => <span>{value}</span>)}</span>
+            <span class="receiver-ticks"></span>
+            <span class="receiver-needle"></span>
+          </span>
+          <input data-tuning type="range" min="0" max={Math.max(1, products.length - 1)} step="1" value="0"
+            aria-valuetext={`88.0 FM, ${products[0]}`} disabled />
+        </label>
+        <button class="receiver-knob" type="button" data-next aria-label="Tune to the next station" title="Click for the next station or drag to tune" disabled>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <button class="receiver-power" type="button" data-power role="switch" aria-label="Sound" aria-checked="false" disabled>
+        <i aria-hidden="true"></i><span>Sound <b data-power-state>off</b></span>
+      </button>
+      <span class="receiver-error" role="status" data-radio-status></span>
+    </div>
+  </pirate-radio>
+)}
+
+<script>
+  import { Broadcast } from "../lib/pirate-radio-audio";
+
+  class PirateRadio extends HTMLElement {
+    private cleanup?: () => void;
+
+    connectedCallback() {
+      if (this.cleanup) return;
+      const stations: string[] = JSON.parse(this.dataset.stations ?? "[]");
+      const slider = this.querySelector<HTMLInputElement>("[data-tuning]")!;
+      const knob = this.querySelector<HTMLButtonElement>("[data-next]")!;
+      const power = this.querySelector<HTMLButtonElement>("[data-power]")!;
+      const status = this.querySelector<HTMLElement>("[data-radio-status]")!;
+      const state = this.querySelector<HTMLElement>("[data-power-state]")!;
+      const frequency = this.querySelector<HTMLElement>("[data-frequency]")!;
+      const station = this.querySelector<HTMLElement>("[data-station]")!;
+      const events = new AbortController();
+      const options = { signal: events.signal };
+      let index = -1;
+      let broadcast: Broadcast | undefined;
+      slider.disabled = knob.disabled = stations.length < 2;
+      power.disabled = false;
+
+      const stop = () => {
+        broadcast?.stop();
+        broadcast = undefined;
+        power.setAttribute("aria-checked", "false");
+        state.textContent = "off";
+      };
+
+      const play = async () => {
+        const playing = broadcast;
+        const requested = index;
+        try {
+          await playing?.tune(requested);
+        } catch (error) {
+          if (playing !== broadcast || requested !== index || (error instanceof DOMException && error.name === "AbortError")) return;
+          stop();
+          status.textContent = "Audio is unavailable. You can still tune the stations.";
+        }
+      };
+
+      const select = (next: number) => {
+        if (!Number.isInteger(next) || next < 0 || next >= stations.length || next === index) return;
+        index = next;
+        const fraction = next / Math.max(1, stations.length - 1);
+        const dial = `${(88 + 20 * fraction).toFixed(1)} FM`;
+        frequency.textContent = dial;
+        station.textContent = stations[next];
+        slider.value = String(next);
+        slider.setAttribute("aria-valuetext", `${dial}, ${stations[next]}`);
+        this.style.setProperty("--radio-position", `${fraction * 100}%`);
+        this.style.setProperty("--radio-angle", `${fraction * 240 - 120}deg`);
+        if (broadcast) void play();
+      };
+
+      const tune = (next: number) => {
+        select(next);
+        window.dispatchEvent(new CustomEvent("theatre-tune", { detail: { index: next } }));
+      };
+
+      slider.addEventListener("input", () => tune(slider.valueAsNumber), options);
+      let grip: { x: number; y: number; start: number } | undefined;
+      let dragged = false;
+      knob.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || event.button !== 0) return;
+        grip = { x: event.clientX, y: event.clientY, start: index };
+        dragged = false;
+        knob.setPointerCapture(event.pointerId);
+      }, options);
+      knob.addEventListener("pointermove", (event) => {
+        if (!grip || !knob.hasPointerCapture(event.pointerId)) return;
+        const travel = event.clientX - grip.x + grip.y - event.clientY;
+        if (Math.abs(travel) >= 12) dragged = true;
+        const next = Math.max(0, Math.min(stations.length - 1, grip.start + Math.round(travel / 24)));
+        if (next !== index) tune(next);
+      }, options);
+      knob.addEventListener("lostpointercapture", () => { grip = undefined; }, options);
+      knob.addEventListener("click", (event) => {
+        if (!dragged || event.detail === 0) tune((index + 1) % stations.length);
+        dragged = false;
+      }, options);
+      power.addEventListener("click", () => {
+        status.textContent = "";
+        if (broadcast) { stop(); return; }
+        try {
+          broadcast = new Broadcast();
+        } catch {
+          status.textContent = "Audio is unavailable in this browser.";
+          return;
+        }
+        power.setAttribute("aria-checked", "true");
+        state.textContent = "on";
+        void play();
+      }, options);
+      window.addEventListener("theatre-scene", (event) => select((event as CustomEvent).detail?.index), options);
+      window.addEventListener("presentationchange", (event) => {
+        if ((event as CustomEvent).detail?.presentation === "classic") stop();
+      }, options);
+      window.addEventListener("pagehide", stop, options);
+      document.addEventListener("visibilitychange", () => { if (document.hidden) stop(); }, options);
+      const scene = Number(document.querySelector<HTMLElement>("paper-theatre")?.dataset.scene ?? "0");
+      select(scene >= 0 && scene < stations.length && Number.isInteger(scene) ? scene : 0);
+      this.cleanup = () => { events.abort(); stop(); };
+    }
+
+    disconnectedCallback() {
+      this.cleanup?.();
+      this.cleanup = undefined;
+    }
+  }
+  if (!customElements.get("pirate-radio")) customElements.define("pirate-radio", PirateRadio);
+</script>
+
+<style>
+  .receiver {
+    --radio-angle: -120deg;
+    --radio-position: 0%;
+    display: block;
+    position: relative;
+    isolation: isolate;
+    color: #f6d49b;
+    background: linear-gradient(180deg, #180d0ad6, #26120b70 12%, #2b150d66 74%, #130b08bd), url('/radio/walnut.webp') center 58% / auto 248px repeat-x #321909;
+    border-block: 1px solid #956634;
+    box-shadow: inset 0 3px 0 #1f100b, inset 0 4px 0 #a1774280, inset 0 -5px 0 #1d100b, inset 0 -6px 0 #8d653e75;
+  }
+  .receiver-face {
+    width: min(1440px, calc(100% - 2 * clamp(1.25rem, 4.4vw, 5rem)));
+    margin-inline: auto;
+    min-height: 112px;
+    display: grid;
+    grid-template-columns: minmax(14rem, .93fr) minmax(10rem, 2fr) auto;
+    gap: clamp(1.3rem, 3vw, 3.5rem);
+    align-items: center;
+    padding-block: 1.2rem;
+  }
+  .receiver-name h2 {
+    margin: 0 0 .37rem;
+    color: #fae2b0;
+    font: italic 710 clamp(2.05rem, 2.9vw, 2.85rem)/.94 "Fraunces Variable", Georgia, serif;
+    letter-spacing: -.02em;
+    text-shadow: 0 2px 2px #190c08;
+  }
+  .receiver-name p {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    margin: 0;
+    color: #ffebc8;
+    font: 550 .81rem/1.35 var(--font-sans);
+  }
+  .receiver-name p span:first-child { color: #f6c57e; font: 500 .7rem/1.5 var(--font-mono); white-space: nowrap; }
+  .receiver-name p i { align-self: center; width: 1px; height: .78rem; background: #b18554; }
+  .receiver-tuner { display: flex; align-items: center; gap: clamp(.8rem, 1.5vw, 1.6rem); min-width: 0; }
+  .receiver-glass {
+    min-width: 0;
+    flex: 1;
+    position: relative;
+    display: block;
+    padding: .48rem clamp(.7rem, 1vw, 1rem);
+    background: linear-gradient(#45230f 0%, #5b2e0f 24%, #51290d 64%, #3e1d0a);
+    border: 2px solid #9c7849;
+    border-radius: .3rem;
+    box-shadow: inset 0 2px 4px #1b0e0b, inset 0 -1px 2px #b57e38, 0 2px 3px #190b08;
+  }
+  .receiver-scale { position: relative; display: grid; grid-template-rows: 1.17rem .75rem; }
+  .receiver-numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    color: #ffe4a5;
+    font: 500 clamp(.70rem, .9vw, .86rem)/1 var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .receiver-ticks {
+    border-bottom: 1px solid #eac37f;
+    background-image: repeating-linear-gradient(90deg, #f7d592 0 1px, transparent 1px 100%),
+      repeating-linear-gradient(90deg, #e3b877 0 1px, transparent 1px 100%);
+    background-size: 10% 100%, 2% 45%;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+  }
+  .receiver-needle {
+    position: absolute;
+    z-index: 1;
+    left: var(--radio-position); inset-block: -.32rem -.18rem;
+    width: 2px;
+    background: #ff7b39;
+    box-shadow: 1px 0 #4d2716, -1px 0 #ffcb69;
+    pointer-events: none;
+  }
+  .receiver-glass input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; cursor: ew-resize; opacity: 0; }
+  .receiver-glass:focus-within, .receiver button:focus-visible { outline: 2px solid #ffebbd; outline-offset: 4px; }
+  .receiver-knob {
+    flex: none; position: relative; display: grid; place-items: center;
+    width: clamp(3rem, 4.2vw, 4.45rem); aspect-ratio: 1;
+    border: 1px solid #5e4027; padding: 3px; border-radius: 50%;
+    background: repeating-conic-gradient(from 4deg, #704d30 0deg 2deg, #dfb781 3deg 4deg, #936c48 5deg 7deg);
+    box-shadow: 0 3px 3px #100907, 0 0 0 2px #24150d;
+    cursor: ew-resize; touch-action: none;
+  }
+  .receiver-knob span {
+    position: relative; width: 100%; height: 100%; border-radius: 50%;
+    border: 1px solid #dfbf88;
+    background: conic-gradient(from 12deg, #8c6843, #f0d2a0 48deg, #bc996c 80deg, #745536 136deg, #b68c60 193deg, #edca93 235deg, #997651 290deg, #8c6843);
+  }
+  .receiver-knob span::after { position: absolute; content: ""; inset: 3px calc(50% - 1px) 50%; background: linear-gradient(#573b24 0 35%, transparent 35%); transform-origin: center bottom; transform: rotate(var(--radio-angle)); }
+  .receiver-knob:hover span { filter: brightness(1.13); }
+  .receiver-knob:active { transform: translateY(1px); }
+  .receiver-power {
+    display: inline-flex; justify-content: center; align-items: center; gap: .6rem;
+    min-width: 7.1rem; min-height: 44px; padding: .45rem .78rem;
+    border: 1px solid #b58f5d; border-radius: .2rem;
+    color: #2b1b10;
+    background: linear-gradient(#f1d3a0, #ceac7d 66%, #c6a376);
+    box-shadow: inset 0 1px 0 #f9deae, 0 2px 2px #160b07;
+    font: 650 .94rem/1 var(--font-sans); cursor: pointer;
+  }
+  .receiver-error { grid-column: 1 / -1; color: #ffe0a9; font: 500 .9rem/1.35 var(--font-sans); }
+  .receiver-error:empty { display: none; }
+  .receiver-power b { font: inherit; }
+  .receiver-power i { width: .55rem; height: .55rem; border: 1px solid #665037; border-radius: 50%; background: #514632; }
+  .receiver-power[aria-checked="true"] i { background: #e97320; box-shadow: 0 0 4px #ae4718; }
+  .receiver-power:hover { filter: brightness(1.07); }
+  .receiver-power:active { transform: translateY(1px); }
+
+  @media (max-width: 720px) {
+    .receiver-face { grid-template-columns: minmax(0, 1fr) auto; gap: .8rem .7rem; padding-block: 1.05rem; }
+    .receiver-name h2 { font-size: clamp(1.65rem, 6.8vw, 2.05rem); }
+    .receiver-power { grid-column: 2; grid-row: 1; min-width: 6.4rem; }
+    .receiver-tuner { grid-column: 1 / -1; gap: .9rem; }
+    .receiver-glass { padding-block: .4rem; }
+    .receiver-numbers span:nth-child(even) { visibility: hidden; width: 0; }
+    .receiver-knob { width: 2.85rem; }
+  }
+  @media (max-width: 400px) {
+    .receiver-face { gap: .65rem; padding-block: .85rem; }
+    .receiver-name h2 { font-size: clamp(1.4rem, 6.4vw, 1.65rem); white-space: nowrap; }
+    .receiver-name p { gap: .35rem; }
+    .receiver-power { min-width: 5.7rem; gap: .4rem; padding-inline: .55rem; }
+  }
+</style>

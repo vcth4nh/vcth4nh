@@ -11,7 +11,6 @@ interface Props {
 
 const { projects } = Astro.props;
 const activity = profile.latestActivity;
-const awardParts = activity.summary.split(/(US\$[\d,]+[.!?]?)/);
 ---
 
 <div class="ex-notes">
@@ -24,11 +23,7 @@ const awardParts = activity.summary.split(/(US\$[\d,]+[.!?]?)/);
       <div class="ex-result-grid">
         <div class="ex-result-entry">
           <h2 id="ex-result-title">{activity.title}</h2>
-          <p class="ex-result-credit">
-            {awardParts.map((part, index) =>
-              index % 2 ? <strong>{part}</strong> : part
-            )}
-          </p>
+          <p class="ex-result-credit">{activity.summary}</p>
           <a class="ex-link" href={activity.sourceUrl} target="_blank" rel="noreferrer">
             Read ZDI’s results <ArrowIcon size={17} />
           </a>
@@ -52,25 +47,27 @@ const awardParts = activity.summary.split(/(US\$[\d,]+[.!?]?)/);
     </div>
   </section>
 
-  <section id="workbench" class="ex-tools ex-shell" aria-labelledby="ex-tools-title">
-    <div class="ex-tools-intro">
-      <h2 id="ex-tools-title">Open-source<br /> tools</h2>
-      <a class="ex-link" href="/projects/">All projects <ArrowIcon size={16} /></a>
-    </div>
-    <div class="ex-projects">
-      {projects.map(({ data }) => (
-        <article class="ex-project">
-          <h3>
-            <a href={data.href} target="_blank" rel="noreferrer">
-              {data.title}<ArrowIcon size={25} />
-            </a>
-          </h3>
-          <p>{data.description}</p>
-          <ul aria-label={`${data.title} technologies`}>
-            {data.stack.map((technology) => <li>{technology}</li>)}
-          </ul>
-        </article>
-      ))}
+  <section id="workbench" class="ex-workbench" aria-labelledby="ex-tools-title">
+    <div class="ex-tools ex-shell">
+      <div class="ex-tools-intro">
+        <h2 id="ex-tools-title"><span>Open-source</span> tools</h2>
+        <a class="ex-link" href="/projects/">All projects <ArrowIcon size={16} /></a>
+      </div>
+      <div class="ex-projects">
+        {projects.map(({ data }) => (
+          <article class="ex-project">
+            <h3>
+              <a href={data.href} target="_blank" rel="noreferrer">
+                {data.title}<ArrowIcon size={25} />
+              </a>
+            </h3>
+            <p>{data.description}</p>
+            <ul aria-label={`${data.title} technologies`}>
+              {data.stack.map((technology) => <li>{technology}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -86,7 +83,7 @@ const awardParts = activity.summary.split(/(US\$[\d,]+[.!?]?)/);
 
   <section id="contact" class="ex-contact" aria-labelledby="ex-contact-title">
     <div class="ex-contact-inner ex-shell">
-      <h2 id="ex-contact-title">Get in touch.</h2>
+      <h2 id="ex-contact-title">Get in touch</h2>
       <div>
         <p>I’m open to research collaborations, consulting, and full-time roles.</p>
         <ProtectedEmail class="ex-email" />

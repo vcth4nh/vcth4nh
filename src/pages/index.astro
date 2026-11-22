@@ -5,7 +5,7 @@ import LatestActivity from "../components/LatestActivity.astro";
 import PortraitPlaceholder from "../components/PortraitPlaceholder.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ProtectedEmail from "../components/ProtectedEmail.astro";
-import JournalHome from "../components/JournalHome.astro";
+import PaperTheatre from "../components/PaperTheatre.astro";
 import ResearchCard from "../components/ResearchCard.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import { profile } from "../data/profile";
@@ -170,7 +170,7 @@ const competitionAwards = profile.awards.filter(
   </div>
 
   <div data-presentation-panel="field-notes">
-    <JournalHome {research} {projects} />
+    <PaperTheatre {research} {projects} />
   </div>
   </main>
 </BaseLayout>

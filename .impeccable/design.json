@@ -1,133 +1,133 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-22T05:09:18.927Z",
+  "generatedAt": "2026-11-22T06:08:11.547Z",
   "title": "Design System: thanh.vc",
   "extensions": {
     "colorMeta": {
-      "gallery-dark": {
+      "theatre-paper": {
         "role": "neutral",
-        "displayName": "Gallery wall",
+        "displayName": "Programme paper",
         "tonalRamp": [
-          "oklch(15% 0.0018 106.75)",
-          "oklch(27% 0.0028 106.75)",
-          "oklch(38% 0.0036 106.75)",
-          "oklch(50% 0.0039 106.75)",
-          "oklch(61% 0.0037 106.75)",
-          "oklch(73% 0.0029 106.75)",
-          "oklch(84% 0.0019 106.75)",
-          "oklch(95% 0.0006 106.75)"
+          "oklch(15% 0.0212 83.94)",
+          "oklch(27% 0.0339 83.94)",
+          "oklch(38% 0.0433 83.94)",
+          "oklch(50% 0.0471 83.94)",
+          "oklch(61% 0.0443 83.94)",
+          "oklch(73% 0.0353 83.94)",
+          "oklch(84% 0.0226 83.94)",
+          "oklch(95% 0.0075 83.94)"
         ]
       },
-      "gallery-white": {
+      "theatre-white": {
         "role": "neutral",
-        "displayName": "Warm white",
+        "displayName": "Light ivory",
         "tonalRamp": [
-          "oklch(15% 0.0063 88.68)",
-          "oklch(27% 0.0100 88.68)",
-          "oklch(38% 0.0128 88.68)",
-          "oklch(50% 0.0139 88.68)",
-          "oklch(61% 0.0131 88.68)",
-          "oklch(73% 0.0105 88.68)",
-          "oklch(84% 0.0067 88.68)",
-          "oklch(95% 0.0022 88.68)"
+          "oklch(15% 0.0164 86.17)",
+          "oklch(27% 0.0262 86.17)",
+          "oklch(38% 0.0335 86.17)",
+          "oklch(50% 0.0364 86.17)",
+          "oklch(61% 0.0342 86.17)",
+          "oklch(73% 0.0273 86.17)",
+          "oklch(84% 0.0175 86.17)",
+          "oklch(95% 0.0058 86.17)"
         ]
       },
-      "gallery-paper": {
+      "theatre-ink": {
         "role": "neutral",
-        "displayName": "Uncoated paper",
+        "displayName": "Ultramarine",
         "tonalRamp": [
-          "oklch(15% 0.0063 88.69)",
-          "oklch(27% 0.0101 88.69)",
-          "oklch(38% 0.0129 88.69)",
-          "oklch(50% 0.0140 88.69)",
-          "oklch(61% 0.0132 88.69)",
-          "oklch(73% 0.0105 88.69)",
-          "oklch(84% 0.0067 88.69)",
-          "oklch(95% 0.0022 88.69)"
+          "oklch(15% 0.0500 264.56)",
+          "oklch(27% 0.0800 264.56)",
+          "oklch(38% 0.1023 264.56)",
+          "oklch(50% 0.1112 264.56)",
+          "oklch(61% 0.1045 264.56)",
+          "oklch(73% 0.0834 264.56)",
+          "oklch(84% 0.0534 264.56)",
+          "oklch(95% 0.0178 264.56)"
         ]
       },
-      "gallery-ink": {
+      "theatre-shadow": {
         "role": "neutral",
-        "displayName": "Charcoal ink",
+        "displayName": "Midnight navy",
         "tonalRamp": [
-          "oklch(15% 0.0026 106.87)",
-          "oklch(27% 0.0041 106.87)",
-          "oklch(38% 0.0053 106.87)",
-          "oklch(50% 0.0057 106.87)",
-          "oklch(61% 0.0054 106.87)",
-          "oklch(73% 0.0043 106.87)",
-          "oklch(84% 0.0028 106.87)",
-          "oklch(95% 0.0009 106.87)"
+          "oklch(15% 0.0373 264.95)",
+          "oklch(27% 0.0597 264.95)",
+          "oklch(38% 0.0763 264.95)",
+          "oklch(50% 0.0829 264.95)",
+          "oklch(61% 0.0779 264.95)",
+          "oklch(73% 0.0622 264.95)",
+          "oklch(84% 0.0398 264.95)",
+          "oklch(95% 0.0133 264.95)"
         ]
       },
-      "gallery-accent": {
+      "theatre-coral": {
         "role": "primary",
-        "displayName": "Vermilion",
+        "displayName": "Curtain coral",
         "tonalRamp": [
-          "oklch(15% 0.0941 34.97)",
-          "oklch(27% 0.1505 34.97)",
-          "oklch(38% 0.1923 34.97)",
-          "oklch(50% 0.2090 34.97)",
-          "oklch(61% 0.1965 34.97)",
-          "oklch(73% 0.1568 34.97)",
-          "oklch(84% 0.1003 34.97)",
-          "oklch(95% 0.0334 34.97)"
+          "oklch(15% 0.0753 29.82)",
+          "oklch(27% 0.1205 29.82)",
+          "oklch(38% 0.1540 29.82)",
+          "oklch(50% 0.1674 29.82)",
+          "oklch(61% 0.1574 29.82)",
+          "oklch(73% 0.1256 29.82)",
+          "oklch(84% 0.0804 29.82)",
+          "oklch(95% 0.0268 29.82)"
         ]
       },
-      "gallery-link": {
+      "theatre-link": {
         "role": "primary",
-        "displayName": "Burnt orange",
+        "displayName": "Brick ink",
         "tonalRamp": [
-          "oklch(15% 0.0722 36.30)",
-          "oklch(27% 0.1154 36.30)",
-          "oklch(38% 0.1475 36.30)",
-          "oklch(50% 0.1603 36.30)",
-          "oklch(61% 0.1507 36.30)",
-          "oklch(73% 0.1203 36.30)",
-          "oklch(84% 0.0770 36.30)",
-          "oklch(95% 0.0257 36.30)"
+          "oklch(15% 0.0610 30.39)",
+          "oklch(27% 0.0976 30.39)",
+          "oklch(38% 0.1247 30.39)",
+          "oklch(50% 0.1355 30.39)",
+          "oklch(61% 0.1274 30.39)",
+          "oklch(73% 0.1016 30.39)",
+          "oklch(84% 0.0650 30.39)",
+          "oklch(95% 0.0217 30.39)"
         ]
       },
-      "gallery-muted": {
+      "theatre-muted": {
         "role": "neutral",
         "displayName": "Muted ink",
         "tonalRamp": [
-          "oklch(15% 0.0074 88.77)",
-          "oklch(27% 0.0118 88.77)",
-          "oklch(38% 0.0151 88.77)",
-          "oklch(50% 0.0164 88.77)",
-          "oklch(61% 0.0154 88.77)",
-          "oklch(73% 0.0123 88.77)",
-          "oklch(84% 0.0079 88.77)",
-          "oklch(95% 0.0026 88.77)"
+          "oklch(15% 0.0172 78.80)",
+          "oklch(27% 0.0276 78.80)",
+          "oklch(38% 0.0352 78.80)",
+          "oklch(50% 0.0383 78.80)",
+          "oklch(61% 0.0360 78.80)",
+          "oklch(73% 0.0287 78.80)",
+          "oklch(84% 0.0184 78.80)",
+          "oklch(95% 0.0061 78.80)"
         ]
       },
-      "gallery-rule": {
+      "theatre-rule": {
         "role": "neutral",
         "displayName": "Paper rule",
         "tonalRamp": [
-          "oklch(15% 0.0081 84.59)",
-          "oklch(27% 0.0129 84.59)",
-          "oklch(38% 0.0165 84.59)",
-          "oklch(50% 0.0179 84.59)",
-          "oklch(61% 0.0169 84.59)",
-          "oklch(73% 0.0135 84.59)",
-          "oklch(84% 0.0086 84.59)",
-          "oklch(95% 0.0029 84.59)"
+          "oklch(15% 0.0213 81.22)",
+          "oklch(27% 0.0342 81.22)",
+          "oklch(38% 0.0436 81.22)",
+          "oklch(50% 0.0474 81.22)",
+          "oklch(61% 0.0446 81.22)",
+          "oklch(73% 0.0356 81.22)",
+          "oklch(84% 0.0228 81.22)",
+          "oklch(95% 0.0076 81.22)"
         ]
       },
       "search-bg": {
         "role": "neutral",
         "displayName": "Search field",
         "tonalRamp": [
-          "oklch(15% 0.0037 91.48)",
-          "oklch(27% 0.0059 91.48)",
-          "oklch(38% 0.0076 91.48)",
-          "oklch(50% 0.0082 91.48)",
-          "oklch(61% 0.0077 91.48)",
-          "oklch(73% 0.0062 91.48)",
-          "oklch(84% 0.0039 91.48)",
-          "oklch(95% 0.0013 91.48)"
+          "oklch(15% 0.0139 86.46)",
+          "oklch(27% 0.0222 86.46)",
+          "oklch(38% 0.0283 86.46)",
+          "oklch(50% 0.0308 86.46)",
+          "oklch(61% 0.0289 86.46)",
+          "oklch(73% 0.0231 86.46)",
+          "oklch(84% 0.0148 86.46)",
+          "oklch(95% 0.0049 86.46)"
         ]
       },
       "ink": {
@@ -216,33 +216,29 @@
       }
     },
     "typographyMeta": {
-      "display": {
-        "displayName": "Exhibition title",
-        "purpose": "Uppercase opening word on the exhibition stage."
-      },
-      "display-italic": {
-        "displayName": "Exhibition italic",
-        "purpose": "Lowercase italic word in front of the sculpture."
+      "masthead": {
+        "displayName": "Author signature",
+        "purpose": "Full name at the head of each programme page."
       },
       "headline": {
         "displayName": "Archive headline",
-        "purpose": "The research and project archive headings."
+        "purpose": "Research and tool archive titles."
       },
       "title": {
         "displayName": "Case title",
-        "purpose": "Full-width records in the research archive."
+        "purpose": "Individual findings in the research archive."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Biographical copy, case text and tool descriptions."
+        "purpose": "Case prose, biographies and tool descriptions."
       },
       "metadata": {
-        "displayName": "Metadata",
-        "purpose": "Years, tech stacks and identifiers."
+        "displayName": "Archive data",
+        "purpose": "Technical identifiers, credits and years."
       },
       "navigation": {
-        "displayName": "Navigation",
-        "purpose": "Destinations in the site header."
+        "displayName": "Programme navigation",
+        "purpose": "Research, Tools, Résumé and Contact."
       },
       "classic-display": {
         "displayName": "Classic display",
@@ -258,32 +254,15 @@
     ],
     "motion": [
       {
-        "name": "sculpture-selection",
-        "value": "220ms ease-out",
-        "purpose": "Fades in the newly selected sculpture."
-      },
-      {
-        "name": "contact-hover",
-        "value": "140ms ease",
-        "purpose": "Reveals the contact link’s hover color."
+        "name": "scene-reveal",
+        "value": "410ms cubic-bezier(.2,.75,.25,1)",
+        "purpose": "Changes the theatrical scene when the tab or radio selects another case."
       }
     ],
     "breakpoints": [
       {
-        "name": "min-1800",
-        "value": "1800px"
-      },
-      {
-        "name": "max-1050",
-        "value": "1050px"
-      },
-      {
         "name": "max-960",
         "value": "960px"
-      },
-      {
-        "name": "max-850",
-        "value": "850px"
       },
       {
         "name": "max-800",
@@ -298,63 +277,43 @@
         "value": "680px"
       },
       {
-        "name": "max-650",
-        "value": "650px"
-      },
-      {
         "name": "max-540",
         "value": "540px"
-      },
-      {
-        "name": "max-420",
-        "value": "420px"
-      },
-      {
-        "name": "max-360",
-        "value": "360px"
       }
     ]
   },
   "components": [
     {
-      "name": "Header contact",
-      "kind": "button",
-      "refersTo": "gallery-contact",
-      "description": "Opens an email to the public contact alias.",
-      "html": "<div class=\"ds-wall\"><a class=\"ds-contact\" href=\"/#contact\">Contact<svg width=\"12\" height=\"12\" viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M3 13 13 3M4 3h9v9\"/></svg></a></div>",
-      "css": ".ds-wall{background:var(--gallery-dark,#161614);color:var(--gallery-white,#f5f1e7);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-wall :focus-visible{outline:2px solid var(--gallery-accent,#ff592f);outline-offset:4px} .ds-contact{display:inline-flex;align-items:center;gap:.8rem;min-height:2.4rem;box-sizing:border-box;padding:.45rem .95rem;background:var(--gallery-accent,#ff592f);color:var(--gallery-dark,#161614);font-weight:550;font-size:.95rem;text-decoration:none}.ds-contact:hover{background:#ff7d56}"
+      "name": "Programme signature",
+      "kind": "custom",
+      "refersTo": "programme-signature",
+      "description": "The author’s home link in the masthead.",
+      "html": "<div class=\"ds-paper\"><a class=\"ds-brand\" href=\"/\">Vũ Chí Thành</a></div>",
+      "css": ".ds-paper{background:var(--theatre-paper,#f6e5c4);color:var(--theatre-ink,#142c69);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--theatre-link,#963326);outline-offset:4px} .ds-brand{font:700 clamp(1.45rem,2.05vw,2rem)/1.15 \"Fraunces Variable\",Georgia,serif;color:#10214c;letter-spacing:-.035em;text-decoration:none}"
     },
     {
-      "name": "Exhibition navigation",
+      "name": "Programme navigation",
       "kind": "nav",
-      "refersTo": "gallery-navigation",
-      "description": "Main destinations on the dark gallery wall.",
-      "html": "<div class=\"ds-wall\"><nav aria-label=\"Primary navigation\"><a href=\"/research/\" aria-current=\"page\">Research</a><a href=\"/projects/\">Projects</a><a href=\"/resume/\">Résumé</a></nav></div>",
-      "css": ".ds-wall{background:var(--gallery-dark,#161614);color:var(--gallery-white,#f5f1e7);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-wall :focus-visible{outline:2px solid var(--gallery-accent,#ff592f);outline-offset:4px} .ds-wall nav{display:flex;align-items:center;flex-wrap:wrap;gap:clamp(1.25rem,3vw,3rem)}.ds-wall a{color:inherit;text-decoration:none;font-size:.98rem;font-weight:550;padding-block:.5rem}.ds-wall a:hover,.ds-wall a[aria-current]{color:var(--gallery-accent,#ff592f);text-decoration:underline;text-underline-offset:.35em}"
+      "refersTo": "programme-navigation",
+      "description": "Serif text links on the cream masthead.",
+      "html": "<div class=\"ds-paper\"><nav aria-label=\"Primary navigation\"><a href=\"/research/\" aria-current=\"page\">Research</a><a href=\"/projects/\">Tools</a><a href=\"/resume/\">Résumé</a><a href=\"/#contact\">Contact</a></nav></div>",
+      "css": ".ds-paper{background:var(--theatre-paper,#f6e5c4);color:var(--theatre-ink,#142c69);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--theatre-link,#963326);outline-offset:4px} nav{display:flex;align-items:center;gap:clamp(1.15rem,2.3vw,2.4rem);flex-wrap:wrap}nav a{color:#10214c;font:625 clamp(1rem,1.24vw,1.15rem)/1.2 \"Fraunces Variable\",Georgia,serif;text-decoration:none;padding-block:.5rem}nav a:hover,nav a[aria-current]{color:#963326;text-decoration:underline;text-underline-offset:.27em}"
     },
     {
       "name": "Research tag",
       "kind": "chip",
-      "refersTo": "gallery-record-tag",
+      "refersTo": "programme-record-tag",
       "description": "Technical classification in the archive.",
       "html": "<div class=\"ds-paper\"><span class=\"ds-tag\">Authentication bypass</span></div>",
-      "css": ".ds-paper{background:var(--gallery-paper,#eeeae0);color:var(--gallery-ink,#1a1a17);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--gallery-link,#aa340e);outline-offset:4px} .ds-tag{display:inline-block;background:#dfd9ca;color:var(--gallery-link,#aa340e);padding:.15rem .45rem;font:.7rem/1.6 var(--font-mono,\"JetBrains Mono Variable\",monospace);letter-spacing:.035em;text-transform:uppercase}"
+      "css": ".ds-paper{background:var(--theatre-paper,#f6e5c4);color:var(--theatre-ink,#142c69);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--theatre-link,#963326);outline-offset:4px} .ds-tag{display:inline-block;background:#efd8aa;color:#963326;padding:.15rem .45rem;font:.7rem/1.6 var(--font-mono,\"JetBrains Mono Variable\",monospace);letter-spacing:.035em;text-transform:uppercase}"
     },
     {
       "name": "Quick navigator search",
       "kind": "input",
-      "refersTo": "gallery-search",
+      "refersTo": "programme-search",
       "description": "Filters the available destinations in the native dialog.",
       "html": "<div class=\"ds-paper\"><input type=\"search\" aria-label=\"Search destinations\" placeholder=\"Search destinations…\"></div>",
-      "css": ".ds-paper{background:var(--gallery-paper,#eeeae0);color:var(--gallery-ink,#1a1a17);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--gallery-link,#aa340e);outline-offset:4px} .ds-paper input{width:100%;box-sizing:border-box;background:#fbf9f3;color:inherit;border:1px solid var(--gallery-ink,#1a1a17);font:inherit;padding:.65rem .75rem}.ds-paper input::placeholder{color:var(--gallery-muted,#625e54)}"
-    },
-    {
-      "name": "Selected study",
-      "kind": "nav",
-      "refersTo": "selected-study",
-      "description": "Active product in the study index.",
-      "html": "<div class=\"ds-paper\"><a class=\"ds-study\" href=\"/research/goanywhere-mft/\"><small>01</small><strong>GoAnywhere MFT</strong></a></div>",
-      "css": ".ds-paper{background:var(--gallery-paper,#eeeae0);color:var(--gallery-ink,#1a1a17);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--gallery-link,#aa340e);outline-offset:4px} .ds-study{display:inline-grid;align-content:center;gap:.32rem;min-height:4.4rem;box-sizing:border-box;padding:.5rem clamp(.68rem,1.6vw,1.7rem);background:var(--gallery-accent,#ff592f);color:#181410;text-decoration:none;font-weight:650}.ds-study small{font:.73rem/1 var(--font-mono,\"JetBrains Mono Variable\",monospace)}"
+      "css": ".ds-paper{background:var(--theatre-paper,#f6e5c4);color:var(--theatre-ink,#142c69);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--theatre-link,#963326);outline-offset:4px} input{width:100%;box-sizing:border-box;background:#fff5df;color:inherit;border:1px solid #142c69;font:inherit;padding:.65rem .75rem}input::placeholder{color:#645640}"
     },
     {
       "name": "Classic primary button",
@@ -382,17 +341,18 @@
     }
   ],
   "narrative": {
-    "northStar": "Boundary studies",
-    "overview": "Boundary studies presents each vulnerability disclosure as a study in an exhibition. Selecting a product changes the sculpture and the adjacent case description. The case links lead to the full finding, attribution and primary sources.",
+    "northStar": "Paper Theatre",
+    "overview": "Paper Theatre turns the homepage into a toy theatre. Red curtains and layered cobalt arches frame a different cut-paper scene for each research case. The title on the apron opens the case. Pulling the tab changes the scenery.",
     "keyCharacteristics": [
-      "A dark stage holds the title and sculpture above a paper strip of selectable studies.",
-      "Warm paper carries long-form work. Ruled rows align years, titles and advisory identifiers across the research archive.",
-      "The latest contest result includes the award, both researchers’ credit and the team placements."
+      "Vũ Chí Thành’s name anchors a narrow cream masthead above the stage.",
+      "The programme lists the cases in performance order, with a product, year, title and credit for each.",
+      "The results section prints the latest award and researcher credits beside the annual team placements."
     ],
     "rules": [],
     "dos": [
-      "Keep attribution, identifiers and source links legible when research rows reflow.",
-      "Pair vermilion with dark ink. Use burnt orange for small colored text on paper.",
+      "Keep the links to the full cases accessible in both the stage captions and the programme.",
+      "Preserve researcher credits, team placements and source links as layouts reflow.",
+      "Use the deep brick ink for small colored text on cream.",
       "Keep screen navigation and controls outside the printed résumé."
     ],
     "donts": []

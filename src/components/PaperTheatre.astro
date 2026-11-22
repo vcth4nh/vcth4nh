@@ -1,0 +1,195 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ExhibitionNotes from "./ExhibitionNotes.astro";
+import PirateRadio from "./PirateRadio.astro";
+import { profile } from "../data/profile";
+import "../styles/paper-theatre.css";
+
+interface Props {
+  research: CollectionEntry<"research">[];
+  projects: CollectionEntry<"projects">[];
+}
+
+const { research, projects } = Astro.props;
+const sceneArt = {
+  "goanywhere-mft": ["first-run", "A cream paper key hangs in front of locked cobalt doors."],
+  "authentik-saml-account-takeover": ["reflection", "Two cut-paper mirrors show different silhouettes."],
+  "ablog-cms": ["passage", "A paper envelope travels through a series of archways."],
+  "9router-rce": ["switchboard", "A miniature paper switchboard has an open socket."],
+} as const;
+const scenes = research.map(entry => {
+  const [plate, alt] = sceneArt[entry.id as keyof typeof sceneArt] ?? sceneArt["goanywhere-mft"];
+  return { ...entry, plate, alt, product: entry.data.product ?? entry.data.title };
+});
+const count = (n: number) => String(n).padStart(2, "0");
+---
+
+<paper-theatre class="paper-playhouse" id="case-files">
+  <section class="playhouse-stage" aria-labelledby="theatre-title">
+    <h1 class="sr-only" id="theatre-title">Paper Theatre — vulnerability research by {profile.name}</h1>
+    {scenes.map(scene => <span class="scene-anchor" id={`study-${scene.id}`} aria-hidden="true"></span>)}
+    <div class="playhouse-set">
+      <div class="stage-pictures">
+        {scenes.length === 0 && <img src="/theatre/first-run.webp" alt="A cut-paper stage with a suspended key and a locked door." />}
+        {scenes.map((scene, i) => (
+          <img src={`/theatre/${scene.plate}.webp`} class="scene-picture" data-scene-picture
+            srcset={`/theatre/${scene.plate}-900.webp 900w, /theatre/${scene.plate}.webp 1800w`}
+            sizes="(max-width: 1600px) 100vw, 1600px" width="1800" height="840"
+            alt={scene.alt} hidden={i !== 0} fetchpriority={i === 0 ? "high" : "low"} decoding="async" />
+        ))}
+      </div>
+
+      {scenes.length > 0 && (
+        <div class="stage-apron">
+          <div class="stage-caption">
+            {scenes.map((scene, i) => (
+              <article data-scene-caption data-scene-hash={`study-${scene.id}`} hidden={i !== 0}>
+                <span class="stage-number">Scene {count(i + 1)} / {count(scenes.length)}</span>
+                <h2><a href={`/research/${scene.id}/`}>
+                  {scene.data.title}
+                  <svg aria-hidden="true" width="23" height="16" viewBox="0 0 24 16" fill="none"><path d="M1 8h20M15 2l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                </a></h2>
+                <span class="stage-product">{scene.product} · {scene.data.year}</span>
+              </article>
+            ))}
+          </div>
+          {scenes.length > 1 && <div class="stage-slot" hidden data-pull-slot>
+            <button type="button" class="stage-pull" data-scene-pull aria-label="Pull to show the next scene" title="Pull for the next scene">
+              Pull <svg width="12" height="13" viewBox="0 0 12 13" aria-hidden="true" fill="none"><path d="M6 1v10M2 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" /></svg>
+            </button>
+          </div>}
+        </div>
+      )}
+    </div>
+    <span class="sr-only" role="status" data-theatre-status></span>
+  </section>
+  <PirateRadio products={scenes.map(scene => scene.product)} />
+</paper-theatre>
+
+{scenes.length > 0 && (
+  <section class="theatre-programme" aria-labelledby="programme-title">
+    <div class="programme-inner">
+      <div class="programme-intro">
+        <h2 id="programme-title">The programme</h2>
+        <a href="/research/">Research archive <span aria-hidden="true">↗</span></a>
+      </div>
+      <ol class="programme-entries">
+        {scenes.map((scene, i) => (
+          <li><a href={`/research/${scene.id}/`}>
+            <span class="programme-count" aria-hidden="true">{count(i + 1)}</span>
+            <div>
+              <p>{scene.product} <span>· {scene.data.year}</span></p>
+              <h3>{scene.data.title}</h3>
+              <span class="programme-credit">{scene.data.roleLabel}</span>
+            </div>
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 13 13 3M4 3h9v9" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+)}
+<ExhibitionNotes {projects} />
+
+<script>
+  class PaperTheatre extends HTMLElement {
+    connectedCallback() {
+      const pictures = Array.from(this.querySelectorAll<HTMLImageElement>("[data-scene-picture]"));
+      const captions = Array.from(this.querySelectorAll<HTMLElement>("[data-scene-caption]"));
+      const pull = this.querySelector<HTMLButtonElement>("[data-scene-pull]");
+      const slot = this.querySelector<HTMLElement>("[data-pull-slot]");
+      const status = this.querySelector<HTMLElement>("[data-theatre-status]");
+      if (!pictures.length || this.dataset.scene !== undefined) return;
+
+      let scene = 0;
+      let shown = 0;
+      let transition: Animation | undefined;
+      let revision = 0;
+
+      const raiseScenery = async (index: number) => {
+        const request = ++revision;
+        const next = pictures[index];
+        if (!next.complete || next.naturalWidth === 0) {
+          try { await next.decode(); } catch { return; }
+        }
+        if (request !== revision || index === shown) return;
+        transition?.cancel();
+        const previous = pictures[shown];
+        pictures.forEach(picture => {
+          picture.hidden = picture !== previous && picture !== next;
+          picture.style.zIndex = picture === next ? "2" : "1";
+        });
+        shown = index;
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          transition = next.animate([
+            { clipPath: "inset(0 0 100% 0)" },
+            { clipPath: "inset(0 0 0% 0)" },
+          ], {duration: 410, easing: "cubic-bezier(.2,.75,.25,1)"});
+          transition.onfinish = () => { if (shown === index) previous.hidden = true; };
+        } else {
+          previous.hidden = true;
+        }
+      };
+
+      const setScene = (index: number, userAction = false) => {
+        if (!Number.isInteger(index) || index < 0 || index >= captions.length) return;
+        const changed = index !== scene;
+        scene = index;
+        this.dataset.scene = String(index);
+        captions.forEach((caption, i) => { caption.hidden = i !== index; });
+        void raiseScenery(index);
+        const caption = captions[index];
+        if (userAction && changed) {
+          window.history.pushState(window.history.state, "", "#" + caption.dataset.sceneHash);
+          if (status) status.textContent = `Scene ${index + 1} of ${captions.length}. ${caption.querySelector("h2")?.textContent?.trim()}`;
+        }
+        window.dispatchEvent(new CustomEvent("theatre-scene", { detail:{ index } }));
+      };
+
+      const restoreScene = () => {
+        const index = captions.findIndex(caption => "#" + caption.dataset.sceneHash === window.location.hash);
+        setScene(Math.max(0,index));
+      };
+      restoreScene();
+      window.addEventListener("hashchange", restoreScene);
+      window.addEventListener("theatre-tune", ((event: CustomEvent<{index:number}>) => {
+        setScene(event.detail?.index, true);
+      }) as EventListener);
+
+      if (!pull || !slot) return;
+      slot.hidden = false;
+      let drag: {id:number; y:number; distance:number} | undefined;
+      let suppressClick = false;
+      const resetPull = () => {
+        drag = undefined;
+        pull.removeAttribute("data-pulling");
+        pull.style.removeProperty("--pull-distance");
+      };
+      const nextScene = () => setScene((scene + 1) % captions.length, true);
+
+      pull.addEventListener("pointerdown", event => {
+        if (!event.isPrimary || event.button !== 0) return;
+        suppressClick = false;
+        drag = {id: event.pointerId, y: event.clientY, distance: 0};
+        pull.setPointerCapture(event.pointerId);
+        pull.dataset.pulling = "";
+      });
+      pull.addEventListener("pointermove", event => {
+        if (!drag || drag.id !== event.pointerId) return;
+        drag.distance = Math.max(0, event.clientY - drag.y);
+        pull.style.setProperty("--pull-distance", Math.min(drag.distance * .7, 22) + "px");
+      });
+      pull.addEventListener("pointerup", event => {
+        if (!drag || drag.id !== event.pointerId) return;
+        if (drag.distance >= 9) { suppressClick = true; nextScene(); }
+        resetPull();
+      });
+      pull.addEventListener("lostpointercapture", resetPull);
+      pull.addEventListener("click", event => {
+        if (event.detail === 0 || !suppressClick) nextScene();
+        suppressClick = false;
+      });
+    }
+  }
+  if (!customElements.get("paper-theatre")) customElements.define("paper-theatre", PaperTheatre);
+</script>
