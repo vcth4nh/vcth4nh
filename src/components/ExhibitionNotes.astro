@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import { render, type CollectionEntry } from "astro:content";
 import ArrowIcon from "./ArrowIcon.astro";
 import ProtectedEmail from "./ProtectedEmail.astro";
 import { profile, pwn2ownResults } from "../data/profile";
@@ -54,19 +54,34 @@ const activity = profile.latestActivity;
         <a class="ex-link" href="/projects/">All projects <ArrowIcon size={16} /></a>
       </div>
       <div class="ex-projects">
-        {projects.map(({ data }) => (
-          <article class="ex-project">
-            <h3>
-              <a href={data.href} target="_blank" rel="noreferrer">
-                {data.title}<ArrowIcon size={25} />
-              </a>
-            </h3>
-            <p>{data.description}</p>
-            <ul aria-label={`${data.title} technologies`}>
-              {data.stack.map((technology) => <li>{technology}</li>)}
-            </ul>
-          </article>
-        ))}
+        {projects.map(async (entry) => {
+          const { data } = entry;
+          const { Content } = await render(entry);
+          return (
+            <article class="ex-project">
+              <h3>
+                <a href={data.href} target="_blank" rel="noreferrer">
+                  {data.title}<ArrowIcon size={25} />
+                </a>
+              </h3>
+              <p>{data.description}</p>
+              <details class="ex-fold">
+                <summary>
+                  <svg viewBox="0 0 14 14" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                    <path d="M2 7h10" /><path class="ex-fold-upright" d="M7 2v10" />
+                  </svg>
+                  Project notes<span class="sr-only"> for {data.title}</span>
+                </summary>
+                <div class="ex-insert">
+                  <Content />
+                  <ul aria-label={`${data.title} technologies`}>
+                    {data.stack.map((technology) => <li>{technology}</li>)}
+                  </ul>
+                </div>
+              </details>
+            </article>
+          );
+        })}
       </div>
     </div>
   </section>

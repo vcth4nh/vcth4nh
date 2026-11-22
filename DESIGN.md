@@ -75,6 +75,10 @@ components:
     backgroundColor: "{colors.search-bg}"
     textColor: "{colors.theatre-ink}"
     padding: "0.65rem 0.75rem"
+  project-notes:
+    backgroundColor: "{colors.theatre-paper}"
+    textColor: "{colors.theatre-ink}"
+    padding: "clamp(1rem, 2.3vw, 1.55rem)"
   classic-primary:
     backgroundColor: "{colors.signal}"
     textColor: "{colors.ink}"
@@ -94,7 +98,7 @@ components:
 
 ## Overview
 
-Paper Theatre turns the homepage into a toy theatre. Red curtains and layered cobalt arches frame a different cut-paper scene for each research case. The title on the apron opens the case. Pulling the tab changes the scenery.
+Paper Theatre turns the homepage into a toy theatre. Red curtains and layered cobalt arches frame a different cut-paper scene for each research case. Separate paper props move within each set. The title on the apron opens the case, and the pull tab changes scenes.
 
 - Vũ Chí Thành’s name anchors a narrow cream masthead above the stage.
 - The programme lists the cases in performance order, with a product, year, title and credit for each.
@@ -102,7 +106,7 @@ Paper Theatre turns the homepage into a toy theatre. Red curtains and layered co
 
 ## Colors
 
-Cobalt carries the lettering and the open-source tools section. Coral appears in the curtains and paper edges. A deeper brick ink gives small links on cream enough contrast. Tan rules separate programme entries and table rows. The radio uses walnut, metal and amber glass.
+Cobalt carries the lettering and the open-source tools section. Coral appears in the curtains and paper edges. A deeper brick ink gives small links on cream enough contrast. Tan rules separate programme entries and table rows.
 
 Classic’s phosphor palette pairs bright green with near-black. Its sage, harbor, grove and signal variants use the theme variables in `src/styles/global.css`.
 
@@ -112,21 +116,23 @@ Fraunces sets the nameplate, navigation and programme headings. The bold italic 
 
 ## Layout
 
-The illustrated stage runs from edge to edge below the masthead. The apron identifies the current scene and gives readers a direct link to its case. The radio below it tunes between the same research cases. The printed programme brings all the case links together in one place.
+The illustrated stage runs from edge to edge below the masthead. The apron identifies the current scene and gives readers a direct link to its case. A row of scene links permits direct selection. The printed programme brings all the case links together in one place.
 
 The results, tools and afterword sit in a 1250px reading area. Two-column sections collapse below 760px. Inner pages give research titles more space beside their credit and identifiers. The masthead changes to a compact menu at 800px. The résumé has its own A4 print layout with 10mm page margins.
 
 ## Elevation & Depth
 
-Visible folds, overlapping layers and directional shadows give the stage its depth. The next illustration appears with a short vertical reveal. A reduced-motion preference changes scenes immediately. A small sample of paper fibre carries the texture into the masthead and programme. Fine rules and changes of ink organize the longer text.
+Visible folds, overlapping layers and directional shadows give the stage its depth. Two paper curtain wings cover the opening during a scene change. The key, mirror, letter and plug move independently of their printed backdrops. Pause motion holds the props still and skips the curtain travel. The stage remembers a pause for the current browser session and rests when it is offscreen. A reduced-motion preference starts it still. A small sample of paper fibre carries the texture into the masthead and programme. Fine rules and changes of ink organize the longer text.
 
 ## Shapes
 
-The cut-paper arch and curtain folds frame the scenery. The pull tab protrudes below the stage apron. The radio’s round knob and horizontal tuning scale operate independently of the paper control. Small circular arrows mark links in the archive.
+The cut-paper arch and curtain folds frame the scenery. The pull tab protrudes below the stage apron. The paper inserts in the tools section use a narrow crease and folded corner. Small circular arrows mark links in the archive.
 
 ## Components
 
-Activating the pull tab advances the scene. A dragged tab, click or keyboard activation works. The selected scene has a shareable URL fragment that also restores the selection on browser navigation. The radio can tune the scene with its range input or step to the next station with the knob. Sound starts when the visitor switches it on.
+A visitor can turn the key, flip the mirror, send the letter or patch the plug in its own scene. Activating the pull tab advances the scene. Dragging the tab draws the wings together. Releasing it advances the scene, and a click or keyboard activation performs the same change. The selected scene has a shareable URL fragment that also restores the selection on browser navigation. Scene links let visitors go directly to another set.
+
+Each open-source tool keeps its repository link and description visible. Its Project notes disclosure unfolds an ivory insert with the published notes and technologies. The disclosure works with a keyboard, touch or mouse, including when JavaScript is disabled. Reduced motion preserves the disclosure without its folding transition.
 
 The masthead carries Research, Tools, Résumé and Contact. The magnifier and slash key open the quick navigator. Typing filters its destinations, arrow keys highlight a result, Enter follows it and Escape closes the dialog. The footer holds the Classic view switch. In Classic, the switch sits in its header or mobile menu. Existing `presentation=field-notes` links select Paper Theatre.
 

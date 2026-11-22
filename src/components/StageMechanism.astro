@@ -1,0 +1,237 @@
+---
+interface Props {
+  plate: string;
+}
+
+interface Mechanism {
+  label: string;
+  reverse: string;
+  box: [number, number, number, number];
+  pivot: [number, number];
+  suspension?: [number, number];
+  mount?: [number, number];
+}
+
+// Coordinates use the artwork's 1800 × 840 view. Props and suspension points scale together.
+const mechanisms: Record<string, Mechanism> = {
+  "first-run": {
+    label: "Turn the key", reverse: "Release the key",
+    box: [725, 352, 214, 207], pivot: [901, 371], suspension: [901, 208],
+  },
+  reflection: {
+    label: "Flip the mirror", reverse: "Flip it back",
+    box: [851, 225, 267, 530], pivot: [986, 749],
+  },
+  passage: {
+    label: "Send the letter", reverse: "Retrieve the letter",
+    box: [663, 381, 464, 364], pivot: [697, 739],
+  },
+  switchboard: {
+    label: "Patch the plug", reverse: "Unplug the cord",
+    box: [1042, 600, 96, 147], pivot: [1051, 736], mount: [1085, 601],
+  },
+};
+
+const { plate } = Astro.props;
+const mechanism = mechanisms[plate];
+const percent = (n: number, length: number) => (100 * n / length).toFixed(3) + "%";
+let geometry = "";
+if (mechanism) {
+  const [left, top, width, height] = mechanism.box;
+  const [px, py] = mechanism.pivot;
+  const [sx, sy] = mechanism.suspension ?? mechanism.mount ?? mechanism.pivot;
+  geometry = Object.entries({
+    "--prop-left": percent(left, 1800), "--prop-top": percent(top, 840),
+    "--prop-width": percent(width, 1800), "--prop-height": percent(height, 840),
+    "--pivot-x": percent(px - left, width), "--pivot-y": percent(py - top, height),
+    "--rig-x": percent(sx - left, width), "--rig-y": percent(sy - top, height),
+    "--thread-length": percent(py - sy, height),
+  }).map(([name, value]) => name + ":" + value).join(";");
+}
+---
+
+{mechanism && (
+  <stage-mechanism class="paper-mechanism" data-piece={plate} data-rest-label={mechanism.label}
+    data-set-label={mechanism.reverse} style={geometry}>
+    <div class="paper-rig" aria-hidden="true">
+      {mechanism.suspension && <span class="paper-thread"></span>}
+      <div class="paper-leaf" data-grab>
+        <img class="paper-cutout" src={`/theatre/${plate}-prop.webp`} alt="" draggable="false" decoding="async"
+          width={mechanism.box[2]} height={mechanism.box[3]} />
+      </div>
+    </div>
+    {plate === "passage" && <img class="paper-arches" src="/theatre/passage-front.webp" alt="" draggable="false" decoding="async" width="1800" height="840" />}
+    <button type="button" class="mechanism-cue" data-mechanism-control hidden>
+      <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6.1 11.1V5.8a1.1 1.1 0 0 1 2.2 0v4.4-6.8a1.1 1.1 0 0 1 2.2 0v6.8-5.5a1.1 1.1 0 0 1 2.2 0v5.7-3.5a1.1 1.1 0 0 1 2.2 0v5c0 3.3-1.8 5.6-4.8 5.6-2.3 0-3.3-1.1-4.3-2.6l-2.3-3.6a1 1 0 0 1 1.5-1.3l1.1 1.1Z"/>
+      </svg>
+      <span data-action-label>{mechanism.label}</span>
+    </button>
+  </stage-mechanism>
+)}
+
+<script>
+  class StageMechanism extends HTMLElement {
+    private listeners?: AbortController;
+
+    connectedCallback() {
+      if (this.listeners) return;
+      const cue = this.querySelector<HTMLButtonElement>("[data-mechanism-control]");
+      const leaf = this.querySelector<HTMLElement>("[data-grab]");
+      const label = this.querySelector<HTMLElement>("[data-action-label]");
+      if (!cue || !leaf || !label) return;
+      this.listeners = new AbortController();
+      const options = { signal: this.listeners.signal };
+      const piece = this.dataset.piece;
+      let set = this.hasAttribute("data-set");
+      let grip: { id: number; x: number; y: number; scale: number; moved: boolean; progress: number } | undefined;
+
+      const place = (engaged: boolean) => {
+        set = engaged;
+        this.toggleAttribute("data-set", set);
+        label.textContent = (set ? this.dataset.setLabel : this.dataset.restLabel) ?? "";
+      };
+      const release = () => {
+        grip = undefined;
+        this.removeAttribute("data-gripping");
+        this.style.removeProperty("--grip-progress");
+      };
+
+      cue.addEventListener("click", () => place(!set), options);
+      leaf.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || event.button !== 0 || grip) return;
+        grip = { id: event.pointerId, x: event.clientX, y: event.clientY, scale: this.clientWidth, moved: false, progress: Number(set) };
+        this.style.setProperty("--grip-progress", String(grip.progress));
+        this.setAttribute("data-gripping", "");
+        leaf.setPointerCapture(event.pointerId);
+      }, options);
+      leaf.addEventListener("pointermove", (event) => {
+        if (!grip || grip.id !== event.pointerId) return;
+        const dx = event.clientX - grip.x;
+        const dy = event.clientY - grip.y;
+        if (Math.hypot(dx, dy) < 4 && !grip.moved) return;
+        grip.moved = true;
+        const travel = piece === "switchboard" ? dx * .4 - dy : piece === "passage" ? dx - dy * .3 : dx;
+        const span = Math.max(24, grip.scale * (piece === "switchboard" ? .075 : .12));
+        const delta = piece === "reflection" ? Math.abs(travel) * (set ? -1 : 1) : travel;
+        grip.progress = Math.max(-.18, Math.min(1.12, Number(set) + delta / span));
+        this.style.setProperty("--grip-progress", grip.progress.toFixed(3));
+      }, options);
+      leaf.addEventListener("pointerup", (event) => {
+        if (!grip || grip.id !== event.pointerId) return;
+        place(grip.moved ? grip.progress > .5 : !set);
+        release();
+      }, options);
+      leaf.addEventListener("lostpointercapture", release, options);
+      this.dataset.ready = "";
+      cue.hidden = false;
+    }
+
+    disconnectedCallback() {
+      this.listeners?.abort();
+      this.listeners = undefined;
+      this.removeAttribute("data-gripping");
+      this.removeAttribute("data-ready");
+      this.style.removeProperty("--grip-progress");
+    }
+  }
+  if (!customElements.get("stage-mechanism")) customElements.define("stage-mechanism", StageMechanism);
+</script>
+
+<style>
+  .paper-mechanism {
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    --pose: 0;
+    --travel-x: 0%;
+    --travel-y: 0%;
+    --twist: 0deg;
+    --flip: 0deg;
+    --shrink: 0;
+  }
+  .paper-mechanism[data-set] { --pose: 1; }
+  .paper-rig {
+    position: absolute; z-index: 1;
+    top: var(--prop-top); left: var(--prop-left);
+    width: var(--prop-width); height: var(--prop-height);
+    transform-origin: var(--rig-x) var(--rig-y);
+  }
+  .paper-thread {
+    position: absolute;
+    left: var(--rig-x); top: var(--rig-y);
+    height: var(--thread-length); width: max(1px, .12cqw);
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #b59a70, #f7dfb1 55%, #baa072);
+    box-shadow: .22cqw .12cqw .12cqw #111e3f66;
+  }
+  .paper-leaf {
+    width: 100%; height: 100%;
+    position: relative;
+    transform-origin: var(--pivot-x) var(--pivot-y);
+    transition-property: none;
+    transform: translate(calc(var(--travel-x) * var(--pose)), calc(var(--travel-y) * var(--pose)))
+      perspective(75cqw) rotate(calc(var(--twist) * var(--pose))) rotateY(calc(var(--flip) * var(--pose)))
+      scale(calc(1 - var(--shrink) * var(--pose)));
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+  .paper-mechanism[data-ready] .paper-leaf { pointer-events: auto; touch-action: none; cursor: grab; }
+  .paper-mechanism[data-gripping] .paper-leaf { cursor: grabbing; }
+  .paper-leaf::after { content: ""; position: absolute; inset: 50% auto auto 50%; width: max(100%, 44px); height: max(100%, 44px); transform: translate(-50%, -50%); }
+  .paper-leaf .paper-cutout {
+    display: block; position: static;
+    width: 100%; height: 100%; object-fit: fill;
+    filter: drop-shadow(.42cqw .62cqw .14cqw rgb(12 14 29 / .56));
+    pointer-events: none;
+  }
+  .paper-mechanism .paper-arches { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; object-fit: fill; pointer-events: none; }
+  [data-piece="first-run"] { --twist: -46deg; --shrink: .31; --tempo: 2.4s; }
+  [data-piece="first-run"] .paper-cutout { filter: drop-shadow(2.9cqw 2.4cqw .27cqw rgb(11 13 28 / .65)); }
+  [data-piece="reflection"] { --flip: 180deg; --tempo: 3.2s; }
+  [data-piece="passage"] { --travel-x: 66%; --travel-y: -46%; --twist: -6deg; --shrink: .55; --tempo: 2.1s; }
+  [data-piece="switchboard"] { --travel-x: 35.4%; --travel-y: -98%; --twist: 132deg; --tempo: 2.2s; }
+
+  .mechanism-cue {
+    position: absolute; z-index: 4; bottom: .9rem; left: 2.3%;
+    display: inline-flex; align-items: center; gap: .42em; width: max-content;
+    pointer-events: auto; cursor: pointer;
+    min-height: 2.45rem; padding: .42rem .75rem;
+    color: #19284a; background: #fae9c9 var(--theatre-fibre, none);
+    border: 1px solid #937a58; border-bottom: 2px solid #a48c67; border-radius: 2px;
+    box-shadow: 1px 2px 3px #21223966;
+    font: 620 .84rem/1.2 "Fraunces Variable", Georgia, serif;
+  }
+  @media (max-width: 620px) {
+    .mechanism-cue { min-height: 1.8rem; left: .45rem; bottom: .35rem; padding: .18rem .43rem; font-size: .72rem; }
+    .mechanism-cue svg { width: 12px; height: 12px; }
+  }
+  .mechanism-cue[hidden] { display: none; }
+  .mechanism-cue::after { content:""; position: absolute; top:50%; left:0; right:0; height:max(100%, 44px); transform:translateY(-50%); }
+  .mechanism-cue:hover { background: #fff4d9; }
+  .mechanism-cue:focus-visible { outline: 3px solid #ffdc87; outline-offset: 3px; }
+  .paper-mechanism:has(.mechanism-cue:focus-visible) .paper-cutout { outline: 1px dashed #ffe5a6; outline-offset: .35cqw; }
+
+  :global(paper-theatre:not([data-motion="on"])) .paper-mechanism * { transition-property: none; }
+  :global(paper-theatre[data-motion="on"]) .paper-leaf { transition: transform 650ms cubic-bezier(.22,.78,.23,1); }
+  :global(paper-theatre[data-motion="on"]) .paper-mechanism[data-gripping] .paper-leaf { --pose: var(--grip-progress); transition: none; }
+  :global(paper-theatre[data-motion="on"]) [data-piece="first-run"]:not([data-set]) .paper-rig { animation: key-swing 2.4s ease-in-out -.9s infinite alternate; }
+  :global(paper-theatre[data-motion="on"]) [data-piece="reflection"]:not([data-set]) .paper-rig { animation: mirror-rock 3.2s ease-in-out -.5s infinite alternate; }
+  :global(paper-theatre[data-motion="on"]) [data-piece="passage"]:not([data-set]) .paper-rig { animation: letter-lift 2.1s ease-in-out -.4s infinite alternate; }
+  :global(paper-theatre[data-motion="on"]) [data-piece="switchboard"]:not([data-set]) .paper-rig { animation: plug-rock 2.2s ease-in-out -.7s infinite alternate; }
+  :global(paper-theatre[data-stage-visible="false"]) .paper-rig,
+  :global(paper-theatre[data-motion="on"]) .paper-mechanism[data-gripping] .paper-rig { animation-play-state: paused !important; }
+
+  /* An explicit Play choice on this page can override the site-wide reduced-motion reset. */
+  @media (prefers-reduced-motion: reduce) {
+    :global(paper-theatre[data-motion="on"]) .paper-rig { animation-duration: var(--tempo) !important; animation-iteration-count: infinite !important; }
+    :global(paper-theatre[data-motion="on"]) .paper-leaf { transition-duration: 650ms !important; }
+  }
+
+  @keyframes key-swing { from { transform: rotate(-10deg); } to { transform: rotate(10deg); } }
+  @keyframes mirror-rock { from { transform: perspective(75cqw) rotateY(-13deg); } to { transform: perspective(75cqw) rotateY(11deg); } }
+  @keyframes letter-lift { from { transform: translate(-.65cqw, .22cqw) rotate(-2deg); } to { transform: translate(.9cqw, -.65cqw) rotate(2deg); } }
+  @keyframes plug-rock { from { transform: rotate(-5deg); } to { transform: rotate(4deg); } }
+</style>

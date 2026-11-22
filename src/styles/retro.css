@@ -392,10 +392,18 @@ html[data-presentation="field-notes"] .round-arrow {
   color: var(--theatre-link);
 }
 
-html[data-presentation="field-notes"] :is(.research-card:hover, .project-row:hover) .round-arrow {
+html[data-presentation="field-notes"] :is(.research-card, .project-row):is(:hover, :focus-within) .round-arrow {
   background: var(--theatre-link);
   color: var(--theatre-paper);
   transform: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html[data-presentation="field-notes"] .archive-section .round-arrow svg {
+    transition: transform 180ms ease;
+  }
+  html[data-presentation="field-notes"] .archive-section :is(.research-card, .project-row):is(:hover, :focus-within) .round-arrow svg {
+    transform: translate(2px, -2px);
+  }
 }
 
 html[data-presentation="field-notes"] :is(.method-section, .project-principles) {

@@ -24,10 +24,12 @@
 .stage-pictures {
   isolation: isolate;
   position: relative;
+  container-type: inline-size;
   aspect-ratio: 15 / 7;
   overflow: hidden;
 }
-.stage-pictures img {
+.stage-scene { position:absolute; inset:0; }
+.stage-pictures .scene-picture, .stage-pictures > img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -37,6 +39,100 @@
   object-position: center 38%;
 }
 .stage-pictures [hidden], .stage-caption [hidden], .stage-slot[hidden] { display: none; }
+
+.stage-mask { position: absolute; pointer-events: none; }
+
+.house-curtain {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  clip-path: url(#stage-opening);
+}
+.house-curtain > div {
+  position: absolute;
+  top: 23%;
+  bottom: 2%;
+  width: 50.2%;
+  background: #b84030 url("/theatre/house-curtain.webp") 0 50% / 200% 100% no-repeat;
+  transform: scaleX(0);
+}
+.curtain-left { left: 0; transform-origin: 0 50%; }
+.house-curtain .curtain-right { right: 0; transform-origin: 100% 50%; background-position-x: 100%; }
+
+.motion-ticket {
+  position: absolute;
+  z-index: 4;
+  bottom: .9rem;
+  right: 2.3%;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  min-height: 2.45rem;
+  border: 1px solid #7f6046;
+  background: #fae9c9 var(--theatre-fibre, none);
+  color: #172648;
+  padding: .42rem .75rem;
+  box-shadow: 1px 3px 5px #27160a49;
+  font: 620 .84rem/1.2 "Fraunces Variable", Georgia, serif;
+  cursor: pointer;
+}
+.motion-ticket:hover { background-color: #fff1d7; }
+.motion-ticket::after { content: ""; position: absolute; inset-inline: 0; top: 50%; height: max(100%, 44px); transform: translateY(-50%); }
+.motion-ticket:focus-visible { outline: 3px solid #172648; outline-offset: 2px; }
+.motion-ticket .motion-play-icon, [data-motion="off"] .motion-pause-icon { display: none; }
+[data-motion="off"] .motion-play-icon { display: block; }
+
+.scene-cues {
+  border-block: 1px solid #c6ab86;
+  background: #ebd7b3 var(--theatre-fibre, none);
+  color: #192c55;
+}
+.cue-inner {
+  width: min(1320px, calc(100% - 2 * clamp(1.25rem, 4.5vw, 5rem)));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 3.4rem);
+  padding-block: .85rem;
+}
+.cue-title { margin: 0; font: 620 1.15rem/1.2 "Fraunces Variable", Georgia, serif; }
+.cue-tickets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem; }
+.cue-ticket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  min-height: 2.8rem;
+  padding: .4rem .6rem;
+  background: #f9ecd0 var(--theatre-fibre, none);
+  border: 1px solid #bdab8f;
+  color: #26395c;
+  box-shadow: 0 2px 0 #4332231f;
+  text-decoration: none;
+  font: 620 clamp(.94rem, 1.2vw, 1.13rem)/1.16 "Fraunces Variable", Georgia, serif;
+}
+.cue-ticket[aria-current] { color: #fff3d9; background-color: #17316a; border-color: #172d56; }
+.cue-number { font: 490 .72rem/1 var(--font-mono); font-variant-numeric: tabular-nums; }
+.cue-ticket:focus-visible { outline: 2px solid #172a52; outline-offset: 2px; }
+.cue-ticket:hover { color: #732f21; border-color: #824539; }
+.cue-ticket[aria-current]:hover { color: #fff3d9; }
+@media (prefers-reduced-motion: no-preference) {
+  .paper-playhouse[data-motion="on"] .cue-ticket { transition: transform 160ms ease, box-shadow 160ms ease; }
+  .paper-playhouse[data-motion="on"] .cue-ticket:hover { transform: translateY(-2px); box-shadow: 0 3px 4px #38241526; }
+}
+@media (max-width: 800px) {
+  .cue-inner { gap: .65rem; grid-template-columns: 1fr; }
+  .cue-title { font-size: 1rem; }
+  .cue-tickets { gap: .45rem; }
+}
+@media (max-width: 620px) {
+  .motion-ticket { min-height: 1.8rem; right: .45rem; bottom: .35rem; font-size: .72rem; padding: .18rem .43rem; gap: .34rem; }
+  .motion-ticket svg { width: 11px; height: 11px; }
+  .cue-tickets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cue-ticket { justify-content: start; gap: .45rem; padding-inline: .65rem; min-height: 2.6rem; }
+}
 
 .stage-apron {
   background: #162e69;

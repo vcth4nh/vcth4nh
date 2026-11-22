@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-22T06:08:11.547Z",
+  "generatedAt": "2026-11-22T06:30:33.812Z",
   "title": "Design System: thanh.vc",
   "extensions": {
     "colorMeta": {
@@ -254,9 +254,44 @@
     ],
     "motion": [
       {
-        "name": "scene-reveal",
-        "value": "410ms cubic-bezier(.2,.75,.25,1)",
-        "purpose": "Changes the theatrical scene when the tab or radio selects another case."
+        "name": "curtain-close",
+        "value": "230ms cubic-bezier(.48,0,.85,.6)",
+        "purpose": "Closes the paper curtain wings before exchanging the scene."
+      },
+      {
+        "name": "curtain-open",
+        "value": "430ms cubic-bezier(.18,.7,.2,1)",
+        "purpose": "Opens the curtain wings to reveal the selected scene."
+      },
+      {
+        "name": "key-swing",
+        "value": "2.4s ease-in-out alternate",
+        "purpose": "Swings the suspended key around its thread anchor."
+      },
+      {
+        "name": "mirror-rock",
+        "value": "3.2s ease-in-out alternate",
+        "purpose": "Turns the mirror slightly around its vertical axis."
+      },
+      {
+        "name": "letter-lift",
+        "value": "2.1s ease-in-out alternate",
+        "purpose": "Lifts the letter away from the printed scene."
+      },
+      {
+        "name": "plug-rock",
+        "value": "2.2s ease-in-out alternate",
+        "purpose": "Rocks the cord before the visitor patches the plug."
+      },
+      {
+        "name": "project-fold",
+        "value": "300ms cubic-bezier(.22,.7,.2,1)",
+        "purpose": "Unfolds or closes the project notes insert from its top crease."
+      },
+      {
+        "name": "case-arrow",
+        "value": "180ms ease",
+        "purpose": "Moves the directional arrow slightly on project and archive link focus or hover."
       }
     ],
     "breakpoints": [
@@ -316,6 +351,14 @@
       "css": ".ds-paper{background:var(--theatre-paper,#f6e5c4);color:var(--theatre-ink,#142c69);padding:1rem;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)} .ds-paper :focus-visible{outline:2px solid var(--theatre-link,#963326);outline-offset:4px} input{width:100%;box-sizing:border-box;background:#fff5df;color:inherit;border:1px solid #142c69;font:inherit;padding:.65rem .75rem}input::placeholder{color:#645640}"
     },
     {
+      "name": "Project notes insert",
+      "kind": "custom",
+      "refersTo": "project-notes",
+      "description": "A native disclosure for published tool details and technologies.",
+      "html": "<div class=\"ds-tools\"><details><summary>Project notes</summary><div><p>decaf starts with published Maven sources when they exist, then falls back across multiple decompilation engines.</p><small>Python · Java · CLI</small></div></details></div>",
+      "css": ".ds-tools{padding:1rem;background:var(--theatre-ink,#142c69);color:#f4d8af;font-family:var(--font-sans,\"Atkinson Hyperlegible Next Variable\",sans-serif)}summary{padding:.7rem 0;cursor:pointer;font-size:.88rem}summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}details>div{background:var(--theatre-paper,#f6e5c4);color:var(--theatre-ink,#142c69);border-top:3px double #a78c60;padding:clamp(1rem,2.3vw,1.55rem)}details p{margin:0 0 .7rem;line-height:1.48}small{color:var(--theatre-link,#963326)}"
+    },
+    {
       "name": "Classic primary button",
       "kind": "button",
       "refersTo": "classic-primary",
@@ -342,9 +385,10 @@
   ],
   "narrative": {
     "northStar": "Paper Theatre",
-    "overview": "Paper Theatre turns the homepage into a toy theatre. Red curtains and layered cobalt arches frame a different cut-paper scene for each research case. The title on the apron opens the case. Pulling the tab changes the scenery.",
+    "overview": "Paper Theatre turns the homepage into a toy theatre. Red curtains and layered cobalt arches frame a different cut-paper scene for each research case. Separate paper props move within each set. The title on the apron opens the case, and the pull tab changes scenes.",
     "keyCharacteristics": [
       "Vũ Chí Thành’s name anchors a narrow cream masthead above the stage.",
+      "A visitor can move each paper prop and draw the curtains with the pull tab. The motion control pauses the stage, and the stage starts still for visitors who prefer reduced motion.",
       "The programme lists the cases in performance order, with a product, year, title and credit for each.",
       "The results section prints the latest award and researcher credits beside the annual team placements."
     ],
